@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Front end</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/Imagens/LogoIco.ico"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          id="border-laranja"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon navbar-icon-laranja"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="ImagensInicial/Logo-resumida.png"
+            alt="Irmãos Dev"
+            width="40"
+            height="32"
+          />
+        </a>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarTogglerDemo03"
+          style="font-family: 'DM Sans'"
+        >
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-around"
+          >
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="index.html"
+                ><strong>TODOS OS CAMINHOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a target="_blank" class="nav-link so-letra-preta" href="#"
+                ><strong>APOIE-NOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                target="_blank"
+                class="nav-link so-letra-preta"
+                href="https://www.youtube.com/@IrmaosDev"
+                ><strong>YOUTUBE</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a target="_blank" class="nav-link so-letra-preta" href="#"
+                ><strong>SOBRE</strong></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid laranja center py-3">
+      <div class="container text-center bg-light rounded-5">
+        <a href="../index.html">
+          <img
+            src="Imagens/Logo.png"
+            class="img-fluid center mt-4 pt-2"
+            alt="Logo"
+            width="280px"
+        /></a>
+        <div class="row mt-5 py-4 me-2">
+          <div class="col-8">
+            <h1 class="display-1 text-center letra-preta mt-4">
+              <strong>Front end</strong>
+            </h1>
+          </div>
+          <div class="col-4">
+            <img
+              src="Imagens/frontend.png"
+              class="img-fluid center pt-2"
+              alt="Front end"
+              style="width: 150px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container center">
+      <div class="row">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sumário</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>
+                <a class="conteudo" href="#introducao">Introdução</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#profissional"
+                  >Relevância profissional</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#pre-requisitos">Pré-requisitos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#tempo">Meta de tempo de estudos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#projetos">Projetos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#estudo"
+                  >Sugestão de recursos para estudo</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#aprofundamento">Aprofundamento</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="introducao">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Introdução</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Este projeto objetiva criar uma página usando Bootstrap que
+              interaja com um servidor por sua API.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Podemos interagir com APIs manualmente através de um software
+              chamado API Client, como o Insomnia ou Postman. O cliente envia
+              solicitações para o servidor, que processa as solicitações e
+              devolve uma resposta.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Para interagir com uma API programaticamente usando Javascript,
+              usamos o método "fetch" ou bibliotecas como o jQuery ou Axios que
+              disponibilizam as ferramentas para enviar requisições à API.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Ao terminar esse projeto, você possuirá as ferramentas mais
+              básicas para escrever pequenas aplicações que utilizam de dados de
+              serviços externos como redes sociais, previsão do tempo, banco de
+              fotos ou qualquer API pública.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="profissional">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Relevância profissional</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              O desenvolvimento frontend é extremamente relevante, pois é a
+              parte da aplicação que recebe o usuário final.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Aplicações que comunicam com uma API são extremamente comuns, pois
+              permitem que as empresas donas do software recebam e processem os
+              dados de seus usuários sem que exponha suas regras de negócios,
+              pois código do frontend é, naturalmente, exposto ao usuário.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="pre-requisitos">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Pré-requisitos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Os projetos #1 e #2 são pré-requisitos deste projeto.
+            </p>
+            <p class="conteudo py-3 px-2">
+              *Este projeto é pré-requisito do projeto #5.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="tempo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Meta de tempo de estudos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="a conteudo py-3 pe-2 ps-4.5">
+              <li>Invista até 6 horas estudando os conteúdos</li>
+              <li>
+                Realize o projeto 1 (Interação com CrudCrud usando Thunder
+                Client) em cerca de 2 horas.
+              </li>
+              <li>
+                Realize o projeto 2 (Interação com CrudCrud usando Javascript)
+                em cerca de 4 horas.
+              </li>
+              <li>
+                Realize o projeto 3 (Página web interagindo com CrudCrud) em até
+                70 horas.
+              </li>
+              <li>
+                Realize o projeto 4 (Testando com Playwright) em até
+                15 horas.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="projetos">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Projeto</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Em todas as atividades desta etapa você usará o serviço gratuito
+              <a target="_blank" class="conteudo" href="https://crudcrud.com"
+                >CrudCrud</a
+              >, que é uma API conveniente na criação de aplicações de teste ou
+              protótipos.
+            </p>
+            <br />
+            <ol class="conteudo py-3 pe-2 ps-4.5">
+              <li id="projeto1">
+                Interação com
+                <a target="_blank" class="conteudo" href="https://crudcrud.com"
+                  >CrudCrud</a
+                >
+                usando Thunder Client
+                <p class="conteudo">
+                  O objetivo da primeira atividade é ambientar com o uso de uma
+                  API Client, um software especializado em interagir com APIs. O
+                  uso do Thunder Client é indicado por ser uma extensão do
+                  VSCode, nosso ambiente de desenvolvimento escolhido.
+                </p>
+                <p class="conteudo py-3 px-2">
+                  Pegue o link disponibilizado em
+                  <a
+                    target="_blank"
+                    class="conteudo"
+                    href="https://crudcrud.com"
+                    >crudcrud.com</a
+                  >
+                  e faça um total de 6 requisições HTTP, sempre na rota
+                  "/pessoas":
+                </p>
+                <ul class="a conteudo">
+                  <li>Liste todos os registros;</li>
+                  <li>Adicione um registro contendo o nome de uma pessoa;</li>
+                  <li>Exiba exclusivamente o registro alterado;</li>
+                  <li>Altere o nome do registro;</li>
+                  <li>Liste todos os registros;</li>
+                  <li>Delete o registro.</li>
+                </ul>
+              </li>
+              <li id="projeto2">
+                Interação com
+                <a target="_blank" class="conteudo" href="https://crudcrud.com"
+                  >CrudCrud</a
+                >
+                usando Javascript
+                <p class="conteudo">
+                  Nesta atividade, você realizará exatamente as mesmas
+                  requisições HTTP. Portanto, ao listar todos os registros,
+                  também na rota "/pessoas", a resposta deve conter nenhum
+                  registro.
+                </p>
+                <p class="conteudo py-3 px-2">
+                  Utilize o método "fetch" para realizar essas requisições
+                  individualmente. Você pode fazer de qualquer forma no
+                  Javascript: em uma página, no playground ou mesmo diretamente
+                  no console do DevTools.
+                </p>
+              </li>
+              <li id="projeto3">
+                Página web interagindo com
+                <a target="_blank" class="conteudo" href="https://crudcrud.com"
+                  >CrudCrud</a
+                ><br />
+                <p class="conteudo">
+                  Agora finalmente crie uma página completa, contendo:
+                </p>
+                <ul class="a conteudo">
+                  <li>
+                    um campo para colocar o link do
+                    <a
+                      target="_blank"
+                      class="conteudo"
+                      href="https://crudcrud.com"
+                      >CrudCrud</a
+                    >
+                    que:
+                    <ul>
+                      <li>
+                        ao perder o foco (blur) envia uma requisição de listar
+                        todas as pessoas e:
+                        <ul>
+                          <li>
+                            caso registros existam, criar a tabela descrita a
+                            baixo;
+                          </li>
+                          <li>
+                            caso nenhum registro exista, exibir a mensagem:
+                            "Nenhuma pessoa cadastrada.";
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>um botão para adicionar pessoas;</li>
+                  <li>uma modal que aparece ao clicar nesse botão;</li>
+                  <li>
+                    um formulário para inserir a pessoa dentro da modal
+                    contendo:
+                    <ul>
+                      <li>text para o Nome e Email;</li>
+                      <li>
+                        radio button para o Tipo: Cliente, Fornecedor ou
+                        Empregado, que:
+                        <ul>
+                          <li>deve mapear estes tipos para 1, 2 e 3;</li>
+                        </ul>
+                      </li>
+                      <li>botão para cancelar que fecha a modal;</li>
+                      <li>
+                        botão para inserir a pessoa que faz:
+                        <ul>
+                          <li>valida se todos os campos estão preenchidos;</li>
+                          <li>valida se é um email válido;</li>
+                          <li>envia a requisição para criar a pessoa;</li>
+                          <li>exibe a mensagem de sucesso ou erro;</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    uma tabela que lista todas as pessoas cadastradas e que
+                    contém:
+                    <ul>
+                      <li>o nome de cada coluna (Nome, Email e Tipo);</li>
+                      <li>
+                        os dados de cada pessoa em cada linha, onde:
+                        <ul>
+                          <li>
+                            tipo deve ser exibido por extenso, em vez de 1, 2 e
+                            3
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        um botão de deletar que abre um diálogo de confirmação
+                        que faz ao confirmar:
+                        <ul>
+                          <li>envia a requisição de deletar;</li>
+                          <li>exibe a mensagem de sucesso ou erro;</li>
+                        </ul>
+                      </li>
+                      <li>
+                        um botão de editar que abre uma modal que:
+                        <ul>
+                          <li>
+                            conteḿ um formulário de edição, similar ao inserir;
+                          </li>
+                          <li>
+                            os campos devem estarem preenchidos com os valores
+                            da pessoa correspondente;
+                          </li>
+                          <li>um botão de cancelar que fecha a modal</li>
+                          <li>
+                            um botão de confirmar a edição que:
+                            <ul>
+                              <li>
+                                realiza as mesmas verificações que a inserção;
+                              </li>
+                              <li>enviar a requisição de editar;</li>
+                              <li>exibe mensagem de sucesso ou erro.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <p class="conteudo">
+                  Como os dados são salvos no
+                  <a
+                    target="_blank"
+                    class="conteudo"
+                    href="https://crudcrud.com"
+                    >CrudCrud</a
+                  >, recarregar a página ou fechar e abrir novamente deve exibir
+                  os dados atuais.
+                </p>
+                <p class="conteudo py-3 px-2">
+                  Atenção! Você possui apenas 100 requisições diárias. Sua
+                  aplicação ficará indisponível ao atingir este limite.
+                </p>
+                <p class="conteudo py-3 px-2">
+                  Confira como é essa
+
+                  <a
+                    target="_blank"
+                    class="conteudo"
+                    href="apifake/"
+                    target="_blank"
+                    >página.</a
+                  >
+                </p>
+              </li>
+              <li id="projeto4">
+                Testando com Playwright
+                <p class="conteudo">
+                  Agora que temos a página finalizada, você deve criar testes
+                  automatizados para ela usando o
+                  <a
+                    target="_blank"
+                    class="conteudo"
+                    href="https://playwright.dev/"
+                    target="_blank"
+                    >Playwright</a
+                  >.
+                </p>
+                <p class="conteudo">
+                  O Playwright é uma ferramenta que simula o uso real de uma
+                  página web utilizando um navegador. Com ela, você acessa
+                  páginas, clica em botões, lê textos e valores e mais.
+                </p>
+                <p class="conteudo">
+                  Faça um código para o Playwright interagir com a sua página
+                  criada no projeto anterior. Ela deve pegar um link do
+                  CrudCrud, preencher no seu site e garantir o sucesso de cada
+                  operações possíveis e também garantir que operações inválidas
+                  não funcionem.
+                </p>
+                <p class="conteudo">
+                  Exemplos de casos de testes:
+                  <ul>
+                    <li>adicionar uma pessoa e verificar
+                      se os dados da pessoa estão sendo apresentados corretamente na
+                      tabela;</li>
+                    <li>remover a pessoa criada e verificar que não aparece mais na tabela;</li>
+                    <li>tentar adicionar uma pessoa sem seus dados e garantir que seja exibido um erro.</li>
+                  </ul>
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="estudo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sugestões de recursos para estudo</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>
+                <a
+                  target="_blank"
+                  class="conteudo"
+                  href="https://www.dio.me/articles/o-que-sao-endpoints-e-rotas-de-uma-api"
+                  >O que são endpoints e rotas de uma api</a
+                >;
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="conteudo"
+                  href="https://www.youtube.com/watch?v=9SbUPqKEWcY"
+                  >O que é uma API REST? Entenda tudo sobre API, HTTP e
+                  RESTful</a
+                >;
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="conteudo"
+                  href="https://www.youtube.com/watch?v=tWu5eoFeIVQ"
+                  >Como usar o Postman para testar API pública/aberta</a
+                >;
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="conteudo"
+                  href="https://blog.rocketseat.com.br/callback-promises-e-async-await-tudo-o-que-voce-precisa-saber/"
+                  >Callback, Promises e Async/Await: Tudo o que você precisa
+                  saber</a
+                >;
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="conteudo"
+                  href="https://www.youtube.com/watch?v=q28lfkBd9F4"
+                  >Como usar Async/Await? Promises no JavaScript? Você nunca
+                  mais vai errar</a
+                >;
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="conteudo"
+                  href="https://eduardoottaviani.com.br/blog/async-await-e-promises-qual-e-o-melhor-quando-usar"
+                  >Async / Await e Promises — Qual é o melhor? Quando usar?</a
+                >;
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="conteudo"
+                  href="https://nodejs.reativa.dev/0034-javascript-promises/index"
+                  >Entendendo JavaScript Promises</a
+                >;
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="conteudo"
+                  href="https://www.freecodecamp.org/portuguese/news/fetch-api-como-fazer-solicitacoes-get-e-post-em-javascript/"
+                  >Fetch API - como fazer solicitações GET e POST em
+                  JavaScript</a
+                >;
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  class="conteudo"
+                  href="https://www.youtube.com/watch?v=qIGYM4S8x50"
+                  >Aprenda fetch API de JavaScript com projeto</a
+                >.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="aprofundamento">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Aprofundamento</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>Testar outras aplicações de API Client;</li>
+              <li>
+                Melhorar o projeto 3, adicionando novas funcionalidades como:
+                <ul>
+                  <li>
+                    poder enviar o endereço da API pelo queryParams
+                    <br />(exemplo:
+                    127.0.0.1:5501/?api=https://crudcrud.com/api/df7cfe3c5af24d8782814ed8d5beb6d5);
+                  </li>
+                  <li>
+                    ordenar (o nome da coluna ao ser clicado, as linhas devem
+                    ser reordenadas de acordo com a coluna);
+                  </li>
+                  <li>
+                    buscar pessoa por nome/email (adicionar um novo input para
+                    fazer a busca);
+                  </li>
+                  <li>
+                    adicionar data de nascimento e exibir total de dias de vida
+                    e quantos dias falta para aniversário;
+                  </li>
+                  <li>
+                    integrar com um serviço de previsão do tempo (exibir no
+                    rodapé informações sobre o clima);
+                  </li>
+                  <li>
+                    cadastro de telefones e/ou endereços para cada pessoa;
+                  </li>
+                  <li>
+                    internacionalização (possibilitar alterar o idioma da
+                    página);
+                  </li>
+                  <li>relacionar pessoas entre si (cadastro de amigos);</li>
+                  <li>relatório número de amigos por pessoa;</li>
+                </ul>
+              </li>
+              <li>
+                Criar uma nova aplicação usando uma API pública:
+                <ul>
+                  <li>
+                    <a
+                      target="_blank"
+                      class="conteudo"
+                      href="https://www.youtube.com/watch?v=N6OjsvMK8EE"
+                      >Conheça 6 APIs públicas ESSENCIAIS para utilizar nos seus
+                      projetos FRONT-END | Desenvolvimento Web</a
+                    >;
+                  </li>
+                  <li>
+                    <a
+                      target="_blank"
+                      class="conteudo"
+                      href="https://github.com/public-apis/public-apis"
+                      >Public APIs</a
+                    >: lista coletiva no GitHub com APIs grátis para software e
+                    desenvolvimento web.
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a target="_blank" class="navbar navbar-text-white ms-2" href="#">
+          Condições e suporte
+        </a>
+      </div>
+    </nav>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,559 @@
+<!-- Relevância profissional, Meta de estudos, Sugestão de estudos, Aprofundamento
+Atividade ou projeto? -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Back end</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/Imagens/LogoIco.ico"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          id="border-laranja"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon navbar-icon-laranja"></span>
+        </button>
+        <a class="navbar-brand" href="/index.html">
+          <img
+            src="ImagensInicial/Logo-resumida.png"
+            alt="Irmãos Dev"
+            width="40"
+            height="32"
+          />
+        </a>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarTogglerDemo03"
+          style="font-family: 'DM Sans'"
+        >
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-around"
+          >
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="index.html"
+                ><strong>TODOS OS CAMINHOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="#"
+                ><strong>APOIE-NOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link so-letra-preta"
+                href="https://www.youtube.com/@IrmaosDev"
+                ><strong>YOUTUBE</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="#"
+                ><strong>SOBRE</strong></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid laranja center py-3">
+      <div class="container text-center bg-light rounded-5">
+        <a href="/index.html">
+          <img
+            src="Imagens/Logo.png"
+            class="img-fluid center mt-4 pt-2"
+            alt="Logo"
+            width="280px"
+        /></a>
+        <div class="row mt-5 py-4 me-2">
+          <div class="col-8">
+            <h1 class="display-1 text-center letra-preta mt-4">
+              <strong>Back end</strong>
+            </h1>
+          </div>
+          <div class="col-4">
+            <img
+              src="Imagens/backend.png"
+              class="img-fluid center pt-2"
+              alt="Back end"
+              style="width: 150px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container center">
+      <div class="row">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sumário</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>
+                <a class="conteudo" href="#introducao">Introdução</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#profissional"
+                  >Relevância profissional</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#conhecimentos"
+                  >Conhecimentos envolvidos</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#pre-requisitos">Pré-requisitos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#tempo">Meta de tempo de estudos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#projetos">Projetos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#estudo"
+                  >Sugestão de recursos para estudo</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#aprofundamento">Aprofundamento</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="introducao">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Introdução</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Este projeto objetiva criar um backend (uma API web) que interaja
+              com o
+              <a class="conteudo" href="3.html#projeto3"
+                >frontend (projeto 3) criado no módulo #3.</a
+              >
+            </p>
+            <p class="conteudo px-2">
+              Você pode, contudo, realizar este projeto antes do projeto #3.
+              Para tal você utilizará o frontend de exemplo que forneci.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Pode-se dizer que todos produtos de software possuem um banco de
+              dados. Contudo nem todos os dados podem ser expostos. O backend
+              atua como interface entre o frontend e o banco de dados,
+              garantindo que apenas os dados relevantes cheguem aos usuários.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="profissional">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Relevância profissional</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Aplicações backend são extremamente comuns, pois permitem que as
+              empresas donas do software recebam e processem os dados de seus
+              usuários sem que exponha suas regras de negócios e seus dados.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="pre-requisitos">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Pré-requisitos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              O projeto #2 é pré-requisito deste projeto.<br /><br />
+              *Este projeto é pré-requisito do projeto #5.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="tempo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Meta de tempo de estudos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="a conteudo py-3 pe-2 ps-4.5">
+              <li>Invista cerca de 20 horas estudando os conteúdos</li>
+              <li>
+                Realize o projeto 1 (Manipulador de arquivos) em cerca de 20 horas.
+              </li>
+              <li>
+                Realize o projeto 2 (Backend para um frontend)
+                em cerca de 10 horas.
+              </li>
+              <li>
+                Realize o projeto 3 (Testar com o Supertest) em cerca de
+                10 horas.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="projetos">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Projetos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ol class="conteudo py-3 pe-2 ps-4.5">
+              <li id="projeto1">Manipulador de arquivos</li>
+              <p class="conteudo">
+                Neste projeto, você deverá exibir, criar, alterar, remover e
+                mover arquivos do seu sistema.<br />
+                Além disso, seu código deverá ser capaz de receber argumentos
+                pela linha de comando.
+              </p>
+              <p class="conteudo">
+                Crie um código a ser executado pelo terminal que aceite os
+                seguintes argumentos:
+              </p>
+              <ul class="a conteudo">
+                <li class="py-1">
+                  node meu_cli.js exibir meu_arquivo_teste.txt<br />
+                  O conteúdo do arquivo deve aparecer integralmente na tela.
+                </li>
+                <li class="py-1">
+                  node meu_cli.js criar meu_arquivo_teste.txt "Meu texto a ser
+                  gravado no arquivo"<br />
+                  Deve criar um arquivo com o nome passado no segundo argumento
+                  (meu_arquivo_teste.txt) e contendo o texto que foi passado
+                  como terceiro argumento ("Meu texto a ser gravado no
+                  arquivo").
+                </li>
+                <li class="py-1">
+                  node meu_cli.js alterar meu_arquivo_teste.txt "Mudei o texto
+                  aqui"<br />
+                  Deve alterar o arquivo de nome passado no segundo argumento
+                  (meu_arquivo_teste.txt) para que seu conteúdo seja o texto que
+                  foi passado como terceiro argumento ("Mudei o texto aqui").
+                </li>
+                <li class="py-1">
+                  node meu_cli.js remover meu_arquivo_teste.txt<br />
+                  Deve deletar o arquivo de nome passado no segundo argumento
+                  (meu_arquivo_teste.txt).
+                </li>
+                <li class="py-1">
+                  node meu_cli.js mover meu_arquivo_teste.txt
+                  C:/pasta_destino/meu_arquivo_teste.txt<br />
+                  Deve mover o arquivo de nome passado no segundo argumento
+                  (meu_arquivo_teste.txt) para o caminho passado no terceiro
+                  argumento (C:/pasta_destino/meu_arquivo_teste.txt).
+                </li>
+                <li class="py-1">
+                  node meu_cli.js OU node meu_cli.js help<br />
+                  Deve exibir a lista de comandos possíveis e uma descrição de
+                  como usá-los.
+                </li>
+              </ul>
+              <p class="conteudo">
+                Você deve validar todos os parâmetros, de forma que ao passar
+                parâmetros inválidos, seu programa deverá exibir uma mensagem de
+                erro e exibir a lista de comandos e suas instruções de uso.
+              </p>
+              <p class="conteudo">
+                Uma outra ideia é fazer o programa renomear todos os arquivos de
+                uma pasta conforme um dado critério.<br />
+                Ou ainda, agrupar os arquivos em diferentes pastas conforme sua
+                extensão.
+              </p>
+              <li id="projeto2">
+                Backend para um
+                <a class="conteudo" href="3.html#projeto3">frontend</a>
+              </li>
+              <p class="conteudo">
+                Este projeto objetiva criar um backend que interaja com o
+                <a class="conteudo" href="3.html#projeto3"
+                  >frontend (projeto 3) criado no módulo #3</a
+                >, substituindo o
+                <a class="conteudo" href="https://crudcrud.com">CrudCrud</a>.
+              </p>
+              <p class="conteudo">
+                Crie um servidor web utilizando Express.JS, com um banco de
+                dados MySQL ou MongoDB (sugiro que faça os dois, um de cada vez)
+                contendo as seguintes rotas:
+              </p>
+              <ul class="a conteudo">
+                <li class="py-2">
+                  GET /pessoas<br />
+                  Deve retornar um JSON contendo todas as pessoas cadastradas.
+                </li>
+                <li class="py-2">
+                  POST /pessoas<br />
+                  Deve receber um JSON contendo os dados de uma pessoa a ser
+                  cadastrada.
+                </li>
+                <li class="py-2">
+                  PUT /pessoas/{ID}<br />
+                  Deve receber um JSON contendo os dados de uma pessoa e alterar
+                  os dados da pessoa com o ID passado na rota (exemplo:
+                  /pessoas/123 altera a pessoa ID 123)
+                </li>
+                <li class="py-2">
+                  DELETE /pessoas/{ID}<br />
+                  A pessoa do ID passado deve ser removida do banco de dados.
+                </li>
+              </ul>
+              <p class="conteudo">
+                Para utilizar a sua API, coloque o endereço IP do seu backend no
+                frontend, em vez do endereço do
+                <a class="conteudo" href="https://crudcrud.com">CrudCrud</a
+                >.<br />
+                Você pode utilizar tanto o próprio frontend quanto um API Client
+                (como o Thunder Client) para desenvolver e testar sua aplicação
+                backend.<br />
+                Após finalizá-la, garanta que o frontend esteja funcionando sem
+                problemas com o backend criado.
+              </p>
+              <li id="projeto3">Testar com o Supertest</li>
+              <p class="conteudo">
+                Agora que finalizamos a API, você deve criar testes
+                automatizados para ela usando o Supertest.
+              </p>
+              <p class="conteudo">
+                O Supertest é uma ferramenta que simula as interações que o
+                frontend faria com o backend.
+              </p>
+              <p class="conteudo">
+                Faça um código que envie requisições HTTP para a aplicação
+                backend que você construiu no projeto anterior. Ela deve testar
+                todas as rotas, simulando um uso real da aplicação.
+              </p>
+              <p class="conteudo">
+                Exemplos de casos de testes:
+                <ul>
+                  <li>verificar que a listagem de pessoas está vazia;</li>
+                  <li>inserir uma nova pessoa e conferir se foi adicionado na rota de listagem;</li>
+                  <li>editar/deletar e conferir;</li>
+                  <li>editar/deletar um usuário que não existe;</li>
+                  <li>fazer requisições inválidas que retornem erros (caso sua API tenha alguma validação).</li>
+                </ul>
+              </p>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="estudo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sugestões de recursos para estudo</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://github.com/ericdouglas/traduz-ai/blob/master/nodejs/001-guia-para-iniciantes-absolutos-em-nodejs.md"
+                  >Guia Para Absolutos Iniciantes em Node.js</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://github.com/ericdouglas/traduz-ai/blob/master/nodejs/002-simples-guia-nodejs-jade-express-mongodb.md"
+                  >Simples Guia Passo-a-Passo Para Desenvolvedores Front-End
+                  Iniciarem Com Node.js, Express, Jade e MongoDB</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://community.revelo.com.br/como-conectar-o-node-js-com-o-mysql/"
+                  >Como conectar o Node.js com o MySQL</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/playlist?list=PLHlHvK2lnJndvvycjBqQAbgEDqXxKLoqn"
+                  >Curso: Criando APIs com NodeJs grátis</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://blog.reativa.dev/apostila-nodejs-completa/"
+                  >Apostila de NodeJS 100% Gratuita</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/playlist?list=PLnex8IkmReXwCyR-cGkyy8tCVAW7fGZow"
+                  >Curso de Node JS</a
+                >.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="aprofundamento">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Aprofundamento</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>
+                Adicionar novas funcionalidades ao primeiro projeto, como:
+                <ul>
+                  <li>
+                    Agrupar os arquivos de um diretório em pastas distintas,
+                    conforme a extensão dos arquivos.
+                  </li>
+                  <li>
+                    Agrupar os arquivos em pastas distintas, conforme o tamanho
+                    dos arquivos. (exemplo, arquivos com menos de 1gb são
+                    movidos para a pasta 1gb-, enquanto arquivos maiores são
+                    movidos para a pasta 1gb+)
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Melhorar o segundo projeto, adicionando novas funcionalidades
+                como essas descritas no
+                <a class="conteudo" href="3.html#aprofundamento"
+                  >segundo item de aprofundamento do frontend.</a
+                >
+              </li>
+              <li>
+                Refaça o
+                <a class="conteudo" href="#projeto2">projeto 2</a> utilizando
+                outra linguagem como C#, Java, PHP, Python, Ruby ou Go.<br />
+                Uma boa opção é utilizar um framework web, como: ASP.NET Core,
+                Spring Boot, Laravel, Django, Ruby on Rails ou Gin.
+              </li>
+              <li>
+                Faça um sistema de web scrapping.<br />
+                Web scrapping é uma forma de extrair dados de websites de forma
+                automatizada.<br />
+                Para isso, você utiliza o Node.JS com uma biblioteca como o
+                <a class="conteudo" href="https://pptr.dev/">Puppeteer.</a> Com
+                ele, você é capaz de controlar um navegador de forma
+                programática.<br />
+                Crie um código que navegue por um site, extraia dados das
+                páginas e armazene-os em um banco de dados ou em um arquivo.<br />
+                Uma ideia é pegar os dados de produtos em promoção em um
+                e-commerce.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar navbar-text-white ms-2" href="#">
+          Condições e suporte
+        </a>
+      </div>
+    </nav>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

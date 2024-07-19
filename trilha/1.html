@@ -1,0 +1,707 @@
+<!-- Introdução sobre html e css
+ -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML e CSS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/Imagens/LogoIco.ico">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          id="border-laranja"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon navbar-icon-laranja"></span>
+        </button>
+        <a class="navbar-brand" href="/index.html">
+          <img
+            src="ImagensInicial/Logo-resumida.png"
+            alt="Irmãos Dev"
+            width="40"
+            height="32"
+          />
+        </a>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarTogglerDemo03"
+          style="font-family: 'DM Sans'"
+        >
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-around"
+          >
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="index.html"
+                ><strong>TODOS OS CAMINHOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="#"
+                ><strong>APOIE-NOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link so-letra-preta"
+                href="https://www.youtube.com/@IrmaosDev"
+                ><strong>YOUTUBE</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="#"
+                ><strong>SOBRE</strong></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid laranja center py-3">
+      <div class="container text-center bg-light rounded-5">
+        <a href="/index.html">
+          <img
+            src="Imagens/Logo.png"
+            class="img-fluid center mt-4 pt-2"
+            alt="Logo"
+            width="280px"
+        /></a>
+        <div class="row mt-5 py-4 me-2">
+          <div class="col-8">
+            <h1 class="display-1 text-center letra-preta mt-4">
+              <strong>HTML e CSS</strong>
+            </h1>
+          </div>
+          <div class="col-2 my-auto">
+            <img
+              src="Imagens/Html5.svg"
+              class="img-fluid center pt-2"
+              alt="HTML"
+              style="width: 150px"
+            />
+          </div>
+          <div class="col-2 my-auto">
+            <img
+              src="Imagens/Css3.svg"
+              class="img-fluid center pt-2"
+              alt="CSS"
+              style="width: 150px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container center">
+      <div class="row">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sumário</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>
+                <a class="conteudo" href="#introducao">Introdução</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#profissional"
+                  >Relevância profissional</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#pre-requisitos">Pré-requisitos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#tempo">Meta de tempo de estudos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#projetos">Projetos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#estudo"
+                  >Sugestão de recursos para estudo</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#aprofundamento">Aprofundamento</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="introducao">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Introdução</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Bootstrap é um framework web com código-fonte aberto desenvolvido
+              pelo Twitter para desenvolvimento de interfaces de aplicações web
+              usando HTML, CSS e JavaScript.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Um framework é um facilitador no desenvolvimento de uma aplicação,
+              poupando tempo e custos através de uma série de componentes
+              predefinidas, como botões, ícones, tipografias, formulários e
+              layouts responsivos, mas mantendo visual agradável e amigável.</p>
+              <p class="conteudo py-3 px-2">
+              Este projeto visa dar os primeiros passos na construção de
+              interfaces web e na utilização da documentação de uma ferramenta
+              de desenvolvimento.</p>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="profissional">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Relevância profissional</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Todas as aplicações web utilizam HTML e CSS. E a maior partes
+              delas utilizam algum tipo de framework CSS.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Dentre as opções listadas no
+              <a
+                class="conteudo"
+                href="https://www.brasilcode.com.br/frameworks-css/"
+              >
+                artigo sobre frameworks CSS</a
+              >, foi verificado que o Bootstrap é o framework com maior número
+              de aparições nas divulgações de
+              <a
+                class="conteudo"
+                href="https://github.com/frontendbr/vagas/issues?q=is%3Aissue+bootstrap+"
+                >vagas para desenvolvedores front-end</a
+              >.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Além disso, os diversos frameworks possuem funcionamento
+              semelhantes, portanto ao aprender Bootstrap, aprender outro
+              framework se torna bem mais fácil.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Finalmente, é bastante comum no contexto profissional que o
+              desenvolvedor receba um arquivo, imagem ou mesmo apenas um esboço
+              contendo um esquema de como o site deve ser. No projeto desse
+              módulo, você receberá um arquivo PDF com a imagem do site a ser
+              desenvolvido por você.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Seja criterioso com o resultado.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="pre-requisitos">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Pré-requisitos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Nenhum.
+            </p>
+            <p class="conteudo py-3 px-2">
+              *Esse projeto é pré-requisito dos projetos #3 e #5.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="tempo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Meta de tempo de estudos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Invista entre 15 a 25 horas estudando os conteúdos de estudo.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Lembre-se de reproduzir na sua máquina o que está sendo mostrado
+              nos textos/vídeos de estudo!
+            </p>
+            <p class="conteudo py-3 px-2">
+              Desenvolva o projeto em até 7 horas, sempre utilizando a
+              documentação do Bootstrap como apoio.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="projetos">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Projeto</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Crie uma página utilizando HTML e Bootstrap similar a esse
+              <a
+                class="conteudo"
+                href="https://drive.google.com/file/d/1Du3zTmmHEcptl6PucdkKfoDCIWhTgH2P/view"
+                >PDF</a
+              >.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Garanta que a página também esteja bem estrutura para versão
+              mobile, como neste
+              <a
+                class="conteudo"
+                href="https://drive.google.com/file/d/1ownTEE9K7MUk_lgScWGo5RlI3ZRNNW-S/view"
+                >PDF</a
+              >.
+            </p>
+            <p class="conteudo py-3 px-2">
+              *Lembre-se: a versão mobile é em geral o mais acessado.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="estudo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sugestões de recursos para estudo</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://gustavoguanabara.github.io/html-css/"
+                  >Curso de HTML5 e CSS3</a
+                >;
+              </li>
+              <li>
+                <a class="conteudo" href="https://flexboxfroggy.com/"
+                  >Flexbox Froggy</a
+                >;
+              </li>
+              <li>
+                <a class="conteudo" href="https://cssgridgarden.com/"
+                  >Grid Garden</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.homehost.com.br/blog/tutoriais/o-que-e-html/"
+                  >O que é HTML? Entenda de forma descomplicada</a
+                >: Esse artigo fala de forma superficial, porém muito
+                informativa, do que é HTML, seu objetivo,sua evolução e um pouco
+                do seu funcionamento.;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.clubedainformatica.com.br/download/unesp.pdf"
+                  >Apostila de HTML e CSS</a
+                >: Esta apostila contém uma explicação passo a passo de como
+                utilizar o HTML e o CSS para desenvolver diversas
+                funcionalidades comuns em páginas web. Neste material, você
+                encontrará 8 exercícios. Apesar de ser uma apostila já antiga,
+                seu conteúdo continua válido;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/playlist?list=PLoEERTEUl6RoYRhypHDac0a6FjMnOqk0s"
+                  >HTML e CSS básico</a
+                >: Playlist;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://stream2.docero.com.br/pdf_dummy/eyJpZCI6IjQyNzk3NzQiLCJuYW1lIjoiRlVOREFNRU5UT1MgRE8gREVTRU5WT0xWSU1FTlRPIFdFQiIsImV4dGVuc2lvbiI6InBkZiIsImNoZWNrc3VtX2lkIjoiMTIzMzMyNDQifQ"
+                  >Fundamentos do Desenvolvimento Web</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.seduc.ce.gov.br/wp-content/uploadss/37/2012/06/informatica_html_css.pdf"
+                  >HTML e CSS</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://getbootstrap.com/docs/5.1/getting-started/introduction/"
+                  >Bootstrap Docs</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://profandreagarcia.files.wordpress.com/2019/11/apostila-framework-twitter-bootstrap-3.pdf"
+                  >Framework Twitter Bootstrap</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/playlist?list=PLoEERTEUl6RqFB4ypL0p21L6m7xw9uh3d"
+                  >Bootstrap Básico</a
+                >;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/watch?v=jEf_zX4fKqU"
+                  >Aprenda Tudo Sobre Media Query - como deixar um site
+                  responsivo</a
+                >;
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="aprofundamento">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Aprofundamento</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>
+                Realize o desafio proposto neste vídeo:
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/watch?v=YPYwND5WGxw"
+                  >Analisando o HTML e CSS dps estagiários</a
+                >;
+              </li>
+              <li>
+                Leia sobre padrões comuns web.
+                <br /><a class="conteudo" href="https://web.dev/patterns"
+                  >Web.dev Patterns</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://www.wix.com/blog/website-layouts"
+                  >10 best website layout ideas to get you started
+                </a>
+                <br /><a
+                  class="conteudo"
+                  href="https://www.toptal.com/designers/ui/web-layout-best-practices"
+                  >Web Layout Best Practices: 12 Timeless UI Patterns Analyzed
+                </a>
+              </li>
+              <li>Refaça o projeto utilizando apenas CSS;</li>
+              <li>
+                Estude Sass, Scss e PostCSS e refaça o projeto utilizando alguma
+                das tecnologias;
+              </li>
+              <li>Refaça o projeto utilizando Tailwind;</li>
+              <li>Busque conteúdo avançado de CSS e suas melhores práticas, alguns links úteis:
+                <br /><a class="conteudo" href="https://dev.to/swirl/24-best-resources-for-web-developers-html-css-javascript--2hog"
+                  >24 Best Resources 🎨 For Web Developers 💻 [HTML + CSS + JavaScript]</a
+                >
+                <br /><a class="conteudo" href="https://github.com/awesome-css-group/awesome-css"
+                  >Awesome CSS</a
+                >
+                <br /><a class="conteudo" href="https://github.com/uhub/awesome-csss"
+                  >Awesome CSS 2</a
+                >
+                <br /><a class="conteudo" href="https://webdesignledger.com/html-css-free-codepen/"
+                  >30 Open Source HTML/CSS Projects From CodePen</a
+                >
+                <br /><a class="conteudo" href="https://roadmap.sh/design-system"
+                  >Roadmap: Design System</a
+                >
+              </li>
+              <li>Aprenda a utilizar componentes externos de CSS, como:
+                <br /><a class="conteudo" href="https://ianlunn.github.io/Hover/"
+                  >Hover.css</a
+                >
+                <br /><a class="conteudo" href="https://uiverse.io/"
+                  >Uiverse.io</a
+                >
+              </li>
+              <li>
+                Estude como funciona alguns dos sites à seguir e replique-os
+                utilizando HTML e CSS:
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-cards/cards-responsive.mp4"
+                  >Cards Responsive</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-cards/cool-bootstrap-cards-design.mp4"
+                  >Cool Cards Design</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-cards/bootstrap-profile-cards-2019.mp4"
+                  >Profile Cards
+                </a>
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-cards/modern-bootstrap-4-cards.jpg"
+                  >Modern Cards</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-grid-examples/bootstrap-masonry.jpg"
+                  >Masonry</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-grid-examples/bootstrap-4-portfolio-item-details-page.png"
+                  >Portfolio Item Details Page</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-grid-examples/animate-a-bootstrap-grid-js-css.jpg"
+                  >Grid with Filters</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-grid-examples/bootstrap-grid-gallery.jpg"
+                  >Grid Gallery</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-modal-windows/modal-14.png"
+                  >Modal Windows</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-modal-windows/bootstrap-modal-2021.mp4"
+                  >Modal Windows</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-menus/bootstrap-5-sidebar-menu-with-toggle-button.mp4"
+                  >Sidebar Menu With Toggle Button</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-menus/website-menu-14.png"
+                  >Website Menu</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-menus/website-menu-07.mp4"
+                  >Website Menu</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-menus/menu-effect.mp4"
+                  >Menu Effect</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-menus/menu-with-awesome-hover.mp4"
+                  >Menu With Awesome Hover</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-payment-forms/bootstrap-5-ecommerce-page-with-payment-method.jpg"
+                  >Ecommerce Page With Payment Method</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-payment-forms/bootstrap-5-vehicle-features-with-payment-details.jpg"
+                  >Vehicle Features With Payment Details</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-payment-forms/bootstrap-4-credit-card-payment-form.png"
+                  >Credit Card Payment Form</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-chats/bootstrap-snippet-white-chat.png"
+                  >Snippet White Chat</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-chats/bootstrap-card-chat-list.png"
+                  >Card Chat List</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-login-forms/2021-login-form-15.jpg"
+                  >Login Form</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-login-forms/2021-login-form-19.png"
+                  >Login Form</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-login-forms/2021-login-form-20.jpg"
+                  >Login Form</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-paginations/bootstrap-4-awesome-round-pagination.png"
+                  >Awesome Round Pagination</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-order-detail-and-tracking/bootstrap-4-tracking-order-purchase-reciept-with-progress.png"
+                  >Tracking Order Purchase Reciept With Progress</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-order-detail-and-tracking/bootstrap-4-track-your-order-with-progress-bar-modal.png"
+                  >Track Your Order With Progress Bar Modal</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-order-detail-and-tracking/bootstrap-4-order-details-with-tracking-button.png"
+                  >Order Details With Tracking Button</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-notifications/profile-notification-settings.png"
+                  >Profile Notification Settings</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-notifications/bootstrap-4-notification-with-navbar-dropdown.png"
+                  >Notification With Navbar Dropdown</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-testimonials/bootstrap-4-owl-carousel-for-user-testimonials.jpg"
+                  >Owl Carousel For User Testimonials</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-testimonials/bootstrap-5-vertical-collapsible-testimonials.png"
+                  >Vertical Collapsible Testimonials</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-timelines/bootstrap-timeline-steps.png"
+                  >Timeline Steps</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-timelines/bootstrap-timeline-events-area.png"
+                  >Timeline Events Area</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-timelines/bootstrap-dark-timeline.png"
+                  >Dark Timeline</a
+                >
+                <br /><a
+                  class="conteudo"
+                  href="https://freefrontend.com/assets/img/bootstrap-timelines/bs4-event-timeline.png"
+                  >Event Timeline</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar navbar-text-white ms-2" href="#">
+          Condições e suporte
+        </a>
+      </div>
+    </nav>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

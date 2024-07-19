@@ -1,0 +1,2827 @@
+<!-- todo: 
+ - escolher uma linguagem e enunciado de testes unitários
+ - sobre procurar emprego 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sistema Completo</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/Imagens/LogoIco.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          id="border-laranja"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon navbar-icon-laranja"></span>
+        </button>
+        <a class="navbar-brand" href="/index.html">
+          <img
+            src="ImagensInicial/Logo-resumida.png"
+            alt="Irmãos Dev"
+            width="40"
+            height="32"
+          />
+        </a>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarTogglerDemo03"
+          style="font-family: 'DM Sans'"
+        >
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-around"
+          >
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="index.html"
+                ><strong>TODOS OS CAMINHOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="#"
+                ><strong>APOIE-NOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link so-letra-preta"
+                href="https://www.youtube.com/@IrmaosDev"
+                ><strong>YOUTUBE</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="#"
+                ><strong>SOBRE</strong></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid laranja center py-3">
+      <div class="container text-center bg-branco rounded-5">
+        <a href="/index.html">
+          <img
+            src="Imagens/Logo.png"
+            class="img-fluid center mt-4 pt-2"
+            alt="Logo"
+            width="280px"
+        /></a>
+        <div class="row mt-5 py-4 me-2">
+          <div class="col-8 d-flex justify-content-center">
+            <h1 class="display-1 text-center letra-preta mt-4 w-50">
+              Sistema Completo
+            </h1>
+          </div>
+          <div class="col-4 my-auto">
+            <img
+              src="Imagens/boss.png"
+              class="img-fluid center pt-2"
+              alt="Like a Boss"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container center">
+      <div class="row">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sumário </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2 ps-4.5">
+              <li>
+                <a class="conteudo" href="#introducao">Introdução</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#pre-requisitos">Pré-requisitos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#tempo">Meta de tempo de estudos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#estudo"
+                  >Sugestão de recursos para estudo</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#perfil1">MVP</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#perfil2">Balanceado</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#perfil3">Expert</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#funcionalidades"
+                  >Lista de Funcionalidades</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="introducao">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Introdução </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Aqui tem 3 estratégias diferentes para sua evolução e seu
+              portfólio. Mas o ponto é: tenha um projeto principal forte, que se
+              destaca.<br />
+              Prefira ir pelo caminho Balanceado, mas se tiver com muita pressa,
+              vá pelo MVP.<br />
+              O que proponho aqui é realmente demorado. O caminho balanceado
+              deve demorar alguns anos. Mas não significa que você precisa
+              dominar tudo completamente. Eu mesmo não possuo todas as
+              habilidades do perfil balanceado.<br />
+              O mercado de desenvolvimento é difícil para iniciantes.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Marque na última seção todas as funcionalidades que você se sente
+              confiante em implementar.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Use a última seção como inspiração de coisas a colocar na sua
+              aplicação.<br />
+              Busque crescer sua aplicação colocando coisas novas, melhore as
+              existentes apenas após já ter muitas funcionalidades feitas.<br />
+            </p>
+
+            <div class="row">
+              <div
+                class="col-6 d-flex align-content-center flex-wrap my-2 justify-content-center"
+              >
+                <p class="conteudo py-2 px-2 mx-5">
+                  Alternativamente, também recomendamos outras comunidades e
+                  metodologias, como a Dev Hatt, que proporciona uma experiência
+                  real de desenvolvimento de software, conectando você com
+                  projetos destinados à produção.
+                </p>
+              </div>
+              <div
+                class="col-6 d-flex align-content-center flex-wrap my-2 justify-content-center"
+              >
+                <div>
+                  <a target="_blank" href="https://github.com/devhatt"
+                    ><img
+                      src="Imagens/dev_hatt.png"
+                      class="img-fluid center"
+                      alt="Dev Hatt"
+                      width="300"
+                  /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="pre-requisitos">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Pré-requisitos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Todos os módulos anteriores são pré-requisitos deste módulo.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="tempo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Meta de tempo de estudos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="a conteudo py-3 pe-2">
+              <li>TODO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="estudo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sugestão de recursos para estudo</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="a conteudo py-3 pe-2">
+              <li>TODO</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="perfil1">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>MVP - Mínimo Produto Viável</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo pt-3 px-2">
+              Esse projeto é para quem quer adquirir as habilidades de
+              desenvolvimento o mais rápido possível.<br>
+              Grave sua jornada em vídeos ou textos para praticar a escrita
+                técnica, mesmo que não vá publicar.
+            </p>
+            <ol class="conteudo py-3 pe-2 ps-4.5">
+              <li id="projeto1">Segunda linguagem</li>
+                <p class="conteudo">
+                  Usar NodeJS para o backend é uma opção. Mas por que não aprender
+                  uma segunda? Melhora seu currículo. E o que você vai aprender
+                  com ela é um conhecimento que você vai carregar caso volte para
+                  o NodeJS no futuro.<br />
+                  Escolha uma das linguagens a seguir: C#, Java, PHP ou Python.
+                </p>
+
+                <p class="conteudo">
+                  Tá em dúvida? Procure saber quais outras atividades essas
+                  linguagens são boas além de desenvolvimento web e veja com o que
+                  você se identifica mais. Por exemplo: C# é usado para jogos,
+                  Java é usado para desenvolver aplicativos Android, PHP é
+                  realmente focada em web e Python é usado para ciência de dados.
+                </p>
+                <p class="conteudo">
+                  Durante o processo de familiarização com a linguagem escolhida,
+                  você deve implementar testes unitários para os códigos que está
+                  escrevendo. <br />
+                  Escolha uma ferramenta de teste unitário e utilize os projetos
+                  de
+                  <a class="conteudo" href="2.html#aprofundamento3"
+                    >aprofundamento 2 e 3</a
+                  >
+                  do terceiro módulo como conteúdo para o estudo da nova
+                  linguagem.
+                </p>
+              <li id="projeto2">Framework Backend</li>
+                <p class="conteudo">
+                  Aprenda o framework indicado: .NET para C#, Spring Boot para
+                  Java, Laravel para PHP e Django para Python.<br />
+                  Todos eles são altamentes produtivos e possuem a maior
+                  quantidade de vagas de trabalho.<br />
+                  Todos eles possuem alguma desvantagem, mas apenas escolha um e
+                  vá até o fim.
+                </p>
+                <ul class="a conteudo pb-3 pe-2 ps-4.5">
+                  <li>
+                    Baixe o repositório correspondente ao seu framework em
+                    <a
+                      class="conteudo"
+                      href="https://codebase.show/projects/realworld"
+                      >CodebaseShow</a
+                    >
+                    e se ambiente minimamente ao código;
+                  </li>
+                  <li>
+                    Entre na documentação oficial do framework e leia o máximo
+                    possível;
+                  </li>
+                  <li>Reproduza alguns dos exemplos mostrados;</li>
+                  <li>Reproduza algum tutorial;</li>
+                  <li>
+                    Estude o código do próprio framework.<br />
+                    Escolha algum conceito apresentado pela documentação (ex: o
+                    ciclo de vida de uma requisição) e procure no código do
+                    framework onde e como aquele comportamento foi programado.
+                  </li>
+                </ul>
+              <li id="projeto3">Framework Frontend</li>
+                <p class="conteudo">
+                  Aprenda ReactJS. Essa tecnologia realmente domina o mercado.<br>
+                  Apesar de outros frameworks também possuirem vagas e terem seus pontos positivos
+                  (ou simplesmente serem melhores que React), você tem mais chances com ele.<br>
+                  A abordagem de estudos deve ser basicamente a mesma, exceto pela
+                  recomendação em aprender Typescript.<br>
+                  Typescript basicamente é Javascript com algumas funcionalidades a mais.<br>
+                  Ela está presente na maior parte dos projetos e depois de aprendê-lo
+                  com React, não será difícil usar somente Javascript se necessário.
+                </p>
+                <ul class="a conteudo pb-3 pe-2 ps-4.5">
+                  <li>
+                    Aprenda Typescript;
+                  </li>
+                  <li>
+                    Baixe um repositório ReactJS com Typescript em
+                    <a
+                      class="conteudo"
+                      href="https://codebase.show/projects/realworld"
+                      >CodebaseShow</a
+                    >
+                    e se ambiente minimamente ao código;
+                  </li>
+                  <li>
+                    Entre na documentação oficial do framework e leia o máximo
+                    possível;
+                  </li>
+                  <li>Reproduza alguns dos exemplos mostrados;</li>
+                  <li>Reproduza algum tutorial.</li>
+                </ul>
+              <li id="projeto4">
+                Adicionar novas funcionalidades a um software já existente:
+              </li>
+              <p class="conteudo">
+                É aqui o ápice da Trilha de Estudos.<br>
+                Se você ainda não grava vídeos ou escreve sobre os seus estudos, fortemente
+                recomendo que comece agora. Não apenas pessoas que podem te contratar saberão sobre você,
+                mas também irá conseguir experiência para falar sobre assuntos técnicos.<br>
+                Quase como se você estivesse se preparando para uma entrevista.<br>
+                Em uma entrevista vão te fazer perguntas difíceis.
+                Treine com pessoas reais nas redes sociais.<br>
+                Dê seu melhor criando um software que vá impressionar um recrutador.
+
+              </p>
+              <ul>
+                <li>
+                  Baixar repositórios em
+                  <a
+                    class="conteudo"
+                    href="https://codebase.show/projects/realworld"
+                    >CodebaseShow</a
+                  >;
+                </li>
+                <li>frontend em ReactJS;</li>
+                <li>
+                  backend em um framework opinativo, como: .NET, Laravel,
+                  Django, Spring Boot;
+                </li>
+                <li>melhorar a responsividade;</li>
+                <li>
+                  testes automatizados (se o projeto não tiver, começar do
+                  zero);
+                </li>
+                <li>login social;</li>
+                <li>filtros, ordenação, paginação;</li>
+                <li>relatórios;</li>
+                <li>variáveis de ambiente e docker;</li>
+                <li>README detalhado e demo online;</li>
+                <li>níveis de acesso e preferências do administrador;</li>
+                <li>websockets - comunicação de duas vias;</li>
+                <li>notificações integradas e/ou por emails;</li>
+                <li>versão paga com período de testes.</li>
+              </ul>
+              <li>
+                Pratique responder às perguntas comuns de entrevistas de
+                emprego;
+              </li>
+              <li>Anuncie que está buscando um emprego e candidate-se;</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="perfil2">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong> Balanceado </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo pt-3 px-2">
+              Esse projeto é para quem quer adquirir as habilidades forma balanceada, sabendo um
+              pouco de tudo.
+              Grave sua jornada em vídeos ou textos para praticar a escrita técnica, mesmo que não vá publicar.
+            </p>
+            <ul class="a conteudo pb-3 pe-2 ps-4.5">
+              <li>
+                Entendimento básico do que faz e pra que serve cada uma das
+                tecnologias relacionadas com WEB;
+              </li>
+              <li>Mais importante que aprender ferramentas, é estudar os fundamentos:</li>
+              <ul>
+                <li><a class="conteudo" href="0.html#ciencia-da-computacao"
+                  >Curso de Ciência da Computação na Universidade Brasileira Livre</a
+                >;</li>
+                <li>algoritmos e estruturas de dados;</li>
+                <li>organização e arquitetura de computadores;</li>
+                <li>sistemas operacionais;</li>
+                <li>redes, internet e navegadores;</li>
+                <li>compiladores e linguagens;</li>
+                <li>ferramentas de desenvolvimento;</li>
+                <li>bancos de dados;</li>
+                <li>protocolos.</li>
+              </ul>
+              Depois de estudar os fundamentos, aprendar qualquer ferramenta ou tecnologia vai ser fácil.
+              <li>Implementar o software <a
+                class="conteudo"
+                href="https://codebase.show/projects/realworld"
+                >Conduit (Real World)</a
+              > do zero:</li>
+              <ul>
+                <li>no máximo um framework leve como Slim ou Flask no backend ou nenhum framework;</li>
+                <li>refaça o projeto agora usando um framework opinativo, como os <a
+                  class="conteudo"
+                  href="#projeto2"
+                  >citados acima</a
+                >;</li>
+                <li>todas as funcionalidades do MVP e mais algumas que escolher na <a
+                  class="conteudo"
+                  href="#funcionalidades"
+                  >última seção;</a
+                ></li>
+              </ul>
+              <li>
+                Pratique responder às perguntas comuns de entrevistas de
+                emprego;
+              </li>
+              <li>Anuncie que está buscando um emprego e candidate-se;</li>
+              <li>
+                Implementar um Visualizador de Algoritmos e Estruturas de Dados;
+              </li>
+              <li>
+                Criar um Web Scrapper (dá pra colocar bastante complexidade);
+              </li>
+              <li>
+                Datatables, date/range picker, telephone picker, fullcalendar;
+              </li>
+              <li>
+                Escolher um software Open Source e adicionar novas
+                funcionalidades, mesmo que não vá fazer um pull request;
+              </li>
+              <li>
+                Desenvolva plugins de softwares como: Wordpress, Magento, Jira,
+                Odoo, Zoho, Salesforce;
+              </li>
+              <li>Faça algum sistema com mais pessoas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="perfil3">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong> Expert </strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Você quer ser um expert, implementar e saber profundamente de
+              tudo.<br>
+              A pergunta que fica é: por que?<br>
+            </p>
+            <ul class="a conteudo pb-3 pe-2 ps-4.5">
+              <li>Fazer e aprimorar tudo do perfil balanceado;</li>
+              <li>
+                Entrar na programação competitiva;
+              </li>
+              <li>
+                Construir softwares usando:
+              </li>
+              <ul>
+                <li>
+                  no frontend: ReactJS, Angular, VueJS, Svelte, HTMX, AlpineJS,
+                  jQuery, React Native, ElectronJS, Flutter, Swift, Kotlin;
+                </li>
+                <li>mais 30 outros frameworks frontend;</li>
+                <li>
+                  no backend: C#, Java, Go, Python, PHP, Ruby, Rust, Node.JS,
+                  Elixir, Swift, Kotlin;
+                </li>
+                <li>
+                  implementar utilizando frameworks lightweight e opinionated;
+                </li>
+                <li>NextJS, SvelteKit e Remix;</li>
+              </ul>
+              <li>
+                Domínio da AWS, Azure, GCP, DigitalOcean, Firebase, Supabase;
+              </li>
+              <li>
+                Domínio de ferramentas e técnicas de infraestrutura, segurança,
+                monitoramento e operações;
+              </li>
+              <li>
+                Construir plugins de softwares de todas as siglas como CRM, ERP,
+                CMS;
+              </li>
+              <li>
+                Construir: linguagem de programação, compilador, runtime,
+                virtual machine, kernel, shell, Git, http server e client, SQLite,
+                interface gráfica, navegador, IDE, jogo, ecommerce, ERP, CRM, SaaS,
+                integração com a SEFAZ (gerar e baixar);
+              </li>
+              <li>
+                Explorar outras linguagens: C, C++, Lua, Zig, Haskell, Erlang;
+              </li>
+              <li>
+                Mais linguagens: OCaml, Odin, Clojure, Lisp, Matlab, Visual Basic, Delphi, Assembly;
+              </li>
+              <li>
+                Isso tudo vai demorar uns 80 anos pra fazer, mas vale a pena.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="funcionalidades">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Lista de funcionalidades</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo pt-4 px-3">
+              Utilize essa lista de funcionalidades como uma fonte de ideias e
+              inspiração de funcionalidades a serem desenvolvidas para seu
+              portfólio. Busque crescer a sua aplicação com novas
+              funcionalidades em vez de novas entidades e cadastros.
+            </p>
+
+            <p class="conteudo pt-4 px-3">
+              Essa listagem também é útil para avaliar a maturidade como
+              desenvolvedor que você possui. Marque os checkboxes de
+              funcionalidades que você já implementou ou que se sente confiante
+              de desenvolver.
+            </p>
+
+            <p class="conteudo pt-4 px-3">
+              De forma alguma você precisa dominar todas essas funcionalidades
+              para ser um profissional viável ao mercado. Eu mesmo, com vários
+              anos de experiência, não marco todas elas.
+            </p>
+
+            <p class="conteudo pt-4 px-3">
+              Um estagiário marca em torno de 7 funcionalidades.<br />
+              Um junior marca em torno de 15 funcionalidades.<br />
+              Um pleno marca em torno de 30 funcionalidades.<br />
+              Um senior marca mais do que 45 funcionalidades.
+            </p>
+
+            <p class="conteudo pt-4 px-3">
+              <span id="qnt_func">0</span>/57 funcionalidades selecionadas
+            </p>
+
+            <div class="accordion conteudo py-3 pe-2 ps-4.5 azul">
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse1"
+                    aria-expanded="false"
+                    aria-controls="collapse1"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault1"
+                      />
+                      <label class="form-check-label">
+                        CRUD de ao menos 5 entidades (e que suas lógicas se
+                        relacionem)
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse1"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Criar CRUDs geralmente é uma tarefa repetitiva. E fazer
+                    muitos deles em um só projeto te trará pouco conhecimento
+                    diverso. É possível construir uma aplicação interessante que
+                    possua tão poucas entidades quanto apenas cinco e que por
+                    consequência, você demorará menos tempo para executá-la.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2"
+                    aria-expanded="true"
+                    aria-controls="collapse2"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault2"
+                      />
+                      <label class="form-check-label">
+                        Banco de dados SQL
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse2"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Seu projeto deve ter um banco de dados. Se você não consegue
+                    trabalhar com um banco de dados, provavelmente não será
+                    visto nem como um "Júnior". Praticamente todos os projetos
+                    profissionais possuem algum tipo de banco de dados.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse3"
+                    aria-expanded="true"
+                    aria-controls="collapse3"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault3"
+                      />
+                      <label class="form-check-label"> Autenticação </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse3"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Ter a funcionalidade de Cadastro e Login é praticamente
+                    indispensável para qualquer aplicação. Seu sistema deve
+                    garantir que pessoas que não possuem cadastro não façam
+                    alterações em quaisquers dados que o sistema possua.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4"
+                    aria-expanded="true"
+                    aria-controls="collapse4"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault4"
+                      />
+                      <label class="form-check-label">
+                        Interface agradável (CSS puro, Bootstrap ou Tailwind)
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse4"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Faça uma interface bonita, limpa, amigável e responsiva. As
+                    pessoas compram o livro pela capa. Frequentemente pensarão
+                    que se a interface é boa, certamente o código também é.
+                    Frameworks CSS como Bootstrap, TailwindCSS, Materialize ou
+                    Bulma são boas o suficiente.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5"
+                    aria-expanded="true"
+                    aria-controls="collapse5"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault5"
+                      />
+                      <label class="form-check-label"> Responsividade </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse5"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    A maior parte do tráfego da internet é feita por
+                    dispositivos móveis. Tenha certeza de que sua interface está
+                    bem montada para smartphones.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse6"
+                    aria-expanded="true"
+                    aria-controls="collapse6"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault6"
+                      />
+                      <label class="form-check-label"> Relatórios </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse6"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Demonstra a sua capacidade técnica de exibir dados de
+                    maneira clara e concisa. Permita que o usuário possa filtrar
+                    o relatório de acordo com alguns dos dados ou por período de
+                    tempo.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse7"
+                    aria-expanded="true"
+                    aria-controls="collapse7"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault7"
+                      />
+                      <label class="form-check-label">
+                        Variáveis de ambiente
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse7"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Muitas vezes rodamos o nosso sistema em ambientes
+                    diferentes. Ter um arquivo de configuração de variáveis é
+                    muito útil para qualquer um poder alterar alguma
+                    configuração (como as credenciais de um banco de dados ou de
+                    uma API) sem ter que alterar o código diretamente.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse9"
+                    aria-expanded="true"
+                    aria-controls="collapse9"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault9"
+                      />
+                      <label class="form-check-label"> Containerização </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse9"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    É comum que as aplicações que construímos possuam vários
+                    passos de instalação. Além disso, ela depende de linguagens
+                    e bibliotecas em versões específicas para funcionar
+                    corretamente. Muitas das vezes, possuímos instalados uma
+                    versão diferente da correta e instalar mais de uma versão
+                    nem sempre é simples. Containerizar sua aplicação utilizando
+                    Docker, por exemplo, te auxilia em automatizar o passo a
+                    passo de configuração/instalação e também garante que as
+                    versões corretas sejam utilizadas, sem a necessidade de
+                    instalar ou alterar a versão de cada uma das dependências do
+                    código.<br /><br />
+                    Além disso, você dificilmente achará uma empresa que não usa
+                    esse tipo de ferramenta e esse é o tipo de tecnologia do
+                    dia-a-dia das empresas que ninguém quer perder tempo te
+                    ensinando.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse10"
+                    aria-expanded="true"
+                    aria-controls="collapse10"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault10"
+                      />
+                      <label class="form-check-label"> README detalhado </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse10"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    A primeira coisa que alguém interessado no seu código vai
+                    olhar é o README do repositório. Esse README deve conter
+                    informações sobre o projeto como o objetivo, as tecnologias
+                    usadas e como executá-lo.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse11"
+                    aria-expanded="true"
+                    aria-controls="collapse11"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault11"
+                      />
+                      <label class="form-check-label"> Demo online </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse11"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Se você está demonstrando o seu projeto a um recrutador,
+                    certamente quer facilitar a vida dele. Faça o seu sistema
+                    estar disponível em algum endereço na internet e inclua o
+                    link no seu README.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse12"
+                    aria-expanded="true"
+                    aria-controls="collapse12"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault12"
+                      />
+                      <label class="form-check-label"> Arquitetura MVC </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse12"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Organize seu código usando os princípios de design e
+                    arquitetura. Empresas possuem padrões de estilo e estrutura
+                    baseado no conhecimento acumulado da indústria. Assim,
+                    garantem que não importa que alguns desenvolvedores saiam ou
+                    entrem, eles possuem uma base de código consistente e fácil
+                    de expandir, debugar ou consultar. Se seu código não possui
+                    uma estrutura clara e organizada, você irá passar a
+                    impressão de que é mais "Júnior" do que realmente é.<br /><br />
+                    Felizmente, o oposto é verdade, se seu projeto segue um bom
+                    padrão de design e arquitetura, ele passará a impressão de
+                    que você é mais "Senior" do que realmente é. Grande parte
+                    dos projetos modernos usam o MVC e mesmo que a empresa em
+                    particular use uma arquitetura diferente, eles irão estar
+                    confiantes que você poderá se adaptar.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse13"
+                    aria-expanded="true"
+                    aria-controls="collapse13"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault13"
+                      />
+                      <label class="form-check-label"> Níveis de acesso </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse13"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Crie um sistema que apenas pessoas autorizadas tenham acesso
+                    a ele. E mais, faça que algumas funções sejam acessíveis
+                    apenas por um grupo, como Administradores.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse14"
+                    aria-expanded="true"
+                    aria-controls="collapse14"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault14"
+                      />
+                      <label class="form-check-label">
+                        Admin controls e preferências do usuário
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse14"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Seu software deve possuir uma página em que os usuários
+                    possam personalizar o comportamento da aplicação. Caso seja
+                    uma configuração do Admin, deve refletir a todos os
+                    usuários. Por outro lado, as configurações do usuário, devem
+                    ser aplicadas apenas aquele único usuário.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse15"
+                    aria-expanded="true"
+                    aria-controls="collapse15"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault151617181920"
+                      />
+                      <label class="form-check-label">
+                        Notificações integradas e por e-mails
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse15"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Tenha um sistema de notificações dentro do seu sistema,
+                    semelhante a notificações de redes sociais. Mas também envie
+                    e-mails de notificação. Possibilite o usuário personalizar
+                    as notificações que deseje receber.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse16"
+                    aria-expanded="true"
+                    aria-controls="collapse16"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault1617181920"
+                      />
+                      <label class="form-check-label">
+                        Shared multi-tenancy
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse16"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Multi-tenancy é a capacidade do seu sistema de separar os
+                    dados de forma de que cada usuário possa ler e alterar
+                    apenas os dados referentes à sua própria conta. Isso pode
+                    acontecer não apenas no nível de usuário, mas também em um
+                    nível acima, como empresas ou projetos, onde os usuários
+                    poderão ver informações apenas da empresa que ele está
+                    associado.<br /><br />
+                    A multi-tenancy ser "shared" significa que os dados estão
+                    todos em um mesmo banco de dados. Uma outra forma de atingir
+                    esse isolamento de dados é colocá-los em bancos de dados
+                    separados. Isso é chamado de "isolated multi-tenancy". É
+                    possível ainda fazer de forma híbrida, tendo alguns dados
+                    compartilhado no mesmo banco de dados, enquanto outros estão
+                    em outro banco de dados.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse17"
+                    aria-expanded="true"
+                    aria-controls="collapse17"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault17181920"
+                      />
+                      <label class="form-check-label">
+                        Upload de arquivos na cloud
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse17"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    O envio de arquivo para um sistema é muito comum e pode ser
+                    a parte central do modelo de negócios. É possível fazer essa
+                    funcionalidade utilizando o seu próprio servidor. Contudo, é
+                    comum usar um serviço apropriado para a tarefa, já que fazer
+                    upload no mesmo servidor da aplicação pode comprometer seu
+                    desempenho. Podemos usar serviço de hospedagem de arquivos
+                    como o AWS S3 para fazer o upload diretamente a ele.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse19"
+                    aria-expanded="true"
+                    aria-controls="collapse19"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault1920"
+                      />
+                      <label class="form-check-label">
+                        Testes automatizados
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse19"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Crie testes unitários no front-end e no back-end. De
+                    preferência, também testes de integração. Mesmo que os
+                    testes automatizados possam parecer um obstáculo ou um peso
+                    na progressão do projeto, eles aumentam a qualidade geral do
+                    sistema e você irá ganhar pontos pelo profissionalismo.
+                    Melhor ainda: a empresa contratante estará tranquila de que
+                    você entende a importância dos testes e como escrevê-los.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse20"
+                    aria-expanded="true"
+                    aria-controls="collapse20"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault20"
+                      />
+                      <label class="form-check-label">
+                        Integração com uma API "simples"
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse20"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Faça seu sistema se comunicar com alguma API externa, mesmo
+                    que simples, como uma previsão do tempo. Você pode encontrar
+                    uma lista de APIs públicas em:
+                    <a
+                      class="conteudo"
+                      href="https://github.com/public-apis/public-apis"
+                      >https://github.com/public-apis/public-apis</a
+                    >.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse21"
+                    aria-expanded="true"
+                    aria-controls="collapse21"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault21"
+                      />
+                      <label class="form-check-label"> Landing page </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse21"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Uma landing page é o primeiro contato de um cliente em
+                    potencial com o seu sistema. Ela deve ser estruturada para
+                    convencer o usuário a adquirir ou assinar o seu produto.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse22"
+                    aria-expanded="true"
+                    aria-controls="collapse22"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault22"
+                      />
+                      <label class="form-check-label">
+                        Versão gratuita e versão paga
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse22"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Isso demonstra que você pode integrar com um sistema de
+                    pagamentos. E é bem comum ter uma integração de pagamentos
+                    em softwares corporativos. Além disso, isso pode te servir
+                    como um grande argumento no momento da entrevista. Todo
+                    mundo gosta de dinheiro.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse23"
+                    aria-expanded="true"
+                    aria-controls="collapse23"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault23"
+                      />
+                      <label class="form-check-label">
+                        Período de testes
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse23"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Além da integração de pagamentos, ter um período de testes
+                    demonstra sua competência em executar scripts agendados
+                    (crontab por exemplo).
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse24"
+                    aria-expanded="true"
+                    aria-controls="collapse24"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault2425"
+                      />
+                      <label class="form-check-label">
+                        Deployment automático
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse24"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Colocar um software em produção envolve muitas etapas que
+                    podem falhar se realizadas de forma errada. Portanto, ter
+                    esse processo automatizado é fundamental em qualquer produto
+                    para evitar que ele esteja fora do ar e por diminuir o tempo
+                    que este processo demora.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse25"
+                    aria-expanded="true"
+                    aria-controls="collapse25"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault25"
+                      />
+                      <label class="form-check-label"> Cache </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse25"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Caches melhoram a experiência do usuário e economizam
+                    recursos. Caches podem existir em locais diferentes: no
+                    client, no server ou ainda ser distribuído (CDN).
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse26"
+                    aria-expanded="true"
+                    aria-controls="collapse26"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault26"
+                      />
+                      <label class="form-check-label">
+                        Importar e exportar CSV
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse26"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    É comum que clientes desejem consultar ou manipular seus
+                    dados utilizando um software de planilha.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse27"
+                    aria-expanded="true"
+                    aria-controls="collapse27"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault27"
+                      />
+                      <label class="form-check-label">
+                        Gerar PDF no client ou no server
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse27"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    É possível gerar PDFs no front ou no back e esta é uma
+                    funcionalidade comum e desejada pelos usuários.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse28"
+                    aria-expanded="true"
+                    aria-controls="collapse28"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault28"
+                      />
+                      <label class="form-check-label">
+                        Single Page Application
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse28"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Também conhecido como SPA, é um site que não realiza uma
+                    atualização completa do seu conteúdo. Após carregado pela
+                    primeira vez, o conteúdo é alterado dinamicamente sem a
+                    necessidade de mudar de página. Apesar de ser possível
+                    atingir esse objetivo utilizando apenas Javascript, em geral
+                    usamos frameworks para tal, como React, Angular, etc. SPAs
+                    proporcionam uma melhor experiência ao usuário e são a
+                    escolha comum na maior parte do sistemas corporativos.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse29"
+                    aria-expanded="true"
+                    aria-controls="collapse29"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault29"
+                      />
+                      <label class="form-check-label">
+                        Server Side Rendering
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse29"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    É comum que o Javascript faça o trabalho de renderizar os
+                    elementos da interface. Porém esse trabalho também pode ser
+                    feito pelo backend que retornará ao frontend o que deverá
+                    ser exibido na tela, diminuindo o processamento dentro do
+                    navegador. Essa abordagem trás benefícios como uma
+                    performance maior e facilita o trabalho dos serviços de
+                    busca como o Google.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse30"
+                    aria-expanded="true"
+                    aria-controls="collapse30"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault30"
+                      />
+                      <label class="form-check-label">
+                        Comunicação de 2 vias
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse30"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    O jeito mais comum de desenvolver um sistema web é fazendo
+                    requisições HTTP. Porém este modelo é unidirecional, ou
+                    seja, o client deve enviar um pedido para que o servidor
+                    responda com algum dado, e o servidor não pode enviar dados
+                    sem que o client faça essa requisição.<br /><br />
+                    Para possibilitar aplicações como chats, notificações e
+                    outros, deve usar um protocolo que permita a comunicação de
+                    duas vias. A forma mais utilizada é chamada de Websockets.
+                    <br /><br />
+                    Faça uma aplicação que utilize desse protocolo. Uma outra
+                    ideia é atualizar os dados de uma tabela em qualquer client
+                    aberto assim que um registro for adicionado, removido ou
+                    alterado.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse31"
+                    aria-expanded="true"
+                    aria-controls="collapse31"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault31"
+                      />
+                      <label class="form-check-label"> Docs da API </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse31"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Crie uma documentação dos endpoints da sua API. Essa
+                    documentação deve conter as informações necessárias para um
+                    desenvolvedor utilizar a API para criar seu próprio
+                    client.<br /><br />
+                    Exemplo:
+                    <a
+                      class="conteudo"
+                      href="https://realworld-docs.netlify.app/docs/specs/backend-specs/endpoints"
+                      >https://realworld-docs.netlify.app/docs/specs/backend-specs/endpoints</a
+                    >.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse32"
+                    aria-expanded="true"
+                    aria-controls="collapse32"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault32"
+                      />
+                      <label class="form-check-label">
+                        Score máximo de acessibilidade
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse32"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Acessibilidade refere-se à capacidade do conteúdo de um
+                    website ser consumido por pessoas com deficiência.<br /><br />
+                    Utilize ferramentas como o
+                    <a
+                      class="conteudo"
+                      href="https://www.accessibilitychecker.org/"
+                      >accessibilitychecker.org</a
+                    >
+                    que avaliam o nível de acessibilidade da sua aplicação.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse33"
+                    aria-expanded="true"
+                    aria-controls="collapse33"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault33"
+                      />
+                      <label class="form-check-label">
+                        Progressive Web Application
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse33"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    PWA te permite adicionar funcionalidades como instalação,
+                    acesso a arquivos do computador, suporte para funcionar
+                    offline e outros.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse34"
+                    aria-expanded="true"
+                    aria-controls="collapse34"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault34"
+                      />
+                      <label class="form-check-label"> Timezones </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse34"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Possibilite que o seu site seja utilizado de forma eficaz
+                    por qualquer pessoa independentemente de seu fuso horário.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse35"
+                    aria-expanded="true"
+                    aria-controls="collapse35"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault35"
+                      />
+                      <label class="form-check-label">
+                        Internacionalização
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse35"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Possibilite que o seu site seja utilizado de forma eficaz
+                    por qualquer pessoa independentemente de seu idioma.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse36"
+                    aria-expanded="true"
+                    aria-controls="collapse36"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault36"
+                      />
+                      <label class="form-check-label"> Fuzzy search </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse36"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Tenha uma funcionalidade de busca inteligente: ela deve
+                    encontrar os recursos mesmo que o usuário não digite
+                    corretamente o termo a ser encontrado. Também deve retornar
+                    recursos relacionados. Exemplo: Elasticsearch.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse37"
+                    aria-expanded="true"
+                    aria-controls="collapse37"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault37"
+                      />
+                      <label class="form-check-label">
+                        Integração com uma API que use autorização por OAuth2
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse37"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Com o OAuth2, sites podem compartilhar os dados de seus
+                    clientes com aplicações de terceiros mediante a aprovação do
+                    usuário.<br /><br />
+                    Um exemplo comum dessa tecnologia é o Social Authentication,
+                    que é o login pela Google (e outros sites), que tornam
+                    desnecessária a implementação de uma página de cadastro e de
+                    login. Também como exemplo comum, tem-se o Google Calendar.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse39"
+                    aria-expanded="true"
+                    aria-controls="collapse39"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault39"
+                      />
+                      <label class="form-check-label">
+                        Criar uma API pública com OAuth2
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse39"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    De forma inversa à sugerida anteriormente, crie um serviço
+                    de OAuth2, em vez de apenas consumir uma API. Você deve
+                    fazer uma API que permita acessar os dados de seus usuários
+                    que concordaram em compartilhar esses dados com o serviço de
+                    terceiros.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse40"
+                    aria-expanded="true"
+                    aria-controls="collapse40"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault40"
+                      />
+                      <label class="form-check-label">
+                        Isolated/hybrid multi-tenancy
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse40"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Enquanto no shared multi-tenancy os dados dos usuários estão
+                    todos agrupados em um mesmo banco de dados, no modelo
+                    isolated os dados estão separados em bancos de dados
+                    distintos. Podem inclusive estar em países diferentes. O
+                    modelo híbrido mescla ambas abordagens, assim é possível,
+                    por exemplo, ter um banco de dados para cada região com os
+                    dados de seus respectivos clientes.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse41"
+                    aria-expanded="true"
+                    aria-controls="collapse41"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault41"
+                      />
+                      <label class="form-check-label">
+                        Ambiente de staging
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse41"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    É um ambiente pareado com o ambiente de produção que é usado
+                    para testar novas funcionalidades ou correções de bugs em
+                    condições similares ao que o usuário tem.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse42"
+                    aria-expanded="true"
+                    aria-controls="collapse42"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault42"
+                      />
+                      <label class="form-check-label"> Teste de carga </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse42"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Simule o recebimento de uma grande quantidade de acessos
+                    simultâneos na sua aplicação para determinar a capacidade de
+                    seus servidores ou para identificar gargalos.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse43"
+                    aria-expanded="true"
+                    aria-controls="collapse43"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault43"
+                      />
+                      <label class="form-check-label"> Message Broker </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse43"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Útil, principalmente, para arquiteturas de microsserviços.
+                    Esta ferramenta te auxilia a integrar as diferentes partes
+                    do seu sistema, mesmo que tenham sido construídas em
+                    linguagens e tecnologias diferentes, garante a entrega de
+                    mensagens entre os componentes e dá suporte à comunicação
+                    assíncrona entre eles.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse44"
+                    aria-expanded="true"
+                    aria-controls="collapse44"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault44"
+                      />
+                      <label class="form-check-label">
+                        Autoscaling horizontal/diagonal
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse44"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Suponha que o sistema recebeu um inesperado número de
+                    acessos simultâneos e seu servidor não pode atender a todas
+                    requisições. O processo de autoscaling faz com que novos
+                    servidores sejam iniciados para ajudar a atender a demanda
+                    extra.<br /><br />
+                    O autoscaling pode ser horizontal (adiciona máquinas iguais
+                    à máquina original) ou diagonal (adiciona máquinas com maior
+                    poder de processamento do que a original).<br /><br />
+                    É importante, também, finalizar as máquinas extras assim que
+                    a demanda diminuir.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse45"
+                    aria-expanded="true"
+                    aria-controls="collapse45"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault45"
+                      />
+                      <label class="form-check-label">
+                        Geograficamente distribuído
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse45"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Sua aplicação pode receber acessos de diferentes partes do
+                    mundo. Quanto mais longe o usuário estiver do servidor,
+                    maior o tempo necessário para receber uma resposta do
+                    servidor, diminuindo, portanto, a performance do sistema
+                    para aquele usuário.<br /><br />
+                    Seu sistema deve possuir servidores em locais geográficos
+                    diferentes para possibilitar um tempo de resposta baixo
+                    independente do lugar que o usuário esteja.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse46"
+                    aria-expanded="true"
+                    aria-controls="collapse46"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault46"
+                      />
+                      <label class="form-check-label"> Drag n drop </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse46"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Faça uma funcionalidade que seja drag and drop, como:
+                    arrastar arquivos do computador para fazer upload no site ou
+                    mudar a ordem dos elementos dentro de uma tabela.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse47"
+                    aria-expanded="true"
+                    aria-controls="collapse47"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault47"
+                      />
+                      <label class="form-check-label">
+                        Offline support (opcional, incomum)
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse47"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Faça uma aplicação que possa ser acessada sem internet e que
+                    as alterações feitas sejam efetuadas assim que a conexão for
+                    reestabelecida.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse48"
+                    aria-expanded="true"
+                    aria-controls="collapse48"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault48"
+                      />
+                      <label class="form-check-label">
+                        Wordpress, Magento
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse48"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Nem tudo precisa ser construído do zero, caso precise
+                    colocar no ar aplicações como blogs ou lojas virtuais,
+                    utilize sistemas prontos como esses que ainda lhe permitem
+                    customizá-los utilizando linguagens de programação.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse49"
+                    aria-expanded="true"
+                    aria-controls="collapse49"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault49"
+                      />
+                      <label class="form-check-label">
+                        Plugins de Wordpress, Magento, Jira, Odoo, Zoho,
+                        Salesforce
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse49"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Softwares como esses possuem grande demanda de
+                    personalização. Você pode atuar como freelance construindo
+                    extensões e plugins nesse tipo de sistema.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse50"
+                    aria-expanded="true"
+                    aria-controls="collapse50"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault50"
+                      />
+                      <label class="form-check-label"> Load balancer </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse50"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Suponha que você possua vários servidores para atender as
+                    requisições dos usuários. Você necessita de um software
+                    (Load Balancer) para encaminhar cada requisição feita a um
+                    servidor disponível, de forma a balancear a quantidade de
+                    recursos usados nos servidores.<br /><br />
+                    Também pode ser usado quando a máquina do servidor possuir
+                    múltiplos núcleos, assim a aplicação pode ser rodada mais de
+                    uma vez ao mesmo tempo na mesma máquina, usufruindo de todos
+                    os núcleos do seu processador.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse51"
+                    aria-expanded="true"
+                    aria-controls="collapse51"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault51"
+                      />
+                      <label class="form-check-label">
+                        Rate limit e throttling
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse51"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Throttling garante que o servidor processe uma quantidade
+                    pré-definida de requisições em um período de tempo e recuse
+                    novas requisições.<br /><br />
+                    Rate limit previne que um mesmo usuário faça requisições
+                    excessivas à sua API, respondendo apenas a uma quantidade X
+                    de requisições em um intervalo de tempo Y.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse52"
+                    aria-expanded="true"
+                    aria-controls="collapse52"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault52"
+                      />
+                      <label class="form-check-label"> Blacklist </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse52"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Ao identificar que um usuário está tentando utilizar seu
+                    software de maneira indevida, sua aplicação deve recusar
+                    novas requisições dele.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse53"
+                    aria-expanded="true"
+                    aria-controls="collapse53"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault53"
+                      />
+                      <label class="form-check-label">
+                        Filtros, Ordenação, Paginação
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse53"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Nas páginas de exibição dos registros cadastrados,
+                    possibilite que o usuário filtre os registros conforme um
+                    critério, bem como os ordene em ordem alfabética crescente
+                    ou decrescente, de acordo com a coluna escolhida. Por sua
+                    vez, a paginação é a funcionalidade que define quantos
+                    registros serão exibidos em uma única página (alguns sites
+                    possibilitam que o próprio usuário defina o número de
+                    registros por página).
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse54"
+                    aria-expanded="true"
+                    aria-controls="collapse54"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault54"
+                      />
+                      <label class="form-check-label"> Observabilidade </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse54"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    É uma propriedade do software que indica a possibilidade de
+                    extrair dados e informações para identificar a raiz de
+                    problemas, bem como gargalos e métricas de negócio e uso.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse55"
+                    aria-expanded="true"
+                    aria-controls="collapse55"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault55"
+                      />
+                      <label class="form-check-label"> Job Queues </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse55"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    É uma fila de tarefas que devem ser executadas. É usado
+                    principalmente para executar tarefas pesadas de forma
+                    assíncrona, garantindo que o site possa continuar servindo
+                    outros clientes enquanto a tarefa está sendo processada pelo
+                    "trabalhador" ou enquanto está à espera de um "trabalhador"
+                    disponível.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse56"
+                    aria-expanded="true"
+                    aria-controls="collapse56"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault56"
+                      />
+                      <label class="form-check-label">
+                        Two-factor authentication
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="collapse56"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    É um processo que torna o acesso à conta do usuário mais
+                    segura ao demandar, além de usuário e senha, uma combinação
+                    de caracteres enviada por SMS, email ou aplicativo de
+                    autenticação.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse57"
+                    aria-expanded="true"
+                    aria-controls="collapse57"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault57"
+                      />
+                      <label class="form-check-label">
+                        Feature flag e canary
+                      </label>
+                    </div>
+                  </button>
+                </h2>
+                <!-- <div
+                  id="collapse57"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Escreva aqui.
+                  </div>
+                </div> -->
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse58"
+                    aria-expanded="true"
+                    aria-controls="collapse58"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault58"
+                      />
+                      <label class="form-check-label"> React Native </label>
+                    </div>
+                  </button>
+                </h2>
+                <!-- <div
+                  id="collapse58"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Escreva aqui.
+                  </div>
+                </div> -->
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse59"
+                    aria-expanded="true"
+                    aria-controls="collapse59"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault59"
+                      />
+                      <label class="form-check-label"> Legacy code </label>
+                    </div>
+                  </button>
+                </h2>
+                <!-- <div
+                  id="collapse59"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body conteudo">
+                    Escreva aqui.
+                  </div>
+                </div> -->
+              </div>
+
+              <div class="accordion-item azul">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse60"
+                    aria-expanded="true"
+                    aria-controls="collapse60"
+                  >
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault60"
+                      />
+                      <label class="form-check-label"> Web scrapping </label>
+                    </div>
+                  </button>
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar navbar-text-white ms-2" href="#">
+          Condições e suporte
+        </a>
+      </div>
+    </nav>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+      checkboxes.forEach(function (e) {
+        e.addEventListener("click", atualizarContagem);
+        e.addEventListener("mouseenter", (e) => {
+          e.target.parentNode.parentNode.setAttribute("data-bs-toggle", "");
+        });
+        e.addEventListener("mouseleave", (e) => {
+          e.target.parentNode.parentNode.setAttribute(
+            "data-bs-toggle",
+            "collapse"
+          );
+        });
+      });
+
+      const contador = document.getElementById("qnt_func");
+
+      function atualizarContagem() {
+        let i = 0;
+
+        checkboxes.forEach((element) => {
+          if (element.checked) {
+            i++;
+          }
+
+          contador.textContent = i;
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,1057 @@
+<!-- Confusão entre cada lição e projetos da lição (pré-requisitos)-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/Imagens/LogoIco.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Sans"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-light">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          id="border-laranja"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo03"
+          aria-controls="navbarTogglerDemo03"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon navbar-icon-laranja"></span>
+        </button>
+        <a class="navbar-brand" href="/index.html">
+          <img
+            src="ImagensInicial/Logo-resumida.png"
+            alt="Irmãos Dev"
+            width="40"
+            height="32"
+          />
+        </a>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarTogglerDemo03"
+          style="font-family: 'DM Sans'"
+        >
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-around"
+          >
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="index.html"
+                ><strong>TODOS OS CAMINHOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="#"
+                ><strong>APOIE-NOS</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link so-letra-preta"
+                href="https://www.youtube.com/@IrmaosDev"
+                ><strong>YOUTUBE</strong></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link so-letra-preta" href="#"
+                ><strong>SOBRE</strong></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid laranja center py-3">
+      <div class="container text-center bg-light rounded-5">
+        <a href="/index.html">
+          <img
+            src="Imagens/Logo.png"
+            class="img-fluid center mt-4 pt-2"
+            alt="Logo"
+            width="280px"
+        /></a>
+        <div class="row mt-5 py-4 me-2">
+          <div class="col-8">
+            <h1 class="display-1 text-center letra-preta mt-4">
+              <strong>JavaScript</strong>
+            </h1>
+          </div>
+          <div class="col-4">
+            <img
+              src="Imagens/JavaScript.png"
+              class="img-fluid center pt-2"
+              alt="JavaScript"
+              style="width: 150px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container center">
+      <div class="row">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sumário</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2">
+              <li>
+                <a class="conteudo" href="#introducao">Introdução</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#profissional"
+                  >Relevância profissional</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#pre-requisitos">Pré-requisitos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#tempo">Meta de tempo de estudos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#projetos">Projetos</a>
+              </li>
+              <li>
+                <a class="conteudo" href="#estudo"
+                  >Sugestão de recursos para estudo</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="#aprofundamento">Aprofundamento</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="introducao">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Introdução</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Programação é o processo de escrita, teste e manutenção de um
+              programa. Um programa é escrito em uma linguagem de programação,
+              como Javascript, C, C#, Python e PHP, que permite ao programador
+              instruir o computador como dados são processados, armazenados ou
+              transmitidos através de algoritmos.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Um algoritmo é uma sequência lógica finita de passos para realizar
+              uma tarefa ou resolver um problema. Um algoritmo não representa,
+              necessariamente, um programa de computador, e sim os passos
+              necessários para realizar uma tarefa. Uma receita culinária é um
+              tipo de algoritmo.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Javascript é a principal linguagem de programação para navegadores
+              web, mas também presente em diversas outras aplicações, como
+              servidores e programas desktop.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="profissional">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Relevância profissional</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              A capacidade de resolver problemas usando linguagens de
+              programação é a competência primordial e indispensável de um
+              programador. Javascript foi a linguagem escolhida por ter uma
+              sintaxe simples e porque virtualmente todas as aplicações web
+              possuem uma parte escrita nesta linguagem.
+            </p>
+            <p class="conteudo py-3 px-2">
+              Os recursos e as atividades abordam conceitos como manipulação de
+              arrays, strings, números e de elementos HTML. Estes conceitos, que
+              isoladamente geram pouco valor de negócio, ao serem combinados são
+              capazes de criar páginas e sistemas complexos, como o sistema que
+              você construirá no próximo projeto, seu primeiro sistema de
+              cadastros.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="pre-requisitos">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Pré-requisitos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo py-3 px-2">
+              Nenhum, porém ter estudado pelo menos parte do projeto #1 te
+              ajudará com os projetos 2, 3 e 4.
+            </p>
+            <p class="conteudo py-3 px-2">
+              *Esse projeto é pré-requisito dos projetos #3, #4 e #5.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="tempo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Meta de tempo de estudos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="a conteudo py-3 pe-2">
+              <li>
+                Invista 40 horas estudando os conteúdos (recomendamos o famoso
+                curso do Guanabara que tem duração anunciada de 40 horas)
+              </li>
+              <li>Realize o projeto 1 (Beecrowd 1) em cerca de 50 horas.</li>
+              <li>
+                Invista outras 20 horas estudando os artigos listados abaixo.
+              </li>
+              <li>
+                Realize o projeto 2 (Leitura de codebases) em cerca de 10 horas.
+              </li>
+              <li>
+                Realize o projeto 3 (Interações no DOM) em cerca de 20 horas.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="projetos">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Projetos</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ol class="conteudo py-3 pe-2">
+              <li id="projeto1">
+                Desafios Beecrowd
+                <p class="conteudo py-3 px-2">
+                  <a class="conteudo" href="">Vídeo de apoio</a>
+                </p>
+                <p class="conteudo px-2">
+                  O objetivo do primeiro projeto é te introduzir à criação e
+                  estruturação de pequenos códigos.<br />
+                  Crie uma conta no Beecrowd e resolva os seguintes problemas:
+                </p>
+                <div class="row">
+                  <div class="col-6">
+                    <ul class="conteudo">
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1006"
+                          >#1: Média 2</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1008"
+                          >#2: Salário</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1019"
+                          >#3: Conversão de Tempo</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1020"
+                          >#4: Idade em Dias</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1021"
+                          >#5: Notas e Moedas</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1035"
+                          >#6: Teste de Seleção 1</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1041"
+                          >#7: Coordenadas de um Ponto</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1051"
+                          >#8: Imposto de Renda</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1072"
+                          >#9: Intervalo 2</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-6">
+                    <ul class="conteudo">
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1132"
+                          >#10: Múltiplos de 13</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1151"
+                          >#11: Fibonacci Fácil</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1176"
+                          >#12: Fibonacci em Vetor</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1180"
+                          >#13: Menor e Posição</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1435"
+                          >#14: Matriz Quadrada I</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1534"
+                          >#15: Matriz 123</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1068"
+                          >#16: Balanço de Parênteses I</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1110"
+                          >#17: Jogando Cartas Fora</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="conteudo"
+                          href="https://www.beecrowd.com.br/judge/pt/problems/view/1259"
+                          >#18: Pares e Ímpares</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <p class="conteudo px-2">
+                  Neste
+                  <a
+                    class="conteudo"
+                    href="https://github.com/irmaos-dev/beecrowd"
+                    >repositório do GitHub</a
+                  >
+                  você encontrará, além das respostas dos desafios propostos,
+                  códigos de outros desafios que são úteis de serem lidos antes
+                  mesmo de iniciar a resolução da lista de exercícios, e ainda
+                  uma lista de outros desafios opcionais a serem resolvidos.
+                </p>
+              </li>
+              <li id="projeto2" class="pt-5">
+                Leitura de codebases
+                <p class="conteudo py-3 px-2">
+                  <a class="conteudo" href="">Vídeo de apoio</a>
+                </p>
+                <p class="conteudo px-2">
+                  O objetivo desse projeto é te trazer familiaridade com os
+                  comandos Javascript e como eles são estruturados em um site
+                  real.
+                </p>
+                <p class="conteudo px-2">
+                  Para isso, você deverá baixar o seguinte
+                  <a
+                    href="https://github.com/irmaos-dev/codebases"
+                    class="conteudo"
+                    >repositório</a
+                  >
+                  que contém os seguintes projetos:
+                  <strong>calculadora</strong>,
+                  <strong>jogo da memória</strong>,
+                  <strong>jogo da velha</strong>, <strong>truco</strong> e
+                  <strong>jokenpo</strong>. Execute os projetos em seu
+                  computador e leia todos seus arquivos.
+                </p>
+              </li>
+              <li id="projeto3" class="pt-5">
+                Interações no DOM
+                <p class="conteudo py-3 px-2">
+                  <a class="conteudo" href="">Vídeo de apoio</a>
+                </p>
+                <p class="conteudo px-2">
+                  O objetivo desse projeto é reproduzir as interações mais
+                  comuns em diferentes páginas web.
+                </p>
+                <p class="conteudo px-2">
+                  Essas interações se repetem nos diversos sistemas, não
+                  importando se são blogs, lojas ou jogos.
+                </p>
+                <p class="conteudo px-2">
+                  Resolva os exercícios contidos
+                  <a class="conteudo" href="exerciciosdom/">nessa página.</a>
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="estudo">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Sugestões de recursos para estudo</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-auto">
+          <div class="container azul mt-5 rounded-4">
+            <p class="conteudo-letramaior pt-3 px-2">Cursos completos</p>
+            <p class="conteudo px-2">
+              Todos os cursos à seguir têm conteúdo semelhante, portanto, ao se
+              sentir seguro com o conteúdo, prossiga para as atividades e/ou os
+              artigos.
+            </p>
+            <ul class="conteudo pe-2">
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.cursoemvideo.com/curso/javascript/"
+                  >Curso de Javascript [40 Horas]</a
+                >: Curso em Vídeo do Gustavo Guanabara;
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/playlist?list=PL1dUY2RYa2RidB3B134ywckDyf-FOwbv7"
+                  >Lógica de Programação com Javascript</a
+                >: Iniciando na carreira front-end
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/playlist?list=PLxIWikUsH2nTLYWgR6e4UZuwT7CXwVOwu"
+                  >Lógica de programação com NodeJS e Javascript moderno</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://drive.google.com/file/d/1T-uz6sYhNXC2JXgWxWaInVEXUnN05mLK/view"
+                  >Aprendendo JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://4linux.com.br/cursos/treinamento/logica-programacao-gratuito/"
+                  >Lógica de Programação com JavaScript</a
+                >
+              </li>
+              <li>
+                <a class="conteudo" href="http://timarcosdias.github.io/ilp/"
+                  >Introdução à Programação com JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://drive.google.com/file/d/1eZkFeA-9UbegPGQsRj9mstfqIoJiYyRs/view"
+                  >Algoritmos em Javascript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://drive.google.com/file/d/1C-TKDVJpo2qYJMMbPxJqje4IS98F4xoN/view"
+                  >Curso Básico de JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://drive.google.com/file/d/1cpkz6aZepDTsAnE-Eps9zN1fhw6R0Zsc/view"
+                  >Iniciação ao JavaScript</a
+                >
+              </li>
+            </ul>
+            <p class="conteudo-letramaior pt-3 px-2">Artigos</p>
+            <p class="conteudo px-2">Estude todos os artigos!</p>
+            <p class="conteudo pt-3 px-2">
+              <strong>Funcionamento do JavaScript</strong>
+            </p>
+            <ul class="conteudo pe-2">
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Objects/Basics"
+                  >O básico sobre objetos JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="http://devfuria.com.br/javascript/operador-condicional-ternario/"
+                  >Referência prática do operador ternário condicional em
+                  JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/howto/javascript/javascript-modulo/"
+                  >Operador de Módulo(%) em JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="http://devfuria.com.br/javascript/typeof/"
+                  >Referência prática do operador typeof em JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.freecodecamp.org/portuguese/news/var-let-e-const-qual-e-a-diferenca/"
+                  >Var, let e const - Qual é a diferença?</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://hcode.com.br/blog/entenda-a-diferenca-entre-var-let-e-const-no-javascript"
+                  >Entenda a diferença entre var, let e const no JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://medium.com/@vicnicius/estrat%C3%A9gias-de-avalia%C3%A7%C3%A3o-em-javascript-a89ad1a00ad3"
+                  >Estratégias de Avaliação em Javascript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.alura.com.br/artigos/tagged-template-literals"
+                  >Tagged Template Literals</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://hcode.com.br/blog/template-strings-em-javascript"
+                  >Template Strings em JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://ericholiveira.medium.com/truques-com-arguments-em-javascript-27942ea807ee"
+                  >Truques com arguments em javascript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://ericholiveira.medium.com/memoization-em-javascript-como-acelerar-fun%C3%A7%C3%B5es-lentas-eab44a64d14"
+                  >Memoization em javascript. Como acelerar funções lentas</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/howto/javascript/javascript-vs-/"
+                  >JavaScript === vs ==</a
+                >
+              </li>
+            </ul>
+            <p class="conteudo px-2">
+              <strong>Funções do JavaScript</strong>
+            </p>
+            <ul class="conteudo pe-2">
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/howto/javascript/javascript-round-to-2-decimal-places/"
+                  >Arredondar um número para 2 casas decimais em JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.macoratti.net/19/02/js_arrow1.htm"
+                  >JavaScript - Arrow Functions</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://hcode.com.br/blog/entendendo-arrow-functions-de-uma-vez-por-todas"
+                  >Entendendo Arrow Functions de uma vez por todas</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.devmedia.com.br/javascript-trim-removendo-espacos-desnecessarios/39685"
+                  >JavaScript trim(): removendo espaços desnecessários</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.devmedia.com.br/javascript-concat-concatenando-arrays-e-strings/37964"
+                  >JavaScript Concat: Concatenando arrays e strings</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://medium.com/luizalabs/entendendo-as-fun%C3%A7%C3%B5es-map-filter-e-reduce-2569888ae084"
+                  >Entendendo as funções map, filter e reduce</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://hcode.com.br/blog/conhecendo-map-filter-reduce-em-javascript"
+                  >Conhecendo map(), filter() e reduce() em JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.freecodecamp.org/portuguese/news/javascript-dividindo-uma-string-e-transformando-a-em-um-array-com-o-metodo-split/"
+                  >JavaScript - Dividindo uma string e transformando-a em array
+                  com o método Split</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://hcode.com.br/blog/dividindo-strings-com-metodo-split"
+                  >Dividindo strings com o método split()</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://medium.com/totvsdevelopers/entendendo-fun%C3%A7%C3%B5es-callback-em-javascript-7b500dc7fa22"
+                  >Entendendo funções callback em JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.devmedia.com.br/trabalhando-com-eventos-em-javascript/28521"
+                  >Trabalhando com eventos em JavaScript</a
+                >
+              </li>
+            </ul>
+            <p class="conteudo-letramaior pt-3 px-2">Document Object Model</p>
+            <ul class="conteudo pe-2">
+              <li>
+                <a
+                  class="conteudo"
+                  href="http://devfuria.com.br/javascript/dom/"
+                  >DOM - Document Object Model</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="http://devfuria.com.br/javascript/dom-manipulando-o-dom/"
+                  >Manipulando o DOM - Document Object Model</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="http://devfuria.com.br/javascript/dom-nodelist/"
+                  >JavaScript - NodeList (DOM)</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="http://devfuria.com.br/javascript/dom-queryselectorall/"
+                  >JavaScript - querySelectorAll()</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.horadecodar.com.br/2020/12/15/como-pegar-valor-de-input-com-javascript/"
+                  >Como pegar valor de input com JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="http://devfuria.com.br/javascript/dom-manipulando-o-dom/"
+                  >Manipulando o DOM - Document Object Model</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/watch?v=0dBY09OJm04"
+                  >Curso de JS Aula 08 DOM Manipular HTML com o JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/watch?v=ZYqrSpi845U"
+                  >Curso de JS Aula 09 DOM Manipular CSS com JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/howto/javascript/javascript-hide-show-elements/"
+                  >Ocultar / mostrar elementos com JavaScript</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.youtube.com/watch?v=VPXLOXz2Xzg"
+                  >Curso JavaScript #24 - Alterando o DOM com um for</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://maujor.com/tutorial/guia-completo-seletores-css3.php"
+                  >Guia completo dos Seletores CSS3</a
+                >
+              </li>
+            </ul>
+            <p class="conteudo-letramaior pt-3 px-2">Outros</p>
+            <ul class="conteudo pb-3 pe-2">
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/tags/javascript-string/"
+                  >Manipular strings</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/tags/javascript-number/"
+                  >Manipular números</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/tags/javascript-datetime/"
+                  >Manipular datas e horário</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/tags/javascript-date/"
+                  >Manipular datas</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/tags/javascript-array/"
+                  >Manipular arrays</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/tags/javascript-object/"
+                  >Manipular objects</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.delftstack.com/pt/howto/javascript/detect-mobile-browser-javascript/"
+                  >JavaScript detectar navegador móvel</a
+                >
+              </li>
+              <li>
+                <a
+                  class="conteudo"
+                  href="https://www.devmedia.com.br/boas-praticas-de-programacao-em-javascript/34215"
+                  >Boas Práticas de programação em JavaScript</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="aprofundamento">
+        <div class="col-auto">
+          <div class="container laranja mt-5 rounded-4">
+            <h1 class="display-6 text-light py-2 px-2">
+              <strong>Aprofundamento</strong>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="container azul mt-5 rounded-4">
+            <ul class="conteudo py-3 pe-2">
+              <li>
+                <p class="conteudo px-2">
+                  Extender as codebases visitadas no projeto 2, adicionando as
+                  seguintes funcionalidades:
+                </p>
+                <ul class="a conteudo">
+                  <li>
+                    jogo da memória:
+                    <ul>
+                      <li>arrumar no firefox;</li>
+                      <li>
+                        input para colocar nome do jogador atual e manter nome
+                        no record.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    truco 1x1:
+                    <ul>
+                      <li>
+                        melhorar visualmente a pontuação e as jogadas feitas;
+                      </li>
+                      <li>contar número de partidas;</li>
+                      <li>trocar alerts.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    truco game:
+                    <ul>
+                      <li>melhorar a aparência e as jogadas feitas;</li>
+                      <li>responsividade;</li>
+                      <li>trocar o alert.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    jokenpo:
+                    <ul>
+                      <li>
+                        aceitar também as palavras pedra, papel e tesoura.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    vanilla-jokenpo:
+                    <ul>
+                      <li>
+                        criar um input que troca o número de rounds para vencer.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>calculadora:</li>
+                  <ul>
+                    <li>(invente algo)</li>
+                  </ul>
+                  <li>
+                    jogo da velha:
+                    <ul>
+                      <li>(invente algo)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Estude sobre algoritmos e estruturas de dados. Este é um tópico
+                imenso no mundo da computação, mas o conhecimento, ainda que
+                raso, te beneficiará de inúmeras formas.
+                <ul>
+                  <li>
+                    <a
+                      class="conteudo"
+                      href="https://www.youtube.com/playlist?list=PLxI8Can9yAHf8k8LrUePyj0y3lLpigGcl"
+                      >Estrutura de Dados</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="conteudo"
+                      href="https://www.youtube.com/playlist?list=PLAGoEvRJAw9BRjbWhDJPDdmnQ1iVXC68r"
+                      >Curso de Algoritmos e Estrutura de Dados</a
+                    >
+                  </li>
+                  <li>
+                    Outra opção, é estudar algoritmos e estruturas de dados
+                    através de livros como:
+                    <ul class="conteudo">
+                      <li>
+                        Entendendo Algoritmos: Um Guia Ilustrado Para
+                        Programadores e Outros Curiosos por Aditya Y. Bhargava
+                      </li>
+                      <li>
+                        Cracking the Coding Interview por Gayle Laakmann
+                        McDowell
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li id="aprofundamento3">
+                <p class="conteudo px-2">
+                  Resolva problemas sobre estruturas de dados e algoritmos, de
+                  preferência, usando uma outra linguagem de programação, como:
+                  C#, Java, PHP, Python, Go ou C.
+                </p>
+                <p class="conteudo px-2">
+                  Você pode utilizar uma plataforma de exercícios, similar ao
+                  Beecrowd, chamada
+                  <a class="conteudo" href="https://leetcode.com/problemset/"
+                    >LeetCode</a
+                  >. É uma ótima oportunidade para se ambientar com as palavras
+                  comuns em programação em Inglês. Existe uma quantidade absurda
+                  de exercícios na plataforma, por isso, alguns sites te
+                  fornecem uma lista de exercícios separadas por tema como o
+                  <a class="conteudo" href="https://neetcode.io/roadmap"
+                    >NeetCode</a
+                  >
+                  e repositórios como o
+                  <a
+                    class="conteudo"
+                    href="https://github.com/ashishps1/awesome-leetcode-resources?tab=readme-ov-file#must-do-problems-topic-wise"
+                    >Awesome LeetCode Resources</a
+                  >, que também contém links de recursos de aprendizagem
+                  relativos aos desafios.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar navbar-text-white ms-2" href="#">
+          Condições e suporte
+        </a>
+      </div>
+    </nav>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
