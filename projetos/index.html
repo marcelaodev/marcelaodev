@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trilha de Projetos</title>
+    
+    <meta name="title" content="Trilha de Estudos - Irmãos Dev" />
+    <meta
+      name="description"
+      content="Conheça a Trilha de Estudos dos Irmãos Dev"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta propriedade="og:type" content="website" />
+    <meta propriedade="og:url" content="https://irmaos.dev/" />
+    <meta propriedade="og:title" content="Trilha de Estudos - Irmãos Dev" />
+    <meta
+      propriedade="og:description"
+      content="Conheça a Trilha de Estudos dos Irmãos Dev"
+    />
+    <meta
+      propriedade="og:image"
+      content="https://irmaos.dev/Imagens/LogoTag.png"
+    />
+
+    <!-- Twitter -->
+    <meta propriedade="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://irmaos.dev/" />
+    <meta property="twitter:title" content="Irmãos Dev" />
+    <meta property="twitter:description" content="Conheça o Site Irmãos Dev" />
+    <meta
+      property="twitter:image"
+      content="https://irmaos.dev/Imagens/LogoTag.png"
+    />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/Imagens/LogoIco.ico" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=DM Sans"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script> -->
+    <!-- <link rel="stylesheet" href="../trilha/style.css" /> -->
+</head>
+
+<body style="background-color: aliceblue;">
+    <nav class="navbar navbar-expand-lg bg-body-light">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            id="border-laranja"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon navbar-icon-laranja"></span>
+          </button>
+          <a class="navbar-brand" href="/index.html">
+            <img
+              src="../trilha/ImagensInicial/Logo-resumida.png"
+              alt="Irmãos Dev"
+              width="40"
+              height="32"
+            />
+          </a>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarTogglerDemo03"
+            style="font-family: 'DM Sans'"
+          >
+            <ul
+              class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-around"
+            >
+              <li class="nav-item">
+                <a class="nav-link so-letra-preta" href="index.html"
+                  ><strong>TODOS OS CAMINHOS</strong></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link so-letra-preta" href="#"
+                  ><strong>APOIE-NOS</strong></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link so-letra-preta"
+                  href="https://www.youtube.com/@IrmaosDev"
+                  ><strong>YOUTUBE</strong></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link so-letra-preta" href="#"
+                  ><strong>SOBRE</strong></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <div class="container border border-bottom-0" id="border-laranja">
+        <h1 class="letra-laranja mt-5 mx-2 mb-4" style="text-align: center">
+          Trilha <span style="color: #288bc8">de</span> Estudos
+        </h1>
+        <div class="col mx-3 px-md-5 mx-md-5" id="letra-media">
+          <p style="text-align: justify">
+            Bem vindo(a)! Esta trilha de estudos te fornece
+            <strong>gratuitamente</strong> os recursos que te fará um(a)
+            <strong>DEV</strong>.
+          </p>
+          <p style="text-align: justify">
+            Cada módulo conta com uma discussão sobre o assunto, uma meta de
+            estudos em horas de recursos como apostilas, vídeos, artigos e
+            tutoriais, projetos e desafios para fixação do conhecimento e uma
+            sugestão de como aprofundar no assunto.
+          </p>
+          <p style="text-align: justify">
+            Este material foi elaborado com base em experiências pessoais e em
+            pesquisas de mercado e está em constante evolução.
+          </p>
+          <!-- <p style="text-align: justify;"><a href="">Assista este vídeo para mais informações.</a></p> -->
+  
+          <a
+            href="https://www.youtube.com/@IrmaosDev"
+            class="textdecorationnone"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-youtube text-dark"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.twitch.tv/irmaosdev"
+            class="textdecorationnone"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-twitch text-dark"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142z"
+              />
+              <path
+                d="M11.857 3.143h-1.143V6.57h1.143zm-3.143 0H7.571V6.57h1.143z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/irmaos_dev"
+            class="textdecorationnone"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-instagram text-dark"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://twitter.com/Irmaos_dev"
+            class="textdecorationnone"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-twitter-x text-dark"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/people/Irm%C3%A3os-Dev/61556334315578/"
+            class="textdecorationnone"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-facebook text-dark"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/irmaosdev"
+            class="textdecorationnone"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-linkedin text-dark"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://github.com/irmaos-dev"
+            class="textdecorationnone"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-github text-dark"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://discord.gg/e4XUCEdR2G"
+            class="textdecorationnone"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-discord text-dark"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.tiktok.com/@irmaos.dev"
+            class="textdecorationnone"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-tiktok text-dark"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"
+              />
+            </svg>
+          </a>
+        </div>
+    </div>
+
+    <div class="bg-warning rounded-2 ms-0 d-inline-block px-3 py-2 ms-4 mt-5">
+        <h4><strong>Projeto #1 Primeiros Passos</strong>
+        </h4>
+    </div>
+    <div class="container-fluid ps-4">
+        <div class="row">
+            <div class="col-6 w-100 pt-3 fs-4 align-content-start">
+                <ul class="list-group">
+                    <li class="list-inline-item">
+                        <i class="bi bi-asterisk fs-5"></i> Instalar o Git e o GitHub Desktop
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="bi bi-asterisk fs-5"></i> Criar uma conta no GitHub
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="bi bi-asterisk fs-5"></i> Criar um repositório
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="bi bi-asterisk fs-5"></i> Baixar o repositório
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="bi bi-asterisk fs-5"></i> Abrí-lo no VSCode
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="bi bi-asterisk fs-5"></i> Fazer um commit pelo VSCode (e conferir se foi para o
+                        GitHub)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+    <div class="bg-warning rounded-2 ms-0 d-inline-block px-3 py-2 ms-4">
+        <h4 class=""><strong>Projeto #2 Bootstrap</strong></h4>
+    </div>
+    <h3 class="display-7 mb-0 ms-4"><i class="bi bi-asterisk fs-5 me-2"></i>Crie uma página utilizando HTML e Bootstrap
+        similar a esse
+        <a href="https://drive.google.com/file/d/1Du3zTmmHEcptl6PucdkKfoDCIWhTgH2P/view" class="text-muted">PDF.</a><br>
+        <i class="bi bi-asterisk fs-5 me-2"></i>Garanta que a página também esteja bem estruturada para versão mobile,
+        como neste
+        <a href="https://drive.google.com/file/d/1ownTEE9K7MUk_lgScWGo5RlI3ZRNNW-S/view" class="text-muted">PDF</a>.
+    </h3>
+    <h3 class="display-7 ms-4"><i class="bi bi-asterisk fs-5 me-2"></i><strong>Lembre-se:</strong> a versão mobile é em
+        geral o mais acessado.</h3>
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+
+
+    <div class="bg-warning rounded-2 ms-0 d-inline-block px-3 py-2 ms-4">
+        <h4><strong>Projeto #3.1 Beecrowd</strong>
+        </h4>
+    </div>
+
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center p-sm-2 mt-3">
+        <div class="container-fluid d-flex justify-content-center">
+            <h3 class="fst-italic">O objetivo do primeiro projeto é te introduzir à criação e estruturação de pequenos
+                códigos.
+                Crie uma conta no Beecrowd e resolva os seguintes problemas:</h3>
+        </div>
+
+        <div class="container-fluid row">
+            <div class="col-6 w-75">
+                <ul class="list-inline">
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1006" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#1 Média 2
+                            (Exercício 1006)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1008" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#2 Salário
+                            (Exercício 1008)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1019"
+                            class="link-dark fst-italic fs-4 d-flex"><i class="bi bi-asterisk fs-4"></i>#3 Converção de
+                            tempo
+                            (Exercício 1019)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1020" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#4 Idade em Dias
+                            (Exercício 1020)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1021" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#5 Notas e Moedas
+                            (Exercício 1021)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1035" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#6 Teste de Seleção 1
+                            (Exercício 1035)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1041" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#7 Coordenadas de um Ponto
+                            (Exercício 1041)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1051" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#8 Imposto de Renda
+                            (Exercício 1051)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1072" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#9 Intervalo 2
+                            (Exercício 1072)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1132" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#10 Múltiplos de 13
+                            (Exercício 1132)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1151" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#11 Fibonacci Fácil
+                            (Exercício 1151)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1176" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#12 Fibonacci em Vetor
+                            (Exercício 1176)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1180" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#13 Menor e Posição
+                            (Exercício 1180)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1435" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#14 Matriz Quadrada 1
+                            (Exercício 1435)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1534" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#15 Matriz 123
+                            (Exercício 1534)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1068" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#16 Balanço de Parênteses 1
+                            (Exercício 1068)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1110" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#17 Jogando Cartas Fora
+                            (Exercício 1110)</a>
+                    </li>
+                    <li class="list-item">
+                        <a href="https://judge.beecrowd.com/en/problems/view/1259" class="link-dark fst-italic fs-4 "><i
+                                class="bi bi-asterisk fs-4"></i>#18 Pares e Ímpares
+                            (Exercício 1259)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong>Projeto #3.2 Leitura de Codebases</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-flex">
+            <i class="bi bi-asterisk fs-4 me-2"></i> O objetivo desse projeto é te trazer familiaridade com os comandos
+            Javascript
+            e como eles são estruturados em um site real.
+        </span>
+        <span class="d-block fs-3 ms-3 ms-5 link-dark fst-italic">
+            Para isso, você deverá baixar o seguinte
+            <a href="https://github.com/irmaos-dev/codebases" class="link-dark fst-italic ms-1">
+                repositório
+            </a>
+            que contém os seguintes projetos: <strong>calculadora, jogo da memória, jogo da velha, truco e
+                jokenpo</strong>.
+            Execute os projetos em seu computador e leia todos seus arquivos.
+        </span>
+
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong>Projeto #3.3 Exercícios DOM</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-block">
+            <i class="bi bi-asterisk fs-4"></i> Interações no <strong>DOM</strong>.
+        </span>
+        <span class="d-block fs-3 ms-3 ms-5 link-dark fst-italic">
+            O objetivo desse projeto é reproduzir as interações mais comuns em diferentes páginas web.
+            Essas interações se repetem nos diversos sistemas, não importando se são blogs, lojas ou jogos.
+        </span>
+        <span class="d-block mb-3 fs-3 ms-5 link-dark fst-italic">
+            Resolva os exercícios contidos
+            <a href="https://irmaos.dev/trilha/exerciciosdom/#um" class="link-dark fst-italic ms-1">nesta página</a>
+        </span>
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong>Projeto #4.1 Interação com CrudCrud usando Thunder Client</strong></h4>
+    </div>
+
+    <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-flex">
+        <i class="bi bi-asterisk fs-4 me-2"></i> Em todas as atividades desta etapa você usará o serviço gratuito
+        CrudCrud,
+        que é uma API conveniente na criação de aplicações de teste ou protótipos.
+    </span>
+    <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-block">
+        <i class="bi bi-asterisk fs-4"></i> Interação com <a href="https://crudcrud.com/"
+            class="link-dark fst-italic ms-1">CrudCrud</a> <strong>usando Thunder Client</strong>.
+    </span>
+    <span class="d-block fs-3 ms-3 ms-5 link-dark fst-italic">
+        O objetivo da primeira atividade é ambientar com o uso de uma API Client,
+        um software especializado em interagir com APIs.
+        O uso do Thunder Client é indicado por ser uma extensão do VSCode, nosso ambiente de desenvolvimento
+        escolhido.
+    </span>
+    <span class="d-block mb-3 fs-3 ms-5 link-dark fst-italic">
+        Pegue o link disponibilizado em <a href="https://crudcrud.com/"
+            class="link-dark fst-italic ms-1">crudcrud.com</a>
+        e faça um total de 6 requisições HTTP, sempre na rota <br> "/pessoas"
+    </span>
+    <ul class="list-group list-group-flush col-11 ms-3">
+        <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Liste todos os registros.</li>
+        <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Adicione um registro contendo o nome de uma pessoa.
+        </li>
+        <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Exiba exclusivamente o registro alterado.</li>
+        <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Altere o nome do registro.</li>
+        <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Liste todos os registros.</li>
+        <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Delete o registro.</li>
+    </ul>
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong>Projeto #4.2 Interação com CrudCrud usando Javascript</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="d-block fs-3 ms-3 ms-5 link-dark fst-italic">
+            Nesta atividade, você realizará exatamente as mesmas requisições HTTP.
+            Portanto, ao listar todos os registros, também na rota "/pessoas", a resposta deve conter nenhum registro.
+        </span>
+        <span class="d-block mb-3 fs-3 ms-5 link-dark fst-italic">
+            Utilize o método "fetch" para realizar essas requisições individualmente.
+            Você pode fazer de qualquer forma no Javascript: em uma página,
+            no playground ou mesmo diretamente no console do DevTools.
+        </span>
+
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong>Projeto #4.3 Página web interagindo com CrudCrud</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mb-3">
+            Agora finalmente crie uma página completa, que envie requisições para o link disponibilizado pelo
+            <a href="https://crudcrud.com/" class="link-dark fst-italic ms-1">crudcrud.com</a> na rota "/pessoas"
+            e trate as respostas recebida do servidor.
+        </span>
+
+        <ul class="list-group list-group-flush col-11 ms-3">
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> um campo para colocar o link do CrudCrud que:
+            </li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> ao perder o foco (blur) envia uma requisição de
+                listar todas as pessoas e:</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> caso registros existam, criar a tabela descrita
+                a
+                baixo.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> caso nenhum registro exista, exibir a mensagem:
+                "Nenhuma pessoa cadastrada.".</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> um botão para adicionar pessoas.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> uma modal que aparece ao clicar nesse botão.
+            </li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> um formulário para inserir a pessoa dentro da
+                modal contendo:</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> text para o Nome e Email.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> radio button para o Tipo: Cliente, Fornecedor ou
+                Empregado, que:</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> deve mapear estes tipos para 1, 2 e 3.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> botão para cancelar que fecha a modal.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> botão para inserir a pessoa que faz:</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> valida se todos os campos estão preenchidos.
+            </li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> valida se é um email válido.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> envia a requisição para criar a pessoa.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> exibe a mensagem de sucesso ou erro.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> uma tabela que lista todas as pessoas
+                cadastradas e que contém:</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> o nome de cada coluna (Nome, Email e Tipo).</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> os dados de cada pessoa em cada linha, onde.
+            </li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> tipo deve ser exibido por extenso, em vez de 1,
+                2 e 3.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> um botão de deletar que abre um diálogo de
+                confirmação que faz ao confirmar:</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> envia a requisição de deletar.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> exibe a mensagem de sucesso ou erro.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> um botão de editar que abre uma modal que:</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> conteḿ um formulário de edição, similar ao
+                inserir.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> os campos devem estarem preenchidos com os
+                valores da pessoa correspondente.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> um botão de cancelar que fecha a modal.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> um botão de confirmar a edição que: </li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> realiza as mesmas verificações que a inserção.
+            </li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> enviar a requisição de editar.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> exibe mensagem de sucesso ou erro.</li>
+        </ul>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mb-3 mt-3">
+            Como os dados são salvos no <a href="https://crudcrud.com/" class="link-dark fst-italic ms-1">CrudCrud</a>,
+            recarregar a página ou fechar e abrir novamente deve exibir os dados
+            atuais.
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mb-3 mt-3">
+            Atenção! Você possui apenas 100 requisições diárias. Sua aplicação ficará indisponível ao atingir este
+            limite.
+        </span>
+        <span class="d-block mb-3 fs-3 ms-5 link-dark fst-italic">
+
+            <a href="https://irmaos.dev/trilha/apifake/" class="link-dark fst-italic ms-1">Confira essa página como exemplo</a>
+        </span>
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm ">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong>Projeto #4.4 Testando com Playwright</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="d-block fs-3 ms-5 link-dark fst-italic">
+            Agora que temos a página finalizada, você deve criar testes automatizados para ela usando o
+            <a href="https://playwright.dev/" class="link-dark fst-italic ms-1">playwright</a>
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic">
+            O Playwright é uma ferramenta que simula o uso real de uma página web utilizando um navegador. <br>
+            Com ela, você acessa páginas, clica em botões, lê textos e valores e mais.
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3">
+            Faça um código para o Playwright interagir com a sua página criada no projeto anterior. Ela deve pegar um
+            link do CrudCrud,
+            preencher no seu site e garantir o sucesso de cada operações possíveis e
+            também garantir que operações inválidas não funcionem.
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3">
+            Exemplos de casos de testes:
+        </span>
+        <ul class="list-group list-group-flush col-11 ms-3">
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> adicionar uma pessoa e verificar se os dados da
+                pessoa
+                estão sendo apresentados corretamente na tabela.
+            </li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> remover a pessoa criada e verificar que não
+                aparece
+                mais na tabela.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> tentar adicionar uma pessoa sem seus dados
+                e garantir que seja exibido um erro.</li>
+        </ul>
+    </div>
+    
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm ">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong>Projeto #5.1 Manipulador de arquivos</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="d-block fs-3 ms-5 link-dark fst-italic">
+            Neste projeto, você deverá exibir, criar, alterar, remover e mover arquivos do seu sistema.
+            Além disso, seu código deverá ser capaz de receber argumentos pela linha de comando.
+        </span>
+        <ul class="list-group list-group-flush col-11 ms-3 mt-3">
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> node meu_cli.js exibir arquivo_teste.txt
+                O conteúdo do arquivo deve aparecer integralmente na tela.
+            </li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> node meu_cli.js criar arquivo_teste.txt "Meu
+                texto a ser gravado no arquivo"
+                Deve criar um arquivo com o nome passado no segundo argumento (arquivo_teste.txt)
+                e contendo o texto que foi passado como terceiro argumento ("Meu texto a ser gravado no arquivo").</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> node meu_cli.js alterar arquivo_teste.txt
+                "Mudei o texto aqui" Deve alterar o arquivo de nome passado no segundo argumento
+                (arquivo_teste.txt) para que seu conteúdo
+                seja o texto que foi passado como terceiro argumento ("Mudei o texto aqui").
+            </li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5">node meu_cli.js remover arquivo_teste.txt
+                Deve deletar o arquivo de nome passado no segundo argumento (arquivo_teste.txt)</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5">node meu_cli.js mover arquivo_teste.txt
+                C:/pasta_destino/arquivo_teste.txt
+                Deve mover o arquivo de nome passado no segundo argumento (arquivo_teste.txt) para o caminho passado
+                no terceiro argumento (C:/pasta_destino/arquivo_teste.txt)</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5">node meu_cli.js OU node meu_cli.js help
+                Deve exibir a lista de comandos possíveis e uma descrição de como usá-los.</li>
+        </ul>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3">
+            Você deve validar todos os parâmetros, de forma que ao passar parâmetros inválidos,
+            seu programa deverá exibir uma mensagem de erro e exibir a lista de comandos e suas instruções de uso.
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3 ">
+            Uma outra ideia é fazer o programa renomear todos os arquivos de uma pasta conforme um dado critério.
+            Ou ainda, agrupar os arquivos em diferentes pastas conforme sua extensão.
+        </span>
+    </div>
+
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm ">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong>Projeto #5.2 Backend para Frontend</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="d-block fs-3 ms-5 link-dark fst-italic">
+            Este projeto objetiva criar um backend que interaja com o <a
+                href="https://irmaos.dev/trilha/3.html#projeto3" class="link-dark fst-italic ms-1">
+
+                frontend (projeto 3) criado no módulo #3,
+
+            </a> substituindo o <a href="https://crudcrud.com/" class="link-dark fst-italic ms-1">crudcrud.com</a>
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3">
+            Crie um servidor web utilizando Express.JS, com um banco de dados MySQL ou MongoDB
+            (sugiro que faça os dois, um de cada vez).
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3">
+            Para utilizar a sua API, coloque o endereço IP do seu backend no frontend, em vez do endereço do
+            <a href="https://crudcrud.com/" class="link-dark fst-italic ms-1">crudcrud.com</a>
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3">
+            Você pode utilizar tanto o próprio frontend quanto um API Client (como o Thunder Client)
+            para desenvolver e testar sua aplicação backend.
+            Após finalizá-la, garanta que o frontend esteja funcionando sem problemas com o backend criado.
+            <a href="https://crudcrud.com/" class="link-dark fst-italic ms-1">crudcrud.com</a>
+        </span>
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm ">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong>Projeto #5.3 Testar com o Supertest</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-block">
+            <i class="bi bi-asterisk fs-4"></i> Agora que finalizamos a API, você deve criar testes automatizados para
+            ela <strong>usando o Supertest.</strong>
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic">
+            O Supertest é uma ferramenta que simula as interações que o frontend faria com o backend.
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3">
+            Faça um código que envie requisições HTTP para a aplicação backend que você construiu no projeto anterior.
+            Ela deve testar todas as rotas, simulando um uso real da aplicação.
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3 mb-2">
+            Exemplos de casos de testes:
+        </span>
+        <ul class="list-group list-group-flush col-11 ms-3">
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> verificar que a
+                listagem de pessoas está vazia.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> inserir uma nova
+                pessoa e conferir se foi adicionado na rota de listagem.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> editar/deletar e
+                conferir.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> editar/deletar um
+                usuário que não existe.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> fazer requisições
+                inválidas que retornem erros (caso sua API tenha alguma validação).</li>
+        </ul>
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm ">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong> Projeto #6.1 Segunda linguagem</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="d-block fs-3 ms-5 link-dark fst-italic">
+            Usar NodeJS para o backend é uma opção. Mas por que não aprender uma segunda? Melhora seu currículo.
+            E o que você vai aprender com ela é um conhecimento que você vai carregar caso volte para o NodeJS no
+            futuro.
+            Escolha uma das linguagens a seguir: C#, Java, PHP ou Python.
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3">
+            Tá em dúvida? Procure saber quais outras atividades essas linguagens são boas além de desenvolvimento web
+            e veja com o que você se identifica mais. Por exemplo: C# é usado para jogos,
+            Java é usado para desenvolver aplicativos Android,
+            PHP é realmente focada em web e Python é usado para ciência de dados.
+        </span>
+        <span class="d-block fs-3 ms-5 link-dark fst-italic mt-3 mb-2">
+            Durante o processo de familiarização com a linguagem escolhida,
+            você deve implementar testes unitários para os códigos que está escrevendo.
+            Escolha uma ferramenta de teste unitário e utilize os projetos de <a
+                href="https://irmaos.dev/trilha/2.html#aprofundamento3"
+                class="link-dark fst-italic ms-1">Aprofundamento 3 do módulo Javascript</a>
+            do terceiro módulo como conteúdo para o estudo da nova linguagem.
+        </span>
+
+
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm ">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong> Projeto #6.2 Framework Backend</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-flex">
+            <i class="bi bi-asterisk fs-4 me-2"></i> Aprenda o framework indicado: .NET para C#, Spring Boot para Java,
+            Laravel para PHP e Django para Python.
+            Todos eles são altamentes produtivos e possuem a maior quantidade de vagas de trabalho.
+            Todos eles possuem alguma desvantagem, mas apenas escolha um e vá até o fim.
+        </span>
+        <ul class="list-group list-group-flush col-11 ms-3">
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Baixe o repositório
+                correspondente ao seu framework em CodebaseShow e se ambiente minimamente ao código.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Entre na documentação
+                oficial do framework e leia o máximo possível.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Reproduza alguns dos
+                exemplos mostrados.</i></li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Reproduza algum tutorial.</i></li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Estude o código do próprio framework.
+                Escolha algum conceito apresentado pela documentação (ex: o ciclo de vida de uma requisição) e procure
+                no código do
+                framework onde e como aquele comportamento foi programado.</i></li>
+        </ul>
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm ">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong> Projeto #6.3 Framework Frontend</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-flex">
+            <i class="bi bi-asterisk fs-4 me-2"></i> Aprenda ReactJS. Essa tecnologia realmente domina o mercado.
+            Apesar de outros frameworks também possuirem vagas e terem seus pontos positivos (ou simplesmente serem
+            melhores que React), você tem mais chances com ele.
+            A abordagem de estudos deve ser basicamente a mesma, exceto pela recomendação em aprender Typescript.
+            Typescript basicamente é Javascript com algumas funcionalidades a mais.
+            Ela está presente na maior parte dos projetos e depois de aprendê-lo com React, não será difícil usar
+            somente Javascript se necessário.
+        </span>
+        <ul class="list-group list-group-flush col-11 ms-3">
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Aprenda Typescript.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Baixe um repositório ReactJS com Typescript em
+                CodebaseShow
+                e se ambiente minimamente ao código.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Entre na documentação oficial do framework e
+                leia o máximo possível.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Reproduza alguns dos exemplos mostrados.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Reproduza algum tutorial.</li>
+        </ul>
+    </div>
+
+    <hr>
+    <!-- <h3 class="text-muted shadow-sm ">
+        ________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+    </h3> -->
+    <div class="bg-warning rounded-2 d-inline-block px-3 py-2 mb-4 ms-4">
+        <h4><strong> Projeto #6.4 Adicionar novas funcionalidades a um software já existente</strong></h4>
+    </div>
+
+    <div class="container-fluid">
+        <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-flex">
+            <i class="bi bi-asterisk fs-4 me-2"></i> É aqui o ápice da Trilha de Estudos.
+            Se você ainda não grava vídeos ou escreve sobre os seus estudos, fortemente recomendo que comece agora. Não
+            apenas pessoas que podem te contratar saberão sobre você, mas também irá conseguir experiência para falar
+            sobre assuntos técnicos.
+            Quase como se você estivesse se preparando para uma entrevista.
+            Em uma entrevista vão te fazer perguntas difíceis. Treine com pessoas reais nas redes sociais.
+            Dê seu melhor criando um software que vá impressionar um recrutador.
+        </span>
+        <ul class="list-group list-group-flush col-11 ms-3">
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> Baixar repositórios em CodebaseShow.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> frontend em ReactJS.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> backend em um framework opinativo, como: .NET,
+                Laravel, Django, Spring Boot.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> melhorar a responsividade.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> testes automatizados (se o projeto não tiver,
+                começar do zero).</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> login social.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> filtros, ordenação, paginação.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> relatórios.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> variáveis de ambiente e docker.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> README detalhado e demo online.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> níveis de acesso e preferências do
+                administrador.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> websockets - comunicação de duas vias.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> notificações integradas e/ou por emails.</li>
+            <li class="list-group-item-secondary fst-italic fs-4 ms-5"> versão paga com período de testes.</li>
+        </ul>
+        <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-flex">
+            <i class="bi bi-asterisk fs-4 me-2"></i>Pratique responder às perguntas comuns de entrevistas de emprego.
+        </span>
+        <span class="mb-3 fs-3 ms-3 link-dark fst-italic d-flex">
+            <i class="bi bi-asterisk fs-4 me-2"></i>Anuncie que está buscando um emprego e candidate-se.
+        </span>
+    </div>
+</body>
+
+</html>
