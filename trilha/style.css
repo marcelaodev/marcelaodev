@@ -197,3 +197,8 @@ li[id] > * {
 .bg-branco {
   background-color: white;
 }
+
+ol.conteudo {
+  list-style-type: none;
+  padding-left: 0; /* Remove o recuo padrão */
+}
