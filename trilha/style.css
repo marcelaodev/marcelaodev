@@ -159,7 +159,12 @@ figcaption.capazul {
   }
 }
 
-ul > li {
+ul > li:not([class]) {
+  margin: 1.5em 0;
+  line-height: 1.15;
+}
+
+ul > li.nav-item {
   margin: 1.5em 0;
   line-height: 1.15;
 }
@@ -196,4 +201,9 @@ li[id] > * {
 
 .bg-branco {
   background-color: white;
+}
+
+ol.conteudo {
+  list-style-type: none;
+  padding-left: 0; /* Remove o recuo padrão */
 }
