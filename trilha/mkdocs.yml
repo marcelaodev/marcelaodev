@@ -1,0 +1,324 @@
+site_name: My Docs
+theme:
+  name: material
+  features:
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    # - navigation.expand
+nav:
+  - Perguntas frequentes:
+    - index.md
+    - Qual linguagem começar?:
+      - index.md
+    - Python/Java/PHP/Javascript são boas? Qual a melhor?:
+      - index.md
+    - Qual linguagem começar?:
+      - index.md
+    - Que projeto eu desenvolvo para o meu portfólio?:
+      - index.md
+    - Quanto tempo leva para conseguir um estágio/emprego?:
+      - index.md
+    - Preciso de faculdade para ser programador?:
+      - index.md
+    - Qual a diferença entre os cursos de Engenharia de Software e da Computação, CC, SI e ADS?:
+      - index.md
+    - Front-end ou back-end?:
+      - index.md
+    - Posso usar o ChatGPT para codar?:
+      - index.md
+    - As inteligências artificiais vão tirar o emprego do programador?:
+      - index.md
+    - Onde procurar emprego?:
+      - index.md
+    - Como fazer uma entrevista de emprego?:
+      - index.md
+    - Meu portfólio/currículo/linkedin tá bom?:
+      - index.md
+    - Qual o melhor curso?:
+      - index.md
+    - Preciso saber inglês para programar?:
+      - index.md
+    - Preciso saber matemática para programar?:
+      - index.md
+  - Primeiros Passos:
+    - index.md 
+    - Não sei nem mexer em computador ainda:
+      - index.md
+    - Tópicos básicos de computação:
+      - index.md
+    - Projetos básicos:
+      - index.md
+    - Tópicos avançados de computação:
+      - inicio/teoria/index.md
+    - Projetos avançados:
+      - index.md
+
+  - HTML e CSS:
+    - index.md 
+    # - Tópicos básicos:
+    #   - index.md
+    #   - HTML e CSS:
+    #     - index.md
+    - Layouts Comuns: html/layouts.md
+    # - Tópicos intermediários:
+    #   - index.md
+    #   - Bootstrap:
+    #     - index.md
+    - Página de Preços: html/precos.md
+  - Javascript:
+    - index.md 
+    # - Material de apoio:
+    #   - index.md
+    #   - Cursos e apostilas:
+    #     - index.md
+    #   - Códigos para leitura:
+    #     - index.md
+    # - Projetos:
+    #   - index.md
+    - Leitura de códigos: javascript/leitura.md
+    - Resolução de problemas: javascript/problemas.md
+    - Manipulador de arquivos: javascript/manipulador_arquivos.md
+    - Mais problemas (opcional): javascript/opcionais.md
+  - Front-end:
+    - index.md 
+    # - Material de apoio:
+    #   - index.md
+    #   - Manipulação do DOM:
+    #     - index.md
+    #   - DevTools:
+    #     - index.md
+    #   - HTTP e API clients:
+    #     - index.md
+    #   - Playwright:
+    #     - index.md
+    # - Projetos:
+    #   - index.md
+    - Exercícios de manipulação do DOM:
+      - index.md
+    - Interação com uma API:
+      - index.md
+      - Usando uma API client:
+        - index.md
+      - Usando Javascript:
+        - index.md
+      - HTML / CSS / JS:
+        - index.md
+      - Teste E2E com Playwright:
+        - index.md
+      - Outras funcionalidades:
+        - index.md
+    - Corrigir bugs de um projeto:
+      - index.md
+  - Back-end:
+    - index.md 
+    # - Material de apoio:
+    #   - index.md
+    #   - Node.js:
+    #     - index.md
+    #   - REST APIs:
+    #     - index.md
+    #   - Express.js:
+    #     - index.md
+    #   - Banco de dados:
+    #     - index.md
+    #   - Supertest:
+    #     - index.md
+    # - Projetos:
+    #   - index.md
+    - Back-end para o Front-end 1: # criar testes automatizados verificando se a validação foi feita
+      - index.md
+    - Login com o Google:
+      - index.md
+    - Corrigir bugs de um projeto:
+      - index.md
+    - Adicionar novas funcionalidades a um projeto existente: # criação de uma rota de relatório
+      - index.md
+  - Front-end com framework:
+    - index.md 
+    # - Material de apoio:
+    #   - index.md
+    #   - React.JS:
+    #     - index.md
+    #   - Técnicas:
+    #     - index.md
+    #     - Roteamento:
+    #       - index.md
+    #     - Comunicação com APIs:
+    #       - index.md
+    #     - Gerenciamento de Estados:
+    #       - index.md
+    #     - Estilização dinâmica:
+    #       - index.md
+    #     - Hooks Customizados:
+    #       - index.md
+    #     - Lazy Loading:
+    #       - index.md
+    #     - Suspense:
+    #       - index.md
+    #   - Bibliotecas:
+    #     - index.md
+    #     - React Router:
+    #       - index.md
+    #     - Tanstack Query:
+    #       - index.md
+    #     - Zustand:
+    #       - index.md
+    #   - Testes automatizados:
+    #     - index.md
+    # - Projetos:
+    #   - index.md
+    - Exercícios de técnicas: # implementar do 0 as técnicas
+      - index.md
+    - Exercícios de biblioteca: # implementar as técnicas usando bibliotecas
+      - index.md
+      # - Dicionário:
+      #   - index.md
+    - Corrigir bugs de um projeto:
+      - index.md
+    - Adicionar novas funcionalidades a um projeto existente:
+      - index.md
+  - Back-end com framework:
+    - index.md 
+    # - Material de apoio:
+    #   - index.md
+
+    #   - Linguagem de programação:
+    #     - index.md
+    #     - PHP / Java / C# / Python:
+    #       - index.md
+    #     - Orientação a Objetos:
+    #       - index.md
+
+
+    #   - Banco de Dados:
+    #     - index.md
+    #     - Relacionamentos:
+    #       - index.md
+    #     - Modelagem:
+    #       - index.md
+    #     - ORMs:
+    #       - index.md
+    #     - Migrations:
+    #       - index.md
+    #     - Seeds, Factories:
+    #       - index.md
+
+    #   - Aplicação:
+    #     - index.md
+    #     - Testing:
+    #       - index.md
+    #     - Roteamento:
+    #       - index.md
+    #     - Middlewares:
+    #       - index.md
+    #     - Autenticação:
+    #       - index.md
+    #     - Validação:
+    #       - index.md
+    #     - Templates:
+    #       - index.md
+    #     - Paginação:
+    #       - index.md
+    #     - Debugging:
+    #       - index.md
+    #     - Logging:
+    #       - index.md
+
+    #   - Outros:
+    #     - index.md
+    #     - Documentação da API:
+    #       - index.md
+    #     - Websockets:
+    #       - index.md
+    #     - Envio de E-mail:
+    #       - index.md
+    #     - Integração com Meios de Pagamento:
+    #       - index.md
+    #     - Web Scrapping:
+    #       - index.md
+    #     - OAuth2.0:
+    #       - index.md
+
+    #   - Infraestrutura:
+    #     - index.md
+    #     - Docker:
+    #       - index.md
+    #     - GitHub Actions:
+    #       - index.md
+    #     - AWS:
+    #       - index.md
+    #     - Monitoramento:
+    #       - index.md
+
+        
+    # - Projetos:
+    #   - index.md
+    - Exercícios de técnicas: # TODO: elaborar subtópicos
+      - index.md
+    # - Dicionário:
+    #   - index.md
+    - Corrigir bugs de um projeto:
+      - index.md
+    - Adicionar novas funcionalidades a um projeto existente:
+      - index.md
+    - OAuth2.0 server: # servidor de emissão + servidor de recursos + client
+      - index.md
+    - Web Scrapper:
+      - index.md
+  - Portfólio:
+    - index.md 
+    - Projetos: 
+      - index.md
+  # - Tópicos avançados:
+  #   - index.md
+  #   - HTML e CSS:
+  #     - Boas práticas:
+  #       - index.md
+  #     - Reutilização de componentes:
+  #       - index.md
+  #     - Arquiteturas e ferramentas:
+  #       - index.md
+  #     - Tailwind:
+  #       - index.md
+  #     - Outros frameworks:
+  #       - index.md
+  #     - Projetos de aprofundamento:
+  #       - index.md
+  #       - Prática com arquiteturas e frameworks:
+  #         - index.md
+  #       - Réplicas de websites:
+  #         - index.md
+  #   - Linguagens de programação:
+  #       - index.md
+  #       - Tópicos:
+  #         - index.md
+  #         - Organização e arquitetura de computadores:
+  #           - index.md
+  #         - Sistemas operacionais:
+  #           - index.md
+  #         - Linguagem C:
+  #           - index.md
+  #         - Algoritmos e estrutura de dados:
+  #           - index.md
+  #         - Linguagens e Compiladores:
+  #           - index.md
+  #         - Matemática para computação:
+  #           - index.md
+  #       - Projetos:
+  #         - index.md
+  #         - Resolução de problemas de nível médio/avançado no LeetCode:
+  #           - index.md
+  #         - Visualizador de algoritmos:
+  #           - index.md
+  #         - Escrever código em Assembly:
+  #           - index.md
+  #         - Construir um software complexo:
+  #           - index.md
+  #           - Linguagem de programação:
+  #             - index.md
+  #           - TCP server/client:
+  #             - index.md
+  #           - Sistema de controle de versões:
+  #             - index.md

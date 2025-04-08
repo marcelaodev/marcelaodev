@@ -1,0 +1,1 @@
+Neste [repositório do GitHub](https://github.com/irmaos-dev/beecrowd) você encontrará, além das respostas dos desafios propostos, códigos de outros desafios que são úteis de serem lidos antes mesmo de iniciar a resolução da lista de exercícios, e ainda uma lista de outros desafios opcionais a serem resolvidos.
