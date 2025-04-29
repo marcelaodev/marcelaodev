@@ -1,3 +1,5 @@
+// https://www.beecrowd.com.br/judge/pt/problems/view/1118
+
 var input = require('fs').readFileSync('/dev/stdin', 'utf8');
 let l1, limite, n1, n2, average;
 l1 = input.split("\n").map(Number);

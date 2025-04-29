@@ -7,6 +7,12 @@ theme:
     - navigation.top
     - navigation.tracking
     # - navigation.expand
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 nav:
   - Perguntas frequentes:
     - index.md
@@ -61,7 +67,6 @@ nav:
     #   - index.md
     #   - HTML e CSS:
     #     - index.md
-    - Layouts Comuns: html/layouts.md
     # - Tópicos intermediários:
     #   - index.md
     #   - Bootstrap:
@@ -78,9 +83,9 @@ nav:
     # - Projetos:
     #   - index.md
     - Leitura de códigos: javascript/leitura.md
+    - Testes automatizados: javascript/testes.md
     - Resolução de problemas: javascript/problemas.md
     - Manipulador de arquivos: javascript/manipulador_arquivos.md
-    - Mais problemas (opcional): javascript/opcionais.md
   - Front-end:
     - index.md 
     # - Material de apoio:
@@ -95,22 +100,14 @@ nav:
     #     - index.md
     # - Projetos:
     #   - index.md
-    - Exercícios de manipulação do DOM:
+    - Manipulação do DOM: front/dom.md # - Exercícios, Leitura e modificar códigos que manipulam o DOM
+    - Leitura e modificação de códigos: front/leitura.md # - Exercícios, Leitura e modificar códigos que manipulam o DOM
+    - Interação com uma API fake:
       - index.md
-    - Interação com uma API:
-      - index.md
-      - Usando uma API client:
-        - index.md
-      - Usando Javascript:
-        - index.md
-      - HTML / CSS / JS:
-        - index.md
-      - Teste E2E com Playwright:
-        - index.md
-      - Outras funcionalidades:
-        - index.md
-    - Corrigir bugs de um projeto:
-      - index.md
+      - Usando uma API client: front/api/client.md
+      - Usando Javascript: front/api/javascript.md
+      - HTML / CSS / JS: front/api/projeto.md
+      - Teste E2E com Playwright: front/api/test.md
   - Back-end:
     - index.md 
     # - Material de apoio:
@@ -127,13 +124,11 @@ nav:
     #     - index.md
     # - Projetos:
     #   - index.md
-    - Back-end para o Front-end 1: # criar testes automatizados verificando se a validação foi feita
+    - Leitura de códigos: back/leitura.md
+    - Servidor API fake: back/api.md
+    - Banco de dados: # leitura, relatórios
       - index.md
-    - Login com o Google:
-      - index.md
-    - Corrigir bugs de um projeto:
-      - index.md
-    - Adicionar novas funcionalidades a um projeto existente: # criação de uma rota de relatório
+    - Frameworks minimalistas: # Leitura, exercícios (CRUD em MPA) e modificar
       - index.md
   - Front-end com framework:
     - index.md 
@@ -143,17 +138,17 @@ nav:
     #     - index.md
     #   - Técnicas:
     #     - index.md
+    #     - Testes automatizados:
+    #       - index.md
     #     - Roteamento:
     #       - index.md
-    #     - Comunicação com APIs:
+    #     - Comunicação com APIs: // default, isError, error, isLoading, isSuccess, data
     #       - index.md
     #     - Gerenciamento de Estados:
     #       - index.md
     #     - Estilização dinâmica:
     #       - index.md
-    #     - Hooks Customizados:
-    #       - index.md
-    #     - Lazy Loading:
+    #     - Formulários:
     #       - index.md
     #     - Suspense:
     #       - index.md
@@ -169,15 +164,13 @@ nav:
     #     - index.md
     # - Projetos:
     #   - index.md
-    - Exercícios de técnicas: # implementar do 0 as técnicas
-      - index.md
-    - Exercícios de biblioteca: # implementar as técnicas usando bibliotecas
+    - Técnicas e biblioteca: # leitura e exercícios p implementar as técnicas do 0 e usando bibliotecas
       - index.md
       # - Dicionário:
       #   - index.md
-    - Corrigir bugs de um projeto:
-      - index.md
-    - Adicionar novas funcionalidades a um projeto existente:
+      - Técnicas: index.md # leitura, exercícios e modificar
+      - Bibliotecas: index.md # leitura, exercícios e modificar
+    - Desafios de contratação de empresas:
       - index.md
   - Back-end com framework:
     - index.md 
@@ -230,6 +223,8 @@ nav:
     #     - index.md
     #     - Documentação da API:
     #       - index.md
+    #     - Login com Google:
+    #       - index.md
     #     - Websockets:
     #       - index.md
     #     - Envio de E-mail:
@@ -255,13 +250,15 @@ nav:
         
     # - Projetos:
     #   - index.md
-    - Exercícios de técnicas: # TODO: elaborar subtópicos
+    - Leitura e exercícios de frameworks minimalistas:
+      - index.md
+    - Leitura e exercícios de Spring / .NET / NestJS / Laravel / Django:
       - index.md
     # - Dicionário:
     #   - index.md
-    - Corrigir bugs de um projeto:
+    - Modificar códigos:
       - index.md
-    - Adicionar novas funcionalidades a um projeto existente:
+    - Desafios de contratação de empresas:
       - index.md
     - OAuth2.0 server: # servidor de emissão + servidor de recursos + client
       - index.md

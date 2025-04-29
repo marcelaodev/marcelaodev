@@ -1,3 +1,5 @@
+// https://www.beecrowd.com.br/judge/pt/problems/view/1174
+
 var input = require('fs').readFileSync('/dev/stdin', 'utf8');
 var lines = input.split('\n');
 let number = parseFloat(lines.shift());

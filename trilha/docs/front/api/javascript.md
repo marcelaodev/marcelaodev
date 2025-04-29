@@ -1,0 +1,3 @@
+Nesta atividade, você realizará exatamente as mesmas requisições HTTP do projeto passada para a [API do CrudCrud](https://crudcrud.com/). Portanto, ao listar todos os registros, também na rota "/pessoas", a resposta deve conter nenhum registro.
+
+Utilize o método `fetch` para realizar essas requisições individualmente. Você pode fazer de qualquer forma no Javascript: em uma página criada por você, em um sandbox ou mesmo diretamente no console do DevTools.

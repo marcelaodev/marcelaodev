@@ -37,6 +37,13 @@ Crie uma conta no Beecrowd e resolva os seguintes problemas:
 
 [\#18: Pares e Ímpares](https://www.beecrowd.com.br/judge/pt/problems/view/1259)
 
-Nesta [pasta de um repositório do GitHub](https://github.com/irmaos-dev/beecrowd/tree/master/m%C3%ADnimo) você encontrará as respostas dos desafios propostos.
+Nesta [pasta do nosso repositório no GitHub](https://github.com/irmaos-dev/irmaos.dev/trilha/docs/javascript/problemas) você encontrará as respostas dos desafios propostos.
 
-[Nesse mesmo repositório](https://github.com/irmaos-dev/beecrowd), que é objeto do projeto anterior de [Leitura de códigos](../leitura), você encontrará códigos de outros desafios para servir de ponto de partida ou inspiração.
+Esses 18 exercícios foram selecionados para que o básico da programação fosse abordado pelo menos uma vez por algum deles.  
+Contudo esta lista não é eficiente para te tornar um bom codificador, pois são poucos problemas, com baixa complexidade e nenhum acoplamento com sistemas externos.
+
+Pra resolver a deficiência de serem poucos problemas, separei mais uma lista de problemas, que você pode ou não fazer:
+
+[1024](https://www.beecrowd.com.br/judge/pt/problems/view/1024), [1061](https://www.beecrowd.com.br/judge/pt/problems/view/1061), [1118](https://www.beecrowd.com.br/judge/pt/problems/view/1118), [1132](https://www.beecrowd.com.br/judge/pt/problems/view/1132), [1145](https://www.beecrowd.com.br/judge/pt/problems/view/1145), [1158](https://www.beecrowd.com.br/judge/pt/problems/view/1158), [1174](https://www.beecrowd.com.br/judge/pt/problems/view/1174), [1175](https://www.beecrowd.com.br/judge/pt/problems/view/1175), [1234](https://www.beecrowd.com.br/judge/pt/problems/view/1234), [1437](https://www.beecrowd.com.br/judge/pt/problems/view/1437), [1551](https://www.beecrowd.com.br/judge/pt/problems/view/1551), [1960](https://www.beecrowd.com.br/judge/pt/problems/view/1960)
+
+A solução dos problemas pode ser consultada na [pasta do nosso repositório no GitHub](https://github.com/irmaos-dev/irmaos.dev/trilha/docs/javascript/opcionais).

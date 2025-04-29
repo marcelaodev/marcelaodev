@@ -1,3 +1,5 @@
+// https://www.beecrowd.com.br/judge/pt/problems/view/1960
+
 var input = require('fs').readFileSync('/dev/stdin', 'utf8');
 var lines = input.split('\n');
 let numero = parseInt(lines.shift());
