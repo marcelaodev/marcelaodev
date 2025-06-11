@@ -126,10 +126,8 @@ nav:
     #   - index.md
     - Leitura de códigos: back/leitura.md
     - Servidor API fake: back/api.md
-    - Banco de dados: # leitura, relatórios
-      - index.md
-    - Frameworks minimalistas: # Leitura, exercícios (CRUD em MPA) e modificar
-      - index.md
+    - Banco de dados: back/database.md
+    - Adicionar nova funcionalidade: back/novas_funcionalidades.md
   - Front-end com framework:
     - index.md 
     # - Material de apoio:
