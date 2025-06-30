@@ -1,3 +1,13 @@
+estilização dinâmica
+    - Crie um botão que
+        - ao clicá-lo ele recebe a classe "clicado"
+        - ao clicar novamente, a classe é removida
+        - a classe "clicado" deve ter uma cor de fundo vermelha
+        - utilizar a biblioteca "classnames"
+    - Crie um container que
+        - a cor de fundo é determinada pelo conteúdo de um input
+        - utilizar a biblioteca "styled-components"
+
 Hooks
     - Conheça os hooks nativos, quando usar e, principalmente, quando NÃO usar
         - useState, useEffect
@@ -74,12 +84,61 @@ gerenciamento de estados / compartilhamento de dados entre componentes distantes
         - faça commits de cada pequena funcionalidade criada
         - crie testes automatizados para cada funcionalidade
 
-suspense / lazy
+suspense / skeleton / lazy loading / promises
+    - Crie uma aplicação que:
+        - utilize o componente "Suspense" do React
+        - exiba o resultado de uma chamada à URL "https://httpstat.us/200?sleep=3000"
+        - exiba um componente contendo o texto "Carregando..." enquanto a chamada não retornar
+    - Crie uma nova aplicação que:
+        - faça duas chamadas à mesma URL ao mesmo tempo, porém alterando o parâmetro "sleep" para valores aleatórios
+        - exiba um componente Suspense enquanto ambas as chamadas não retornarem
+        - utilize Promise.all
+    - Crie uma nova aplicação que:
+        - faça duas chamadas em sequência à mesma URL
+        - exiba um componente Suspense enquanto a segunda chamada não retornar
 
-estilização dinâmica
-    - cn
-    - styled components
+roteamento
+    - Crie uma aplicação que:
+        - contenha um menu com 3 links para páginas simples (Início, Sobre, Contato)
+        - ao clicar em qualquer um dos links,
+            - a aplicação deve deixar de exibir a página atual e exibir a página destino
+            - nenhuma requisição deve acontecer na aba Rede do DevTools
+            - a barra de URL do navegador deve ser atualizado com a rota da página destino
+        - ao acessar qualquer rota, o link correspondente deve receber uma estilização diferente (negrito, por exemplo)
+        - ao acessar diretamente as rotas "/", "/sobre" e "/contato", a aplicação deve carregar as páginas Início, Sobre e Contato, respectivamente. O conteúdo em si das páginas pode ser qualquer coisa
+        - ao acessar qualquer outra rota, como /teste, a aplicação deve carregar uma página com uma mensagem "Página inexistente"
+    - Refaça a mesma aplicação usando a biblioteca react-router-dom
 
-router
+formulários e validação
+    - Crie uma aplicação que:
+        - contenha os inputs com as seguintes verificações:
+            - Nome
+                - deve ter no mínimo 3 caracteres
+            - Email
+                - deve passar no teste de uma expressão regular (regex) que avalia se a string é um email válido
+            - Senha
+                - deve ter no mínimo 6 caracteres
+                - pelo menos uma letra
+                - pelo menos um número
+                - pelo menos um caractere especial
+            - Confirmar Senha
+                - deve ser igual ao campo "senha"
+            - Aceitar Termos (checkbox)
+                - deve ser marcado
+        - contenha um botão "Enviar" que apenas fica ativado quando todas as restrições são cumpridas
+        - contenha um botão "Limpar" que limpa o valor de todos os inputs
+        - contenha um feedback próximo ao input de qual das restrições aquele input está violando
+    - Crie a mesma aplicação, mas usando as bibliotecas Formik e Zod
 
 testes
+    - compreenda a diferença entre testes unitários e testes end-to-end
+    - compreenda a utilidade de criar testes automatizados:
+        - garantir que as funcionalidades testadas vão continuar funcionando ao alterar algo, ou ao atualizar uma biblioteca
+        - melhorar a qualidade geral ao evidenciar casos especiais
+        - possibilitar desenvolver abrindo pouco o navegador
+    - compreenda as melhores práticas de testes e o que não é necessário testar
+    - Crie pequenas aplicações que contenham um teste que:
+        - testa que um componente é renderizado ao clicar em um botão
+        - testa que um input é carregado já com um valor padrão
+        - testa que um spinner é exibido enquanto uma Promise não é resolvida
+        - testa que a página é alterada após uma Promise ser resolvida
