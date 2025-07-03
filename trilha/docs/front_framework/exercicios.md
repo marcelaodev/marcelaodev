@@ -134,11 +134,20 @@ testes
     - compreenda a diferença entre testes unitários e testes end-to-end
     - compreenda a utilidade de criar testes automatizados:
         - garantir que as funcionalidades testadas vão continuar funcionando ao alterar algo, ou ao atualizar uma biblioteca
-        - melhorar a qualidade geral ao evidenciar casos especiais
+        - melhorar a qualidade geral ao evidenciar casos especiais (encontrar bugs mais cedo)
         - possibilitar desenvolver abrindo pouco o navegador
     - compreenda as melhores práticas de testes e o que não é necessário testar
+        - https://daily.dev/blog/test-cases-for-react-js-a-starter-guide
+        - https://zaicevas.com/blog/what-not-to-assert-in-react-component-tests
+        - https://kentcdodds.com/blog/avoid-nesting-when-youre-testing
     - Crie pequenas aplicações que contenham um teste que:
         - testa que um componente é renderizado ao clicar em um botão
         - testa que um input é carregado já com um valor padrão
         - testa que um spinner é exibido enquanto uma Promise não é resolvida
         - testa que a página é alterada após uma Promise ser resolvida
+
+boas práticas
+    - https://www.freecodecamp.org/news/how-to-use-react-devtools/
+    - https://www.perssondennis.com/articles/react-anti-patterns-and-best-practices-dos-and-donts
+    - https://medium.com/@Blochware/common-mistakes-in-react-component-structure-avoiding-unnecessary-nesting-and-keeping-components-dcbf626ab568
+    - https://www.freecodecamp.org/news/react-performance-optimization-techniques/

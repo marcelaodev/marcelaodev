@@ -8,9 +8,7 @@
 
 - front framework:
     - leitura de codigo (criar tutoriais da IA)
-    - exercicios 
-    - modificar o código
-    - desafios de empresas
+    - desafios de empresas (escrever descrição)
 
 - back framework:
     - leitura framework minimalista
@@ -19,3 +17,5 @@
     - desafios de empresas
     - OAuth2.0 client/server
     - web scrapper
+
+- sistema portfólio
