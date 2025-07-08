@@ -1,4 +1,7 @@
 O objetivo desse projeto é dar os primeiros passos de como utilizar um banco de dados relacional.  
+Eu preparei um vídeo que dá algumas dicas de como resolver esses exercícios: [Aprenda SQL de uma vez por todas!](https://www.youtube.com/watch?v=ScN1rpwtZWs)
+É importante notar que o assunto "modelagem de bancos de dados" é bastante extenso, mas seus fundamentos são importantes de serem dominados para você conseguir resolver esses e outros problemas.
+
 Crie uma conta no Beecrowd e resolva os seguintes problemas:
 
 **Problemas de tabela única**

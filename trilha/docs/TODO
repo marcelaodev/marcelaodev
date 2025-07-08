@@ -5,17 +5,15 @@
 - back:
     - leitura de codigo (terminar de criar tutoriais da AI para cada codebase)
     - extrair informações de um DB (colocar link do video do youtube mostrando beecrowd e dbeaver)
+    - web scrapper
 
 - front framework:
     - leitura de codigo (criar tutoriais da IA)
-    - desafios de empresas (escrever descrição)
 
 - back framework:
-    - leitura framework minimalista
     - leitura framework opinativo
     - modificar o código
     - desafios de empresas
     - OAuth2.0 client/server
-    - web scrapper
 
 - sistema portfólio
