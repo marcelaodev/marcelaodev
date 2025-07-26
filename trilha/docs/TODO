@@ -3,17 +3,14 @@
 - adicionar testes automatizados a todos os projetos
 
 - back:
-    - leitura de codigo (terminar de criar tutoriais da AI para cada codebase)
+    - leitura de codigo (remover tutoriais da AI para cada codebase)
     - extrair informações de um DB (colocar link do video do youtube mostrando beecrowd e dbeaver)
-    - web scrapper
 
 - front framework:
-    - leitura de codigo (criar tutoriais da IA)
+    - leitura de codigo (escrever)
 
 - back framework:
-    - leitura framework opinativo
-    - modificar o código
-    - desafios de empresas
-    - OAuth2.0 client/server
+    - OAuth2.0 client/server *
 
 - sistema portfólio
+    - web scrapper

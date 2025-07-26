@@ -8,29 +8,36 @@ Minha recomendação é escolher uma entre as quatro: Java, C#, PHP ou Python.
 
 - Java é muito usada em diferentes tipos de sistemas, como desenvolvimento nativo de aplicativos para Android, softwares empresariais, servidores "não-web" e outros.
 - C# é muito usada para desenvolvimento de jogos com a engine Unity, mas também usada em muitos outros contextos.
-- PHP é uma linguagem mais limitada ao desenvolvimento web, mas seu framework Laravel entrega uma incrível experiência de desenvolvimento web.
+- PHP é limitada a web, mas se destaca pela simplicidade de desenvolver aplicações completas.
 - Python também é muito usada para automações, análise de dados e inteligência artificial.  
 
-Falando apenas de vagas de emprego de desenvolvimento web, na frente e empatados, estão o Java e o C# como as linguagens com mais oportunidades no mercado de hoje, seguidas pelo PHP e, por último, o Python.  
+Java e C# são as linguagens mais populares no mercado de trabalho, seguidas pelo PHP e, por último, o Python.  
 
-Mas ainda assim, considere também aprender Typescript, pois o NodeJS também oferece muitas oportunidades e o uso de tipagem é uma abordagem padrão para softwares robustos.  
+Em algum momento após dominar uma das linguagens, considere voltar ao Javascript, de preferência utilizando a sua versão tipada Typescript, pois o mercado do NodeJS é muito grande.  
+
+Não tenha medo de fazer uma escolha "errada". Grande parte dos conhecimentos que você vai adquirir aqui são transferíveis a uma outra tecnologia. Depois de aprender, por exemplo, Java com Spring, você vai conseguir ser produtivo com NodeJS com NestJS muito mais rápido.
+
+Também não fique travado querendo escolher a "linguagem perfeita". Todas elas são boas e ruins ao mesmo tempo, cada uma à sua própria maneira.
 
 Além de escolher uma linguagem, sua tarefa é:
 
-- Compreender sua sintaxe, funcionalidades e particularidades
-- Aprender sobre tipagem
-- Compreender seus ferramentas de build, gerenciamento de pacotes e o ambiente de execução
-- Aprender programação orientada a objetos
+- Aprender sua sintaxe, funcionalidades e particularidades
+- Aprender tipagem e programação orientada a objetos
+- Compreender suas ferramentas de build, de debugging, de gerenciamento de pacotes e o ambiente de execução
 - Conhecer o ecossistema da linguagem e bibliotecas comuns
 - Utilizar ferramentas como o SonarQube e linters como ESLint, PHPStan e Mypy
 - Utilizar ferramentas de testes automatizados
 
-Apesar de não te passar exercícios específicos para resolver, recomendo realizar uma ou mais das atividades:
+Apesar de não te passar exercícios específicos para resolver, recomendo realizar atividades como:
 
 - Refazer ou resolver novos exercícios do Beecrowd
-- Implementar estruturas de dados como listas encadeadas, filas, pilhas, hash tables, árvores ou grafos
+- Implementar estruturas de dados como listas encadeadas, filas, pilhas
 - Implementar algoritmos de interação com suas estruturas de dados, como busca e ordenação
-- Compreender as técnicas mais comuns de solução de problemas, como recursão, programação dinâmica, divisão e conquista, algoritmos gananciosos, força bruta e outros
+
+Você pode ir mais a fundo com atividades como:
+
+- Implementar estruturas de dados como hash tables, árvores ou grafos
+- Compreender as técnicas mais comuns de solução de problemas, como recursão, programação dinâmica, divisão e conquista, algoritmos greedy, força bruta, sliding window, BFS, DFS e outros
 - Implementar soluções de problemas clássicos, como o "Caminho Mínimo" e o "Problema do Caixeiro Viajante"
 
 Depois disso, desenvolveremos uma aplicação web utilizando o framework respectivo da sua linguagem escolhida:
@@ -41,4 +48,4 @@ Depois disso, desenvolveremos uma aplicação web utilizando o framework respect
 - Django ou Flask (Python)
 - NestJS ou Express (Typescript)
 
-Para compreender melhor os frameworks, estude os dois próximos módulos: [Frameworks Minimalistas](minimalista.md) e [Frameworks Opinativos](opinativo.md)
+Para compreender melhor os frameworks, estude o próximo capítulo: [Leitura de Códigos](leitura.md)

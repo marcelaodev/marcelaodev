@@ -8,3 +8,5 @@ Issue #41: [bug: Voltar a página reseta o filtro de tag](https://github.com/irm
 Issue #57: [Bug Login Button](https://github.com/irmaos-dev/mural/issues/57)  
 Issue #58: [Link de fazer Login e Follow está indo para pagina 404](https://github.com/irmaos-dev/mural/issues/58)  
 Issue #60: [Nova linha no artigo não está sendo respeitado](https://github.com/irmaos-dev/mural/issues/60)  
+
+Ou qualquer uma das [outras issues](https://github.com/irmaos-dev/mural/issues?q=is%3Aissue%20label%3Aclient%20-label%3Aserver). (Em tarefas já resolvidas, entre no commit anterior ao da solução)

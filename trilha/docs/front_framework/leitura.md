@@ -22,3 +22,16 @@ https://github.com/gaearon/overreacted.io
 boilerplate:
 https://github.com/alan2207/bulletproof-react + https://github.com/santiq/bulletproof-nodejs
 
+ToDos:
+https://github.com/tastejs/todomvc/tree/master/examples/react-redux
+https://github.com/tastejs/todomvc/tree/master/examples/react
+https://github.com/tastejs/todomvc/tree/master/examples/typescript-react
+
+Conduit:
+https://github.com/khaledosman/react-redux-realworld-example-app
+https://github.com/statiumjs/realworld-example
+https://github.com/romansndlr/react-vite-realworld-example-app
+https://github.com/angelguzmaning/ts-redux-react-realworld-example-app
+https://github.com/yurisldk/realworld-react-fsd
+https://github.com/sukam09/react-recoil-realworld-example-app
+https://github.com/jiheon788/react-query-realworld
