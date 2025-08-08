@@ -1,4 +1,5 @@
 site_name: Trilha de Estudos
+site_dir: ../trilha
 theme:
   name: material
   features:
