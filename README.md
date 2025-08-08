@@ -1,7 +1,7 @@
 Olá, eu sou o **Marcelão Dev**! 👋
 
 Bem-vindo ao meu perfil! Sou um desenvolvedor Full-Stack com vários anos de experiência no mercado e, atualmente, trabalho para uma empresa americana.  
-Amo e odeio todas as linguagens e tecnologias de forma igual, mas amo o processo de resolver problemas.  
+Amo e odeio todas as linguagens e tecnologias de forma igual, mas adoro resolver problemas.  
 Criei uma trilha de estudos completa para novos devs, e também faço lives para trocar ideias, responder dúvidas de estudantes de programação, e explorar tecnologias e as novidades do nosso universo.
 
 Acesse a [Trilha de Estudos](https://marcelao.dev/trilha)!
