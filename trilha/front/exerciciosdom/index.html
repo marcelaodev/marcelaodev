@@ -1,0 +1,589 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercícios DOM: aprendendo as interações mais comuns em sites</title>
+    <style>
+      strong {
+        text-shadow: 1px 0;
+        letter-spacing:1px;
+        font-weight:bolder;
+      }
+    </style>
+  </head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <h1>Exercícios DOM: aprendendo as interações mais comuns em sites</h1>
+    </div>
+  </nav>
+
+  <div class="container-fluid containerExercicios">
+    <p>Esses exercícios foram desenvolvidos pensando em como simular grande parte das interações que são comumente vistas nos diversos sites da web.
+      <br>São padrões de comportamento que se repetem em quase todos os sites. Tome esses exercícios como os rudimentos da criação de qualquer tipo de página.
+      <br>Após dominar esses fundamentos, você possuirá as ferramentas básicas da criação de páginas interativas.
+      <br>Entenda-os profundamente! <strong>Use-os como consulta</strong> quando estiver criando uma página usando Javascript.
+    </p>
+    <p>Note:</p>
+    <ul>
+      <li>A estilização dos elementos com CSS ou Bootstrap não é o objetivo, foque nas funcionalidades.</li>
+      <li>A responsabilidade de verificar a corretude da solução é toda sua. Seja criterioso como um cliente exigente.</li>
+      <li>Não há necessidade de fazer uma página idêntica a essa, sugiro fazer múltiplas páginas, uma para cada exercício.</li>
+    </ul>
+  </div>
+
+  <div class="container-fluid containerExercicios">
+    <div class="accordion" id="accordionExample">
+      
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Exercício #1: Input alterando um elemento automaticamente
+              </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <strong>Introdução:</strong>
+                  <p>Talvez você nunca tenha ouvido falar em "reatividade", mas em termos gerais, significa que uma coisa altera na medida que outra é alterada.
+                      <br>Esse exercício te mostrará como alterar um elemento à partir de um <code>input</code>.
+                  </p>
+                  <strong>Instruções:</strong>
+                  <ul>
+                      <li>Você deverá criar 1 elemento de texto (exemplo: <code>span</code> ou <code>strong</code>) e 1 <code>input</code>.</li>
+                      <li>Ao trocar o valor do <code>input</code>, o sistema automaticamente deve exibir o valor do <code>input</code> no elemento de texto.</li>
+                      <li>Sugestão: entenda como funcionam os seguintes eventos: <code>change</code>, <code>blur</code>, <code>keyup</code> e <code>keydown</code>.</li>
+                  </ul>
+              
+                  <strong>Exemplo:</strong>
+                  <div class="exercicio container" id="exercicio1_container">
+                      <div class="row">
+                          <div class="col">
+                              <b>Valor do input:</b>
+                              <span id="exercicio1_text"></span>
+                          </div>
+                      </div>
+                      <br>
+                      <div class="row">
+                          <div class="col">
+                              <input type="text" class="form-control" id="exercicio1input" onkeyup="exercicio1change(this)">
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <strong>Conhecimentos chaves:</strong>
+                  <ul>
+                      <li>Como usar o evento <code>keyup</code></li>
+                      <li>Como selecionar um elemento usando o <code>document.querySelectorAll</code>?</li>
+                      <li>Como ler o valor de um <code>input</code>?</li>
+                      <li>Como alterar o texto de um elemento?</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+              Exercício #2: Confirmar antes de executar
+              </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordiTwoxample">
+              <div class="accordion-body">
+                  <strong>Introdução:</strong>
+                  <p>É muito comum sites apresentarem um pedido de confirmação. Afinal, ninguém quer ter suas coisas deletadas porque clicou no lugar errado.
+                      <br>Nesse exercício, você aprenderá como fazer isso.
+                  </p>
+                  <strong>Instruções:</strong>
+                  <ul>
+                      <li>Você deverá criar 1 <code>button</code>.</li>
+                      <li>Ao clicar no botão, deverá aparecer um pedido de confirmação da ação.</li>
+                      <li>Ao confirmar, uma mensagem falando que foi confirmado deve ser exibida.</li>
+                      <li>Ao recusar, uma mensagem falando que foi recusado deve ser exibida.</li>
+                  </ul>
+                  <div class="exercicio">
+                      <form>
+                          <button type="button" onclick="exercicio2Botao1()" class="btn btn-primary">Pedido de confirmação</button>
+                      </form>
+                  </div>
+                  <br>
+                  <strong>Conhecimentos chaves:</strong>
+                  <ul>
+                      <li>Como usar o evento <code>onClick</code>?</li>
+                      <li>Como usar uma condicional <code>if</code>?</li>
+                      <li>Como usar o <code>confirm</code>?</li>
+                      <li>Como usar o <code>alert</code>?</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+              Exercício #3: Ocultar ou exibir um elemento
+              </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <strong>Introdução:</strong>
+                  <p>Você talvez nem saiba, mas quase todos os sites possuem mais coisas do que você pode ver.
+                      <br>Você aprenderá como exibir ou ocultar elementos da tela neste exercício.
+                  </p>
+                  <strong>Instruções:</strong>
+                  <ul>
+                      <li>Você deverá criar 2 <code>img</code> e 2 <code>button</code>.</li>
+                      <li>Ao clicar no primeiro botão, se a primeira imagem estiver visível na tela, oculte-a.<br>
+                          Se a primeira imagem estiver oculta na tela, exiba-a.</li>
+                      <li>Ao clicar no segundo botão, você deverá fazer o mesmo processo anterior para ambas as imagens.<br>
+                          Se a imagem estiver visível, oculte-a. Se a imagem estiver oculta, exiba-a.</li>
+                      <li>Em todos os casos, você deve usar a função <code>document.querySelectorAll()</code>.<br>
+                          No segundo botão, você deve usar essa função apenas uma vez.</li>
+                  </ul>
+              
+                  <strong>Exemplo:</strong>
+                  <div class="exercicio container" id="exercicio3_container">
+                      <div class="row">
+                          <div class="col">
+                              <img id="exercicio3_1" src="exercicio3_1.png" width="300" />
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col">
+                              <img src="exercicio3_2.png" width="300" />
+                          </div>
+                      </div>
+                      <div class="row" style="margin-top: 10px">
+                          <div class="col">
+                              <button type="button" onclick="exercicio3Botao1()" class="btn btn-primary">Toggle primeira imagem</button>
+                              <button type="button" onclick="exercicio3Botao2()" class="btn btn-primary">Toggle ambas imagem</button>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <strong>Conhecimentos chaves:</strong>
+                  <ul>
+                      <li>Como selecionar um elemento usando o <code>document.querySelectorAll</code>?</li>
+                      <li>Como usar o evento <code>onClick</code>?</li>
+                      <li>Como usar um <code>for</code> para executar uma ação em vários elementos?</li>
+                      <li>Como ocultar um elemento da tela?</li>
+                      <li>Como voltar a exibir um elemento na tela?</li>
+                      <li>Como verificar se um elemento está oculto?</li>
+                  </ul>
+              </div>
+          </div>
+      </div>      
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+              Exercício #4: Ver o valor de inputs
+              </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordiFourxample">
+              <div class="accordion-body">
+                  <strong>Introdução:</strong>
+                  <p>Neste exercício, você aprenderá como ler o valor que o usuário digitou em um campo e como limpar o <code>input</code>.
+                      <br>Além disso, você aprenderá como tornar obrigatório o preenchimento de um <code>input</code>.
+                  </p>
+                  <strong>Instruções:</strong>
+                  <ul>
+                      <li>Nesse exercício, você deverá criar 2 <code>input</code>, 1 <code>checkbox</code>, 1 <code>radiobox</code> e 2 <code>button</code>.</li>
+                      <li>O primeiro botão deve exibir em um alert() os valores contidos em cada um dos <code>input</code> e o outro botão limpará os valores dos <code>input</code> e desmarcar o <code>checkbox</code> e o <code>radiobox</code>.</li>
+                      <li>O primeiro botão deve usar o método <code>document.querySelectorAll()</code> e organizar a exibição pelo id do elemento.</li>
+                  </ul>
+      
+                  <strong>Exemplo:</strong>
+                  <div class="exercicio">
+                      <form onsubmit="exercicio4Submit(this); return false;">
+                          <div class="mb-3">
+                              <label class="form-label">Primeiro campo</label>
+                              <input type="text" class="form-control" id="exercicio4_campo1_id" name="exercicio4_campo1_nome" required>
+                          </div>
+                          <div class="mb-3">
+                              <label class="form-label">Segundo campo</label>
+                              <input type="text" class="form-control" id="exercicio4_eu_uso_o_nome_que_quiser" name="exercicio4_eu_uso_o_nome_que_quiser" required>
+                          </div>
+                          <div class="mb-3 form-check">
+                              <input type="checkbox" class="form-check-input" id="exercicio4_checkbox_id" name="exercicio4_checkbox_nome">
+                              <label class="form-check-label" for="exercicio4_checkbox_id">Verdadeiro ou falso?</label>
+                          </div>
+                          <div class="mb-3">
+                              <fieldset>
+                                  <label class="form-label">Doce preferido:</label>
+                                  <div>
+                                      <input type="radio" id="Chocolate" name="exercicio4_radiobox_name" value="Chocolate" required />
+                                      <label for="Chocolate">Chocolate</label>
+                                  </div>
+      
+                                  <div>
+                                      <input type="radio" id="Caramelo" name="exercicio4_radiobox_name" value="Caramelo" />
+                                      <label for="Caramelo">Caramelo</label>
+                                  </div>
+                                  
+                                  <div>
+                                      <input type="radio" id="Sorvete" name="exercicio4_radiobox_name" value="Sorvete" />
+                                      <label for="Sorvete">Sorvete</label>
+                                  </div>
+                              </fieldset>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Exibir</button>
+                          <button type="button" onclick="exercicio4Botao2()" class="btn btn-danger">Limpar tudo</button>
+                      </form>
+                  </div>
+                  <br>
+                  <strong>Conhecimentos chaves:</strong>
+                  <ul>
+                      <li>Como usar o <code>document.querySelectorAll</code>?</li>
+                      <li>Como usar o <code>alert</code>?</li>
+                      <li>Como usar o evento <code>onsubmit</code>?</li>
+                      <li>Como prevenir que a página atualize ao clicar o botão do tipo <code>submit</code>?</li>
+                      <li>Como usar o evento <code>onClick</code>?</li>
+                      <li>Como ler o valor de um <code>input</code>?</li>
+                      <li>Como ler o <code>name</code> de um <code>input</code>?</li>
+                      <li>Como alterar o valor de um <code>input</code>? (para limpar)</li>
+                      <li>Como ver se um <code>checkbox</code> está marcado?</li>
+                      <li>Como ver qual <code>radiobox</code> está marcado?</li>
+                      <li>Como limpar um <code>checkbox</code></li>
+                      <li>Como limpar um <code>radiobox</code></li>
+                      <li>Como usar o atributo <code>required</code>?</li>
+                      <li>Como usar o método <code>event.preventDefault</code>?</li>
+                  </ul>
+              </div>
+          </div>
+      </div>      
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+              Exercício #5: Botões ocultáveis e botões desabilitados
+              </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordiFivexample">
+              <div class="accordion-body">
+                  <strong>Introdução:</strong>
+                  <p>Neste exercício você irá simular uma tela de cadastro que também serve como tela de alteração.
+                  </p>
+                  <strong>Instruções:</strong>
+                  <ul>
+                      <li>Nesse exercício, você deverá criar 1 <code>input</code> e 5 <code>button</code>. O input e os três primeiros botões devem estar ocultos.</li>
+                      <li>O primeiro, segundo e terceiro botões devem estar próximos ao <code>input</code>. Eles são respectivamente o botão de Cancelar, Cadastrar e de Alterar. Todos esses devem estar inicialmente ocultos.</li>
+                      <li>O terceiro e o quarto botão devem exibir o <code>input</code> e apenas um dos botões.</li>
+                      <li>Ao abrir a tela em modo de alteração, o <code>input</code> deve estar preenchido com o texto "Fulano da Silva" e apenas os botões Cancelar e Alterar devem ser exibidos.</li>
+                      <li>Ao abrir o modo de cadastro, o <code>input</code> deve estar em branco e apenas o botão de Cancelar e Cadastrar devem ser exibidos.</li>
+                      <li>Ao clicar no botão Cancelar, o <code>input</code> e seus botões devem ser ocultados.</li>
+                  </ul>
+                  <strong>Exemplo:</strong>
+                  <div class="exercicio container" id="exercicio5_container" style="display: none">
+                      <div class="mb-3 form-check">
+                          <label class="form-label">Nome</label>
+                          <input type="text" class="form-control" id="exercicio5_input" name="exercicio5_input">
+                      </div>
+                      <button type="button" id="exercicio5Botao1" onclick="exercicio5Botao1()" class="btn btn-danger m-3">Cancelar</button>
+                      <button type="button" id="exercicio5Botao2" class="btn btn-primary m-3">Cadastrar</button>
+                      <button type="button" id="exercicio5Botao3" class="btn btn-success m-3">Alterar</button>
+                  </div>
+                  <div class="container">
+                      <button type="button" onclick="exercicio5Botao3()" class="btn btn-dark m-3">Abrir tela de cadastro</button>
+                      <button type="button" onclick="exercicio5Botao4()" class="btn btn-secondary m-3">Abrir tela de alterar</button>
+                  </div>
+                  <br>
+                  <strong>Conhecimentos chaves:</strong>
+                  <ul>
+                      <li>Como selecionar um elemento usando o <code>document.querySelectorAll</code>?</li>
+                      <li>Como usar o evento <code>click</code></li>
+                      <li>Como preencher um <code>input</code> com um valor inicial?</li>
+                      <li>Como ocultar ou exibir um elemento?</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+              Exercício #6: Execução única de eventos
+              </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordiSixxample">
+              <div class="accordion-body">
+                  <strong>Introdução:</strong>
+                  <p>Eventos são uma parte muito importante da WEB. Exemplo de eventos: <code>click</code>, <code>change</code>, <code>keyup</code>. Porém nem sempre esses eventos devem acontecer para sempre.
+                      <br>Neste exercício, você aprenderá como limitar o número de execuções de um evento.
+                  </p>
+                  <strong>Instruções:</strong>
+                  <ul>
+                      <li>Nesse exercício, você deverá criar 1 <code>input</code> e 1 <code>button</code>.</li>
+                      <li>Ao clicar no botão pela primeira vez, irá exibr um alerta contendo o valor do <code>input</code></li>
+                      <li>Caso o valor do <code>input</code> não tenha sido alterado, apertar ao botão não deve abrir o alerta novamente.</li>
+                      <li>Após alterar o <code>input</code>, apertar ao botão deve abrir o alerta novamente, apenas uma vez novamente.</li>
+                  </ul>
+                  <strong>Exemplo:</strong>
+                  <div class="exercicio container" id="exercicio6_container">
+                      <div class="mb-3 form-check">
+                          <label class="form-label">Assunto</label>
+                          <input type="text" class="form-control" id="exercicio6_input" name="exercicio6_input">
+                      </div>
+                      <button type="button" onclick="exercicio6Botao1()" class="btn btn-primary m-3">Exibir alerta</button>
+                  </div>
+                  <br>
+                  <strong>Conhecimentos chaves:</strong>
+                  <ul>
+                      <li>Como selecionar um elemento usando o <code>document.querySelectorAll</code>?</li>
+                      <li>Como ler o valor de um <code>input</code>?</li>
+                      <li>Como usar o evento <code>click</code></li>
+                      <li>Como usar uma condicional <code>if</code>?</li>
+                      <li>Como usar o <code>alert</code>?</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeven">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+              Exercício #7: Remover a enésima linha
+              </button>
+          </h2>
+          <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <strong>Introdução:</strong>
+                  <p>.Tabelas são muito comuns em sites. Por exemplo em um cadastro de pessoas. As pessoas já cadastradas são exibidas em uma tabela.
+                      <br>E geralmente você tem a opção de remover essa pessoa. Neste exercício, você irá remover um registro de uma tabela.
+                  </p>
+                  <strong>Instruções:</strong>
+                  <ul>
+                      <li>Você deverá criar 1 <code>table</code>, 1 <code>input</code> e 1 <code>button</code>.</li>
+                      <li>Crie uma <code>table</code> com qualquer quantidade de linhas.</li>
+                      <li>Crie um <code>input</code> para receber um número.</li>
+                      <li>Crie um botão que identifique o valor do <code>input</code>.</li>
+                      <li>Se o valor não for um número, exiba um erro.</li>
+                      <li>Selecione na <code>table</code> a linha com o número do <code>input</code>.<br>(Sendo N o número do <code>input</code>, encontre a Nª linha.)</li>
+                      <li>Remova essa linha.<br>(Diferentemente da ocultação, não é possível retornar a exibição da linha e nem exibir ela pelo Inspecionar do DevTools.)</li>
+                  </ul>
+                  
+                  <strong>Exemplo:</strong>
+                  <div class="exercicio container" id="exercicio7_container">
+                      <div class="row">
+                          <div class="col">
+                              <table class="table">
+                                  <thead>
+                                      <tr>
+                                          <th>Nome</th>
+                                          <th>Idade</th>
+                                          <th>Profissão</th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>Ana</td>
+                                          <td>30</td>
+                                          <td>Médica</td>
+                                      </tr>
+                                      <tr>
+                                          <td>João</td>
+                                          <td>30</td>
+                                          <td>Advogado</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Maria</td>
+                                          <td>30</td>
+                                          <td>Professora</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Paulo</td>
+                                          <td>30</td>
+                                          <td>Engenheiro</td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                      <div class="row" style="margin-top: 10px">
+                          <div class="col-3">                
+                              <label for="exercicio7input" class="form-label">Número da linha a remover:</label>
+                              <input type="number" class="form-control" id="exercicio7input">
+                          </div>
+                      </div>
+                      <div class="row" style="margin-top: 10px">
+                          <div class="col">
+                              <button type="button" onclick="exercicio7botao1()" class="btn btn-danger">Remover</button>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <strong>Conhecimentos chaves:</strong>
+                  <ul>
+                      <li>Como usar o evento <code>onclick</code>?</li>
+                      <li>Como transformar uma string em um número</li>
+                      <li>Como checar se uma variável é um número válido?</li>
+                      <li>Como selecionar a enésimo linha de uma tabela (seletor <code>nth-child</code>) OU como acessar um item de um array?</li>
+                      <li>Como remover um elemento?</li>
+                  </ul>
+                  <br>
+                  <strong>Recurso adicional:</strong>
+                  <ul>
+                      <li><a href="https://velhobit.com.br/tutoriais/como-selecionar-o-item-de-uma-tabela-html.html">Como Selecionar o Item de Uma Tabela HTML</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>      
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEight">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+              Exercício #8: Remover a linha que contém o botão
+              </button>
+          </h2>
+          <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <strong>Introdução:</strong>
+                  <p>Ainda falando sobre tabelas, agora você irá remover um registro de uma tabela de outra maneira.
+                  </p>
+                  <strong>Instruções:</strong>
+                  <ul>
+                      <li>Você deverá criar 1 <code>table</code> contendo 1 <code>button</code> para cada linha.</li>
+                      <li>Crie uma <code>table</code> com qualquer quantidade de linhas.</li>
+                      <li>Uma das colunas deve conter um botão.</li>
+                      <li>Ao clicar neste botão, a linha inteira deste botão deve ser removida.</li>
+                  </ul>
+                  
+                  <strong>Exemplo:</strong>
+                  <div class="exercicio container" id="exercicio8_container">
+                      <div class="row">
+                          <div class="col">
+                              <table class="table">
+                                  <thead>
+                                      <tr>
+                                          <th>Nome</th>
+                                          <th>Idade</th>
+                                          <th>Profissão</th>
+                                          <th></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr>
+                                          <td>Ana</td>
+                                          <td>30</td>
+                                          <td>Médica</td>
+                                          <td><button type="button" onclick="exercicio8botao1(this)" class="btn btn-danger">Remover</button></td>
+                                      </tr>
+                                      <tr>
+                                          <td>João</td>
+                                          <td>30</td>
+                                          <td>Advogado</td>
+                                          <td><button type="button" onclick="exercicio8botao1(this)" class="btn btn-danger">Remover</button></td>
+                                      </tr>
+                                      <tr>
+                                          <td>Maria</td>
+                                          <td>30</td>
+                                          <td>Professora</td>
+                                          <td><button type="button" onclick="exercicio8botao1(this)" class="btn btn-danger">Remover</button></td>
+                                      </tr>
+                                      <tr>
+                                          <td>Paulo</td>
+                                          <td>30</td>
+                                          <td>Engenheiro</td>
+                                          <td><button type="button" onclick="exercicio8botao1(this)" class="btn btn-danger">Remover</button></td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <strong>Conhecimentos chaves:</strong>
+                  <ul>
+                      <li>Como usar o evento <code>onClick</code>?</li>
+                      <li>Como obter o elemento do botão que foi clicado?</li>
+                      <li>Como obter o elemento da linha da tabela à partir do elemento do botão? OU como usar um ID para remover a linha de uma tabela.</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      
+      <div class="accordion-item">
+          <h2 class="accordion-header" id="headingNine">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+              Exercício #9: Adicionar uma linha numa tabela
+              </button>
+          </h2>
+          <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                  <strong>Introdução:</strong>
+                  <p>Ainda sobre tabelas, agora vamos criar novos elementos programaticamente e inserí-los na tabela. Teremos agora as ferramentas para criar um cadastro de pessoas que também podem serem removidas.
+                  </p>
+                  <strong>Instruções:</strong>
+                  <ul>
+                      <li>Você deverá criar 1 <code>table</code> contendo algumas colunas e nenhuma linha, um elemento informando a ausência de registros e um formulário para adicionar registros à <code>table</code>.</li>
+                      <li>A <code>table</code> deverá conter uma coluna a mais para acomodar o botão de remoção.<br>
+                          O formulário deverá conter um <code>input</code> para cada coluna de dados e um botão para adicionar.</li>
+                      <li>Ao clicar no botão do formulário, o app deverá conferir se os dados são válidos: se for um campo numérico, verificar se o valor é um número. Se for um campo de string, verificar se o valor não está vazio.<br>
+                          Após a verificação, o sistema deverá adicionar uma linha na <code>table</code> contendo os respectivos dados do formulário, além de um botão para remover esse mesmo registro.<br>
+                          Além disso, o sistema deve ocultar a mensagem de ausência de registro.</li>
+                      <li>Ao clicar no botão de remoção, a linha deverá ser removida (e impossível de visualizar pelo DevTools).<br>
+                          Além disso, se nenhuma outra linha existir na <code>table</code>, o sistema deverá exibir novamente a mensagem de ausência de registros.</li>
+                  </ul>
+              
+                  <strong>Exemplo:</strong>
+                  <div class="exercicio container" id="exercicio9_container">
+                      <div class="row">
+                          <div class="col">
+                              <table class="table">
+                                  <thead>
+                                      <tr>
+                                          <th>Nome</th>
+                                          <th>Idade</th>
+                                          <th>Profissão</th>
+                                          <th></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody></tbody>
+                              </table>
+                          </div>
+                      </div>
+                      <div class="row" id="exercicio9_nenhum_registro">
+                          <div class="col">
+                              <p>Nenhum registro cadastrado.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <div class="exercicio container">
+                      <div class="row">
+                          <div class="col">
+                              <label for="exercicio9input_nome" class="form-label bold">Nome:</label>
+                              <input type="text" class="form-control" id="exercicio9input_nome">
+                          </div>
+                          <div class="col">
+                              <label for="exercicio9input_idade" class="form-label bold">Idade:</label>
+                              <input type="number" class="form-control" id="exercicio9input_idade">
+                          </div>
+                          <div class="col">
+                              <label for="exercicio9input_profissao" class="form-label bold">Profissão:</label>
+                              <input type="text" class="form-control" id="exercicio9input_profissao">
+                          </div>
+                          <div class="col" style="margin: auto">
+                              <button type="button" onclick="exercicio9botao1()" class="btn btn-primary">Adicionar</button>
+                          </div>
+                      </div>
+                  </div>
+                  <br>
+                  <strong>Conhecimentos chaves:</strong>
+                  <ul>
+                      <li>Como usar o evento <code>onclick</code>?</li>
+                      <li>Como ler o valor de um <code>input</code>?</li>
+                      <li>Como criar elementos HTML usando a função <code>document.createElement</code>?</li>
+                      <li>Como alterar o texto, as classes e como associar um evento usando a função <code>addEventListener</code> a esse elemento?</li>
+                      <li>Como inserir elementos dentro de outros elementos usando a função <code>appendChild</code>?</li>
+                      <li>Como identificar o número de elementos HTML dentro de outro elemento?</li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="all.js"></script>
+</body>
+</html>
+

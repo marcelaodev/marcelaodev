@@ -1,0 +1,209 @@
+.textdecorationnone {
+  text-decoration: none;
+}
+
+.laranja {
+  background-color: #ff5b19;
+}
+
+.letra-preta {
+  color: black;
+  font-size: 6rem;
+  font-family: "DM Sans";
+}
+
+@media only screen and (max-width: 992px) and (min-width: 600px) {
+  .letra-preta {
+    font-size: 3.7rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .letra-preta {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
+
+.so-letra-preta {
+  color: black;
+}
+
+#letra-media {
+  font-size: 1.3rem;
+  font-family: "DM Sans";
+}
+
+.azul {
+  background-color: #288bc8;
+}
+
+.conteudo {
+  line-height: 1.3;
+  text-align: justify;
+  font-size: 1.4rem;
+  color: white;
+  font-family: "DM Sans";
+}
+
+.conteudo-preto {
+  line-height: 1.3;
+  text-align: center;
+  font-size: 1.4rem;
+  color: black;
+  font-weight: bold;
+  font-family: "DM Sans";
+}
+
+.espacamentosm {
+  line-height: 0.8;
+}
+
+.alinhacenter {
+  margin: 0;
+}
+
+.navbar-text-white {
+  line-height: 1;
+  text-align: start;
+  font-size: 0.6rem;
+  color: white;
+  text-decoration: none;
+  font-family: "DM Sans";
+}
+
+.navbar-icon-laranja {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2840, 139, 200, 100%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+ul.a {
+  list-style-type: square;
+}
+
+.conteudo-letramaior {
+  line-height: 1;
+  text-align: justify;
+  font-size: 1.7rem;
+  color: white;
+  font-weight: bold;
+  font-family: "DM Sans";
+}
+
+td {
+  background-color: #288bc8 !important;
+}
+
+#border-laranja {
+  border-color: #ff5b19 !important;
+}
+
+#border-azul {
+  border-color: #288bc8 !important;
+}
+
+.letra-laranja {
+  color: #ff5b19;
+  font-size: 4rem;
+  font-family: "DM Sans";
+}
+@media only screen and (max-width: 600px) {
+  .letra-laranja {
+    font-size: 2.4rem;
+  }
+}
+
+.letra-azul {
+  color: #288bc8;
+  font-weight: bold;
+  margin-inline-start: 1.5rem;
+  font-family: "DM Sans";
+}
+
+figcaption.capbranco {
+  color: white;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-family: "DM Sans";
+}
+@media only screen and (max-width: 600px) {
+  figcaption.capbranco {
+    font-size: 0.9rem;
+  }
+}
+
+figcaption.capazul {
+  color: #288bc8;
+  font-weight: bold;
+  font-size: 1.6rem;
+  font-family: "DM Sans";
+}
+@media only screen and (max-width: 600px) {
+  figcaption.capazul {
+    font-size: 0.9rem;
+  }
+}
+
+.letra-link {
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "DM Sans";
+}
+
+.aumentaimagemsm {
+  width: 15%;
+}
+@media only screen and (max-width: 600px) {
+  .aumentaimagemsm {
+    width: 70%;
+  }
+}
+
+ul > li:not([class]) {
+  margin: 1.5em 0;
+  line-height: 1.15;
+}
+
+ul > li.nav-item {
+  margin: 1.5em 0;
+  line-height: 1.15;
+}
+
+li[id] {
+  font-weight: bolder;
+}
+
+li[id] > * {
+  font-weight: initial;
+}
+
+.accordion {
+  --bs-accordion-active-color: white;
+  --bs-accordion-active-bg: #ff5b19;
+  --bs-accordion-icon-active-color: red;
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' stroke='rgba%28255, 91, 25%29' fill='none' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-border-color: #ff5b19;
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='rgba%28255, 255, 255%29' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-focus-box-shadow: "none";
+}
+
+.accordion-button {
+  line-height: 1.3;
+  text-align: justify;
+  font-size: 1.4rem;
+  color: #288bc8;
+  font-family: "DM Sans";
+}
+
+.form-check input[type="checkbox"] {
+  border-color: #ff5b19;
+}
+
+.bg-branco {
+  background-color: white;
+}
+
+ol.conteudo {
+  list-style-type: none;
+  padding-left: 0; /* Remove o recuo padrão */
+}
