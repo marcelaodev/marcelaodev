@@ -4,7 +4,7 @@ Beecrowd é uma plataforma de desafios de programação. Nela você encontra exe
 
 Ao ler, analisar e raciocionar sobre códigos que já estão prontos, você começa a compreender como comandos são usados, amplia o seu "repertório de algoritmos" e te permite perceber formas diferentes para atingir um mesmo resultado.
 
-Veja a lista de códigos [no nosso repositório no GitHub](https://marcelao.dev/trilha/javascript/leitura).
+Veja a lista de códigos [no nosso repositório no GitHub](https://github.com/marcelaodev/marcelaodev/tree/main/trilha/javascript/leitura).
 
 **1002 - Área do Círculo**  
 [Desafio](https://judge.beecrowd.com/pt/problems/view/1002)  
