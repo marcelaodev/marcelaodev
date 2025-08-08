@@ -1,6 +1,6 @@
 Neste projeto, você deverá desenvolver um script utilitário para rodar no terminal que é capaz de exibir, criar, alterar, remover e mover arquivos do seu sistema conforme o argumento que for passado na linha de comando.
 
-Além disso, você deverá usar [o conjunto de testes automatizados disponíveis no nosso repositório](https://github.com/irmaos-dev/irmaos.dev/trilha/docs/javascript/manipulador/) que fará uma verificação rigorosa da corretude do seu programa. Baixe os arquivos do link (package.json e manipulador.test.js) para a mesma pasta do seu script, abra o terminal na pasta e rode `npm install` e depois `npm test`. A ferramenta "Jest" irá executar todos os testes contra o seu script e te indicará as funcionalidades que estão corretas ou erradas. Seu script deve ser nomeado como `manipulador.js` para que os testes sejam feitos.
+Além disso, você deverá usar [o conjunto de testes automatizados disponíveis no nosso repositório](https://github.com/marcelaodev/marcelaodev/trilha/docs/javascript/manipulador/) que fará uma verificação rigorosa da corretude do seu programa. Baixe os arquivos do link (package.json e manipulador.test.js) para a mesma pasta do seu script, abra o terminal na pasta e rode `npm install` e depois `npm test`. A ferramenta "Jest" irá executar todos os testes contra o seu script e te indicará as funcionalidades que estão corretas ou erradas. Seu script deve ser nomeado como `manipulador.js` para que os testes sejam feitos.
 
 Exemplo de cada comando do programa:
 

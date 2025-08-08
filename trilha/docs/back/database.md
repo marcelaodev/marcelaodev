@@ -1,8 +1,8 @@
 O objetivo desse projeto é dar os primeiros passos de como utilizar um banco de dados relacional.  
-Eu preparei um vídeo que dá algumas dicas de como resolver esses exercícios: [Aprenda SQL de uma vez por todas!](https://www.youtube.com/watch?v=ScN1rpwtZWs)
+
 É importante notar que o assunto "modelagem de bancos de dados" é bastante extenso, mas seus fundamentos são importantes de serem dominados para você conseguir resolver esses e outros problemas.
 
-Crie uma conta no Beecrowd e resolva os seguintes problemas:
+Resolva os seguintes problemas no Beecrowd:
 
 **Problemas de tabela única**
 
@@ -25,3 +25,5 @@ Crie uma conta no Beecrowd e resolva os seguintes problemas:
 [\#10: CPF Dos Empregados](https://www.beecrowd.com.br/judge/pt/problems/view/2990)  
 [\#11: Quanto Ganha um Médico?](https://www.beecrowd.com.br/judge/pt/problems/view/2994)  
 [\#12: Pagamento dos Empregados?](https://www.beecrowd.com.br/judge/pt/problems/view/2997)  
+
+Para entender melhor como resolver esses exercícios, de uma olhada no vídeo explicativo: [Aprenda SQL de uma vez por todas!](https://www.youtube.com/watch?v=ScN1rpwtZWs).

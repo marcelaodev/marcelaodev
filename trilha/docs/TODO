@@ -1,16 +1,6 @@
-- HTML/CSS: layouts comuns
+- Introdução
+    - motivação
+    - perfil do egresso
+    - links
 
-- adicionar testes automatizados a todos os projetos
-
-- back:
-    - leitura de codigo (remover tutoriais da AI para cada codebase)
-    - extrair informações de um DB (colocar link do video do youtube mostrando beecrowd e dbeaver)
-
-- front framework:
-    - leitura de codigo (escrever)
-
-- back framework:
-    - OAuth2.0 client/server *
-
-- sistema portfólio
-    - web scrapper
+- deploy
