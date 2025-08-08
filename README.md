@@ -1,4 +1,4 @@
-Olá, eu sou o Marcelão Dev! 👋
+Olá, eu sou o **Marcelão Dev**! 👋
 
 Bem-vindo ao meu perfil! Sou um desenvolvedor Full-Stack com vários anos de experiência no mercado e, atualmente, trabalho para uma empresa americana.  
 Gosto e odeio todas as linguagens e tecnologias de forma igual, mas amo o processo de resolver problemas.  
