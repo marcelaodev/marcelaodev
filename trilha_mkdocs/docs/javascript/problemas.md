@@ -37,7 +37,7 @@ Crie uma conta no Beecrowd e resolva os seguintes problemas:
 
 [\#18: Pares e Ímpares](https://www.beecrowd.com.br/judge/pt/problems/view/1259)
 
-Nesta [pasta do nosso repositório no GitHub](https://github.com/marcelaodev/marcelaodev/trilha/docs/javascript/problemas) você encontrará as respostas dos desafios propostos.
+Nesta [pasta do nosso repositório no GitHub](https://github.com/marcelaodev/marcelaodev/tree/main/trilha/javascript/problemas) você encontrará as respostas dos desafios propostos.
 
 Esses 18 exercícios foram selecionados para que o básico da programação fosse abordado pelo menos uma vez por algum deles.  
 Contudo esta lista não é eficiente para te tornar um bom codificador, pois são poucos problemas, com baixa complexidade e nenhum acoplamento com sistemas externos.
@@ -46,4 +46,4 @@ Pra resolver a deficiência de serem poucos problemas, separei mais uma lista de
 
 [1024](https://www.beecrowd.com.br/judge/pt/problems/view/1024), [1061](https://www.beecrowd.com.br/judge/pt/problems/view/1061), [1118](https://www.beecrowd.com.br/judge/pt/problems/view/1118), [1132](https://www.beecrowd.com.br/judge/pt/problems/view/1132), [1145](https://www.beecrowd.com.br/judge/pt/problems/view/1145), [1158](https://www.beecrowd.com.br/judge/pt/problems/view/1158), [1174](https://www.beecrowd.com.br/judge/pt/problems/view/1174), [1175](https://www.beecrowd.com.br/judge/pt/problems/view/1175), [1234](https://www.beecrowd.com.br/judge/pt/problems/view/1234), [1437](https://www.beecrowd.com.br/judge/pt/problems/view/1437), [1551](https://www.beecrowd.com.br/judge/pt/problems/view/1551), [1960](https://www.beecrowd.com.br/judge/pt/problems/view/1960)
 
-A solução dos problemas pode ser consultada na [pasta do nosso repositório no GitHub](https://github.com/marcelaodev/marcelaodev/trilha/docs/javascript/opcionais).
+A solução dos problemas pode ser consultada na [pasta do nosso repositório no GitHub](https://github.com/marcelaodev/marcelaodev/tree/main/trilha/javascript/opcionais).
