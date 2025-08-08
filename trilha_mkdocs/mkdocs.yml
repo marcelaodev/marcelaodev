@@ -1,0 +1,52 @@
+site_name: Trilha de Estudos
+site_dir: ../trilha
+theme:
+  name: material
+  features:
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - navigation.tracking
+    # - navigation.expand
+plugins: []
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+nav:
+  - Introdução:
+    - Perguntas frequentes: introducao/faq.md
+    - Primeiros passos: introducao/primeiros_passos.md
+
+  - HTML e CSS: html/exercicios.md
+  - Javascript:
+    - Leitura de códigos: javascript/leitura.md
+    - Testes automatizados: javascript/testes_automatizados.md
+    - Resolução de problemas: javascript/problemas.md
+    - Manipulador de arquivos: javascript/manipulador_arquivos.md
+  - Front-end:
+    - Manipulação do DOM: front/dom.md
+    - Leitura e modificação de códigos: front/leitura.md
+    - Interação com uma API fake:
+      - Usando uma API client: front/api/client.md
+      - Usando Javascript: front/api/javascript.md
+      - HTML / CSS / JS: front/api/projeto.md
+      - Teste E2E com Playwright: front/api/test.md
+  - Back-end:
+    - Leitura de códigos: back/leitura.md
+    - Servidor API fake: back/api.md
+    - Banco de dados: back/database.md
+    - Adicionar nova funcionalidade: back/novas_funcionalidades.md
+  - Front-end com framework:
+    - Leitura: front_framework/leitura.md
+    - Exercícios: front_framework/exercicios.md
+    - Desafios: front_framework/desafios.md
+  - Back-end com framework:
+    - Segunda Linguagem: back_framework/segunda_linguagem.md
+    - Leitura: back_framework/leitura.md
+    - Desafios: back_framework/desafios.md
+  - Portfólio:
+    - Junior / Pleno: portfolio/junior_pleno.md
+    - Senior: portfolio/senior.md

@@ -1,0 +1,1298 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+    
+    
+      
+        <title>Chapter 2: Processamento e Separação da Entrada - Trilha de Estudos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-2-processamento-e-separacao-da-entrada" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Trilha de Estudos" class="md-header__button md-logo" aria-label="Trilha de Estudos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Trilha de Estudos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chapter 2: Processamento e Separação da Entrada
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Trilha de Estudos" class="md-nav__button md-logo" aria-label="Trilha de Estudos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Trilha de Estudos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introdução
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introducao/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Perguntas frequentes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../introducao/primeiros_passos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primeiros passos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../html/exercicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML e CSS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Javascript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leitura de códigos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../testes_automatizados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Testes automatizados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../problemas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resolução de problemas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manipulador_arquivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manipulador de arquivos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Front-end
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Front-end
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/dom/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Manipulação do DOM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/leitura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leitura e modificação de códigos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Interação com uma API fake
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Interação com uma API fake
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/api/client/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usando uma API client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/api/javascript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usando Javascript
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/api/projeto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML / CSS / JS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front/api/test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teste E2E com Playwright
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Back-end
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Back-end
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/leitura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leitura de códigos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/api/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servidor API fake
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Banco de dados
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back/novas_funcionalidades/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Adicionar nova funcionalidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Front-end com framework
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Front-end com framework
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front_framework/leitura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leitura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front_framework/exercicios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercícios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../front_framework/desafios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desafios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Back-end com framework
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Back-end com framework
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back_framework/segunda_linguagem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Segunda Linguagem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back_framework/leitura/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leitura
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../back_framework/desafios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desafios
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Portfólio
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Portfólio
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../portfolio/junior_pleno/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Junior / Pleno
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../portfolio/senior/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Senior
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chapter-2-processamento-e-separacao-da-entrada">Chapter 2: Processamento e Separação da Entrada</h1>
+<p>Olá novamente! No <a href="../01_leitura_de_entrada_padr%C3%A3o_/">Capítulo 1: Leitura de Entrada Padrão</a>, aprendemos como nosso programa consegue ler todas as informações enviadas a ele de uma só vez, guardando tudo em uma única variável chamada <code>input</code>. Essa variável ficou como um grande bloco de texto, incluindo as quebras de linha (<code>\n</code>) que separam cada informação.</p>
+<p>Mas, geralmente, não queremos trabalhar com o texto todo de uma vez. Se estamos construindo nossa calculadora, e o usuário digitou dois números, um em cada linha, precisamos pegar cada número separadamente para poder somá-los. Como fazemos isso?</p>
+<p><strong>O Problema: Como Separar as Informações?</strong></p>
+<p>Imagine que o recepcionista do capítulo anterior recebeu aquele envelope com várias instruções, uma em cada linha. Ele tem o papel na mão, mas para entregar cada instrução à pessoa certa, ele precisa primeiro <em>separar</em> essas instruções. Ele não pode entregar o papel inteiro para todo mundo!</p>
+<p>No nosso caso, a variável <code>input</code> contém algo como:</p>
+<div class="highlight"><pre><span></span><code>&quot;25\n100\n5.50\n&quot;
+</code></pre></div>
+<p>Esse <code>\n</code> é o caractere especial que representa a "quebra de linha", o momento em que apertamos Enter. Queremos transformar essa única string (texto) em uma lista onde cada item é uma dessas linhas originais. Queremos algo assim: <code>["25", "100", "5.50"]</code>.</p>
+<p><strong>A Ferramenta: O Método <code>split()</code></strong></p>
+<p>Felizmente, o JavaScript (a linguagem que estamos usando) nos dá uma ferramenta perfeita para isso: o método <code>split()</code>. Pense no <code>split()</code> como uma tesoura mágica para strings. Você diz a ela qual caractere usar como ponto de corte, e ela divide a string nesses pontos, entregando os pedaços em uma lista organizada.</p>
+<p><strong>Como Usar o <code>split()</code></strong></p>
+<p>No nosso projeto (<code>1007.js</code>), usamos o <code>split()</code> logo após ler a entrada:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Lemos toda a entrada no Capítulo 1</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;/dev/stdin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;utf8&#39;</span><span class="p">);</span>
+
+<span class="c1">// Agora, separamos a entrada em linhas</span>
+<span class="c1">// Usamos a quebra de linha &#39;\n&#39; como separador</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">);</span><span class="w"> </span>
+</code></pre></div>
+<p>Vamos analisar a nova linha:</p>
+<ol>
+<li><code>input</code>: É a nossa variável que contém a string completa lida no capítulo anterior (ex: <code>"25\n100\n5.50\n"</code>).</li>
+<li><code>.split()</code>: Chamamos o método <code>split</code> <em>diretamente</em> na nossa string <code>input</code>. É como dizer: "String <code>input</code>, separe-se!".</li>
+<li><code>('\n')</code>: Dentro dos parênteses, passamos o "separador". Aqui, dizemos para cortar a string toda vez que encontrar o caractere de quebra de linha (<code>\n</code>).</li>
+<li><code>var valores = ...</code>: O resultado da operação <code>split()</code> não é uma string, mas sim uma <strong>lista</strong> (em JavaScript, chamamos isso de <em>Array</em>) contendo as partes separadas. Guardamos essa lista na nova variável chamada <code>valores</code>.</li>
+</ol>
+<p><strong>Exemplo Prático</strong></p>
+<p>Vamos ver o que acontece com nosso exemplo:</p>
+<ul>
+<li><strong>Entrada (variável <code>input</code>):</strong> <code>"25\n100\n5.50\n"</code></li>
+<li><strong>Código:</strong> <code>var valores = input.split('\n');</code></li>
+<li><strong>Saída (variável <code>valores</code>):</strong> <code>["25", "100", "5.50", ""]</code></li>
+</ul>
+<p>O resultado é uma lista de strings! Cada número que estava em uma linha separada agora é um item individual dentro da lista <code>valores</code>.</p>
+<p><strong>Atenção ao Detalhe:</strong> Percebeu que o último item na lista é uma string vazia (<code>""</code>)? Isso acontece porque nossa string original <code>input</code> terminava com um <code>\n</code>. O <code>split('\n')</code> encontra esse último <code>\n</code> e cria um item na lista para o que vem <em>depois</em> dele. Como não há nada depois do último <code>\n</code>, o resultado é uma string vazia. Isso é comum e vamos aprender a lidar com isso no próximo capítulo.</p>
+<p><strong>Como Funciona por Baixo dos Panos?</strong></p>
+<p>Quando você chama <code>input.split('\n')</code>, o motor do JavaScript faz algo parecido com isto:</p>
+<ol>
+<li><strong>Início:</strong> Ele olha para a string original: <code>"25\n100\n5.50\n"</code>.</li>
+<li><strong>Procura:</strong> Ele começa a ler a string do início, procurando pelo separador <code>\n</code>.</li>
+<li><strong>Encontra o 1º <code>\n</code>:</strong> Opa! Achou um <code>\n</code> depois do <code>"25"</code>.</li>
+<li><strong>Corta e Guarda:</strong> Ele pega o texto que veio <em>antes</em> do <code>\n</code> (que é <code>"25"</code>) e adiciona como o primeiro item de uma nova lista. A lista agora é <code>["25"]</code>.</li>
+<li><strong>Continua:</strong> Ele continua a procurar <em>depois</em> do <code>\n</code> que acabou de processar.</li>
+<li><strong>Encontra o 2º <code>\n</code>:</strong> Achou outro <code>\n</code> depois do <code>"100"</code>.</li>
+<li><strong>Corta e Guarda:</strong> Pega o texto entre o <code>\n</code> anterior e este (<code>"100"</code>) e adiciona à lista. A lista agora é <code>["25", "100"]</code>.</li>
+<li><strong>Encontra o 3º <code>\n</code>:</strong> Achou mais um <code>\n</code> depois do <code>"5.50"</code>.</li>
+<li><strong>Corta e Guarda:</strong> Pega o texto <code>"5.50"</code> e adiciona à lista. A lista agora é <code>["25", "100", "5.50"]</code>.</li>
+<li><strong>Fim da String?</strong> Ele continua procurando depois do último <code>\n</code>. A string acaba aqui.</li>
+<li><strong>Último Corte:</strong> Como a string terminava com <code>\n</code>, ele considera que há um último "pedaço" depois dele, mesmo que vazio. Ele adiciona uma string vazia (<code>""</code>) à lista. A lista final é <code>["25", "100", "5.50", ""]</code>.</li>
+<li><strong>Retorna:</strong> O método <code>split</code> entrega essa lista completa, que é então armazenada na variável <code>valores</code>.</li>
+</ol>
+<p>Podemos visualizar isso:</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Entrada as String Original ("25\n100\n5.50\n")
+    participant Split as Método split('\n')
+    participant Saida as Nova Lista (valores)
+
+    Entrada-&gt;&gt;Split: Pedido para dividir por '\n'
+    Split-&gt;&gt;Split: Encontra "25", antes do 1º '\n'
+    Split-&gt;&gt;Saida: Adiciona "25" à lista
+    Split-&gt;&gt;Split: Encontra "100", entre o 1º e 2º '\n'
+    Split-&gt;&gt;Saida: Adiciona "100" à lista
+    Split-&gt;&gt;Split: Encontra "5.50", entre o 2º e 3º '\n'
+    Split-&gt;&gt;Saida: Adiciona "5.50" à lista
+    Split-&gt;&gt;Split: Encontra "" (vazio), após o 3º '\n'
+    Split-&gt;&gt;Saida: Adiciona "" à lista
+    Split--&gt;&gt;Entrada: Retorna a lista completa ["25", "100", "5.50", ""]
+    Note right of Entrada: Lista é guardada na variável 'valores'
+</code></pre>
+<p><strong>O Código em Contexto</strong></p>
+<p>No nosso arquivo <code>1007.js</code>, essas duas primeiras linhas trabalham juntas:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// --- File: 1007.js ---</span>
+
+<span class="c1">// 1. Lê toda a entrada como uma única string (Capítulo 1)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">).</span><span class="nx">readFileSync</span><span class="p">(</span><span class="s1">&#39;/dev/stdin&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;utf8&#39;</span><span class="p">);</span><span class="w"> </span>
+
+<span class="c1">// 2. Separa a string em uma lista de strings, usando &#39;\n&#39; como divisor (Este Capítulo)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">valores</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">input</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;\n&#39;</span><span class="p">);</span><span class="w"> </span>
+
+<span class="c1">// ... (o resto do código que usará a lista &#39;valores&#39;)</span>
+</code></pre></div>
+<p>Primeiro, pegamos o "envelope fechado" (<code>input</code>). Depois, usamos a "tesoura" (<code>split</code>) para cortar o conteúdo em "tiras" individuais (a lista <code>valores</code>).</p>
+<p><strong>E Agora?</strong></p>
+<p>Excelente! Conseguimos transformar aquele bloco de texto único em uma lista organizada, onde cada item corresponde a uma linha da entrada original. Agora temos <code>["25", "100", "5.50", ""]</code>.</p>
+<p>O próximo passo é pegar cada um desses itens da lista e colocá-los em suas próprias variáveis, para podermos usá-los individualmente nos nossos cálculos. Por exemplo, como pegamos o <code>"25"</code> e colocamos numa variável <code>A</code>, o <code>"100"</code> numa variável <code>B</code>, e assim por diante?</p>
+<p>É exatamente isso que veremos no próximo capítulo!</p>
+<p><strong>Conclusão</strong></p>
+<p>Neste capítulo, demos um passo crucial no processamento dos dados de entrada:</p>
+<ul>
+<li>Entendemos a necessidade de separar um bloco de texto multi-linhas em partes individuais.</li>
+<li>Aprendemos sobre o método <code>split('\n')</code>, a ferramenta que nos permite fazer essa separação usando a quebra de linha como divisor.</li>
+<li>Vimos como o resultado do <code>split()</code> é uma <em>lista</em> (Array) de strings.</li>
+<li>Analisamos um exemplo prático e entendemos como o <code>split()</code> funciona internamente.</li>
+</ul>
+<p>Agora que temos nossos dados brutos organizados em uma lista, estamos prontos para distribuí-los em variáveis específicas.</p>
+<p><strong>Próximo Capítulo:</strong> <a href="../03_atribui%C3%A7%C3%A3o_de_vari%C3%A1veis_de_entrada_/">Atribuição de Variáveis de Entrada</a></p>
+<hr />
+<p>Generated by <a href="https://github.com/The-Pocket/Tutorial-Codebase-Knowledge">AI Codebase Knowledge Builder</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.path", "navigation.indexes", "navigation.top", "navigation.tracking"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
