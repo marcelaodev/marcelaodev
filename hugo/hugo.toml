@@ -1,4 +1,0 @@
-baseURL = '/blog'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-publishDir = '../blog'
