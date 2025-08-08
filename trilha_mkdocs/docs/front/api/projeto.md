@@ -36,4 +36,4 @@ Como os dados são salvos no [CrudCrud](https://crudcrud.com/), recarregar a pá
 
 Atenção! Você possui apenas 100 requisições diárias. Sua aplicação ficará indisponível ao atingir este limite.
 
-[Confira como é essa página clicando aqui](https://marcelao.dev/trilha/apifake/).
+[Confira como é essa página clicando aqui](https://marcelao.dev/trilha/front/api/apifake/).

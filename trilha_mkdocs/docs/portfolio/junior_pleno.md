@@ -25,7 +25,7 @@ Desenvolva, pelo menos, as seguintes funcionalidades:
 - README e documentação
 
 Esse projeto aborda a maior parte do trabalho comum de um desenvolvedor web fullstack.  
-Para outras sugestões, veja essa [lista de funcionalidades](https://marcelao.dev/trilha/funcionalidades/).
+Para outras sugestões, veja essa [lista de funcionalidades](https://marcelao.dev/trilha/portfolio/funcionalidades/).
 
 É comum achar desenvolvedores plenos que ainda não tenham desenvolvido todas essas funcionalidades listadas.  
 Contudo não é possível dizer que você, sem experiência profissional, já seja um pleno só por fazer esse projeto, pois alguns aprendizados só o tempo em um projeto real pode te trazer.  
