@@ -52,7 +52,7 @@ Alguma das respostas abaixo já foram abordadas em lives e estão disponíveis c
 > Eu exploro essa questão no vídeo: [O que eu preciso para ser um bom dev?](https://www.youtube.com/watch?v=TNSmPqR7u2A)
 
 **Qual projeto eu desenvolvo para o meu portfólio?**
-> Veja o último módulo: [Portfólio](../portfolio/mvp.md)
+> Veja o último módulo: [Portfólio](../portfolio/junior_pleno.md)
 
 **Meu portfólio/currículo/linkedin tá bom?**
 > Você pode me pedir para avaliar o seu portfólio durante minhas lives, mas você também pode olhar as avaliações anteriores: [Avaliação de currículo dos inscritos!](https://www.youtube.com/playlist?list=PL9xOWYLJMf-JcJKNhpOiMDTVq_cB7Tp74)
@@ -67,7 +67,7 @@ Alguma das respostas abaixo já foram abordadas em lives e estão disponíveis c
 > - Leia artigos e veja vídeos sobre o assunto.  
 > - Treine responder a perguntas comuns em entrevistas.  
 > - Se você já tem alguma experiência anterior (mesmo que seja freelance ou sem fins lucrativos), comente sobre isso em termos de soluções, desafios e valor entregue. Mencione as tecnologias usadas que possuam relação com a vaga em questão, mas prefira sempre falar em termos de realizações, em vez de aspectos técnicos.  
-> - Se você ainda não tem experiência profissional, aposte em um projeto que impressione. Dê preferência a construir um sistema que um entrevistador comum deve conhecer, como um gerenciador de tarefas. A familiaridade com esse sistema irá lhe gerar interesse em explorar seu projeto e ajudá-lo a elaborar boas questões. Com um projeto potente, você pode evitar que a pessoa entrevistadora precise recorrer a um desafio algorítmico ou de arquitetura, que ainda que seja simples, pode ser desafiadora para responder em uma situação estressante como uma entrevista. Para saber mais sobre o que um projeto "perfeito" tem, veja o último módulo: [Portfólio](../portfolio/mvp.md).
+> - Se você ainda não tem experiência profissional, aposte em um projeto que impressione. Dê preferência a construir um sistema que um entrevistador comum deve conhecer, como um gerenciador de tarefas. A familiaridade com esse sistema irá lhe gerar interesse em explorar seu projeto e ajudá-lo a elaborar boas questões. Com um projeto potente, você pode evitar que a pessoa entrevistadora precise recorrer a um desafio algorítmico ou de arquitetura, que ainda que seja simples, pode ser desafiadora para responder em uma situação estressante como uma entrevista. Para saber mais sobre o que um projeto "perfeito" tem, veja o último módulo: [Portfólio](../portfolio/junior_pleno.md).
 > - Em algum momento da entrevista, afirme as seguintes ideias:
 >   - Suas habilidades te capacitam a contribuir signitivamente para atingir os objetivos da empresa
 >   - Você será capaz de aprender quaisquer habilidades que ainda não possui

@@ -2,6 +2,8 @@ site_name: Trilha de Estudos
 site_dir: ../trilha
 theme:
   name: material
+  logo: img/favicon.ico
+  favicon: img/favicon.ico
   features:
     - navigation.path
     - navigation.indexes
