@@ -32,9 +32,9 @@ Alguma das respostas abaixo já foram abordadas em lives e estão disponíveis c
 > Além do conteúdo em si, a parte social é muito enriquecedora: fazer trabalhos em grupo (mesmo se precisar fazer todo o trabalho sozinho), negociar com professores, conversar e conhecer potenciais parceiros profissionais ou até mesmo românticos.
 
 **Estou começando uma faculdade, quais dicas pode me dar?**
-> Em resumo, já esteja ciente que você deve estudar por fora do conteúdo principal do curso. As matérias obrigatórias não são suficientes.
-> Leia e estude a fundo os livros recomendados de cada disciplina e se envolva em atividades extra-curriculares como empresas junior ou na criação de um produto ou serviço.
-> No caso específico da computação, dê mais atenção ao conteúdo de fundamentos da computação, como Algoritmos, Organização e Arquitetura de Computadores, Sistemas Operacionais, Redes de Computadores e Compiladores.
+> Em resumo, já esteja ciente que você deve estudar por fora do conteúdo principal do curso. As matérias obrigatórias não são suficientes.  
+> Leia e estude a fundo os livros recomendados de cada disciplina e se envolva em atividades extra-curriculares como empresas junior ou na criação de um produto ou serviço.  
+> No caso específico da computação, dê mais atenção ao conteúdo de fundamentos da computação, como Algoritmos, Organização e Arquitetura de Computadores, Sistemas Operacionais, Redes de Computadores e Compiladores.  
 > Veja minha resposta a essa pergunta durante uma live: [Aproveite melhor sua faculdade de computação](https://www.youtube.com/watch?v=vGH7109SfmA)
 
 **Qual a diferença entre os cursos de Engenharia da Computação ou de Software, SI, CC e ADS?**
@@ -62,19 +62,20 @@ Alguma das respostas abaixo já foram abordadas em lives e estão disponíveis c
 > No LinkedIn, dê preferência às publicações do feed de recrutadores em vez da funcionalidades "Vagas". (Saiba mais nesse vídeo: [As vagas fantasma do LinkedIn](https://www.youtube.com/watch?v=naX-S9O7ogo))
 
 **O que fazer em uma entrevista de emprego?**
-> Definitivamente você deve gastar algumas dezenas de horas se preparando para entrevistas. Algumas recomendações que tenho para você:
+> Definitivamente você deve gastar algumas dezenas de horas se preparando para entrevistas. Algumas recomendações que tenho para você:  
+
 > - Procure estabelecer uma conexão com a(s) pessoa(s) que te entrevistarem. Sua chance de ser contratado é muito grande se ela conseguir responder SIM para a questão: "Eu gostaria de trabalhar com esse candidato?"  
 > - Leia artigos e veja vídeos sobre o assunto.  
 > - Treine responder a perguntas comuns em entrevistas.  
 > - Se você já tem alguma experiência anterior (mesmo que seja freelance ou sem fins lucrativos), comente sobre isso em termos de soluções, desafios e valor entregue. Mencione as tecnologias usadas que possuam relação com a vaga em questão, mas prefira sempre falar em termos de realizações, em vez de aspectos técnicos.  
-> - Se você ainda não tem experiência profissional, aposte em um projeto que impressione. Dê preferência a construir um sistema que um entrevistador comum deve conhecer, como um gerenciador de tarefas. A familiaridade com esse sistema irá lhe gerar interesse em explorar seu projeto e ajudá-lo a elaborar boas questões. Com um projeto potente, você pode evitar que a pessoa entrevistadora precise recorrer a um desafio algorítmico ou de arquitetura, que ainda que seja simples, pode ser desafiadora para responder em uma situação estressante como uma entrevista. Para saber mais sobre o que um projeto "perfeito" tem, veja o último módulo: [Portfólio](../portfolio/junior_pleno.md).
-> - Em algum momento da entrevista, afirme as seguintes ideias:
->   - Suas habilidades te capacitam a contribuir signitivamente para atingir os objetivos da empresa
->   - Você será capaz de aprender quaisquer habilidades que ainda não possui
->   - Você conseguirá gerar valor ao projeto em pouco tempo e com o mínimo de ajuda de outros colaboradores
->   - Seu objetivo não é apenas escrever código, mas também entender o problema do usuário final
->   - Você é um bom ouvinte e valoriza opiniões contrárias
->   - Você irá ajudar seus colegas e irá dar ideias quando necessário
+> - Se você ainda não tem experiência profissional, aposte em um projeto que impressione. Dê preferência a construir um sistema que um entrevistador comum deve conhecer, como um gerenciador de tarefas. A familiaridade com esse sistema irá lhe gerar interesse em explorar seu projeto e ajudá-lo a elaborar boas questões. Com um projeto potente, você pode evitar que a pessoa entrevistadora precise recorrer a um desafio algorítmico ou de arquitetura, que ainda que seja simples, pode ser desafiadora para responder em uma situação estressante como uma entrevista. Para saber mais sobre o que um projeto "perfeito" tem, veja o último módulo: [Portfólio](../portfolio/junior_pleno.md).  
+> - Em algum momento da entrevista, afirme as seguintes ideias:  
+>     - Suas habilidades te capacitam a contribuir signitivamente para atingir os objetivos da empresa  
+>     - Você será capaz de aprender quaisquer habilidades que ainda não possui  
+>     - Você conseguirá gerar valor ao projeto em pouco tempo e com o mínimo de ajuda de outros colaboradores  
+>     - Seu objetivo não é apenas escrever código, mas também entender o problema do usuário final  
+>     - Você é um bom ouvinte e valoriza opiniões contrárias  
+>     - Você irá ajudar seus colegas e irá dar ideias quando necessário
 
 **Posso usar IAs para codar?**
 > Enquanto você ainda está aprendendo, evite usar uma IA para criar funcionalidades inteiras. Use principalmente para tirar dúvidas e explicar conceitos.  
@@ -98,8 +99,9 @@ Alguma das respostas abaixo já foram abordadas em lives e estão disponíveis c
 > Dominar a matemática básica é o suficiente para a maior parte dos trabalhos.
 
 **Estou começando um produto, quais dicas pode me dar?**
-> Considere usar um boilerplate ou um projeto open source! Saiba mais sobre isso com esses vídeos:
-> - [Em vez de começar um software do zero, vou fazer isso](https://www.youtube.com/watch?v=BFnOFaaWgSE)
+> Considere usar um boilerplate ou um projeto open source! Saiba mais sobre isso com esses vídeos:  
+
+> - [Em vez de começar um software do zero, vou fazer isso](https://www.youtube.com/watch?v=BFnOFaaWgSE)  
 > - [Não desenvolva um ERP do zero](https://www.youtube.com/watch?v=4iz4qCanR20)
 
 **Posso começar já com ReactJS ou devo usar Javascript "puro" primeiro?**
