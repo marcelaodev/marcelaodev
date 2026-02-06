@@ -42,8 +42,10 @@ Nesta [pasta do nosso repositório no GitHub](https://github.com/marcelaodev/mar
 Esses 18 exercícios foram selecionados para que o básico da programação fosse abordado pelo menos uma vez por algum deles.  
 Contudo esta lista não é eficiente para te tornar um bom codificador, pois são poucos problemas, com baixa complexidade e nenhum acoplamento com sistemas externos.
 
-Pra resolver a deficiência de serem poucos problemas, separei mais uma lista de problemas, que você pode ou não fazer:
+Aqui estão mais alguns problemas, caso sinta necessidade:
 
 [1024](https://www.beecrowd.com.br/judge/pt/problems/view/1024), [1061](https://www.beecrowd.com.br/judge/pt/problems/view/1061), [1118](https://www.beecrowd.com.br/judge/pt/problems/view/1118), [1132](https://www.beecrowd.com.br/judge/pt/problems/view/1132), [1145](https://www.beecrowd.com.br/judge/pt/problems/view/1145), [1158](https://www.beecrowd.com.br/judge/pt/problems/view/1158), [1174](https://www.beecrowd.com.br/judge/pt/problems/view/1174), [1175](https://www.beecrowd.com.br/judge/pt/problems/view/1175), [1234](https://www.beecrowd.com.br/judge/pt/problems/view/1234), [1437](https://www.beecrowd.com.br/judge/pt/problems/view/1437), [1551](https://www.beecrowd.com.br/judge/pt/problems/view/1551), [1960](https://www.beecrowd.com.br/judge/pt/problems/view/1960)
 
-A solução dos problemas pode ser consultada na [pasta do nosso repositório no GitHub](https://github.com/marcelaodev/marcelaodev/tree/main/trilha/javascript/opcionais).
+A solução desses problemas opcionais está disponível na [pasta do nosso repositório no GitHub](https://github.com/marcelaodev/marcelaodev/tree/main/trilha/javascript/opcionais).
+
+Para ir ainda mais a fundo, você pode escolher outros desafios do Beecrowd ou em outras plataformas como o LeetCode, ou ainda você pode avançar algumas etapas e realizar o projeto [Segunda Linguagem](../back_framework/segunda_linguagem.md), mas recomendo que siga o caminho sugerido.

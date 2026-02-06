@@ -27,7 +27,7 @@ nav:
   - HTML e CSS: html/exercicios.md
   - Javascript:
     - Leitura de códigos: javascript/leitura.md
-    - Testes automatizados: javascript/testes_automatizados.md
+    - Testando seus primeiros códigos: javascript/testando.md
     - Resolução de problemas: javascript/problemas.md
     - Manipulador de arquivos: javascript/manipulador_arquivos.md
   - Front-end:

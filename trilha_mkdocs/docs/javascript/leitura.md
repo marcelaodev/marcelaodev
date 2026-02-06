@@ -1,4 +1,4 @@
-Uma prática eficiente de estudo em programação é ler e analisar códigos que solucionam desafios do Beecrowd.
+Uma prática eficiente de estudo em programação é ler e analisar códigos que solucionam desafios do Beecrowd. Identifique todos os comandos, variáveis e métodos, tente prever qual será seu resultado, execute o código e confira se o resultado é o mesmo do previsto.
 
 Beecrowd é uma plataforma de desafios de programação. Nela você encontra exercícios para praticar a solução de problemas usando códigos e a própria plataforma valida se o código que você fez está correto, se de fato o seu código soluciona o problema dado.
 
