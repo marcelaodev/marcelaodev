@@ -1,5 +1,250 @@
+/* ===== Base & Reset ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  min-height: 100vh;
+  background: #0f1117;
+  background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(40, 139, 200, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 100%, rgba(255, 91, 25, 0.12) 0%, transparent 50%);
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ===== Layout ===== */
+.linktree {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ===== Profile ===== */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.avatar-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #ff5b19, #288bc8);
+  animation: ring-pulse 3s ease-in-out infinite;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #0f1117;
+}
+
+.profile-name {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.profile-name span {
+  background: linear-gradient(135deg, #ff5b19, #288bc8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== Links ===== */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  color: #e0e0e0;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: slide-up 0.5s ease-out both;
+  animation-delay: calc(var(--delay) * 0.06s);
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.link-card:hover .link-icon {
+  transform: scale(1.1);
+}
+
+.link-text {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.link-arrow {
+  font-size: 1.4rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.link-card:hover .link-arrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== Brand Colors ===== */
+.link-trilha .link-icon {
+  background: linear-gradient(135deg, #ff5b19, #288bc8);
+  color: #fff;
+}
+.link-trilha:hover {
+  border-color: #ff5b19;
+  box-shadow: 0 8px 30px rgba(255, 91, 25, 0.15);
+}
+
+.link-youtube .link-icon {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ff0000;
+}
+.link-youtube:hover {
+  border-color: #ff0000;
+  box-shadow: 0 8px 30px rgba(255, 0, 0, 0.12);
+}
+
+.link-substack .link-icon {
+  background: rgba(255, 103, 25, 0.15);
+  color: #ff6719;
+}
+.link-substack:hover {
+  border-color: #ff6719;
+  box-shadow: 0 8px 30px rgba(255, 103, 25, 0.12);
+}
+
+.link-tiktok .link-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.link-tiktok:hover {
+  border-color: #69c9d0;
+  box-shadow: 0 8px 30px rgba(105, 201, 208, 0.12);
+}
+
+.link-instagram .link-icon {
+  background: linear-gradient(135deg, rgba(250, 200, 50, 0.2), rgba(188, 42, 141, 0.2));
+  color: #e1306c;
+}
+.link-instagram:hover {
+  border-color: #e1306c;
+  box-shadow: 0 8px 30px rgba(225, 48, 108, 0.12);
+}
+
+.link-twitch .link-icon {
+  background: rgba(145, 70, 255, 0.15);
+  color: #9146ff;
+}
+.link-twitch:hover {
+  border-color: #9146ff;
+  box-shadow: 0 8px 30px rgba(145, 70, 255, 0.12);
+}
+
+.link-linkedin .link-icon {
+  background: rgba(10, 102, 194, 0.15);
+  color: #0a66c2;
+}
+.link-linkedin:hover {
+  border-color: #0a66c2;
+  box-shadow: 0 8px 30px rgba(10, 102, 194, 0.12);
+}
+
+.link-github .link-icon {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+.link-github:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.06);
+}
+
+.link-discord .link-icon {
+  background: rgba(88, 101, 242, 0.15);
+  color: #5865f2;
+}
+.link-discord:hover {
+  border-color: #5865f2;
+  box-shadow: 0 8px 30px rgba(88, 101, 242, 0.12);
+}
+
+.link-whatsapp .link-icon {
+  background: rgba(37, 211, 102, 0.15);
+  color: #25d366;
+}
+.link-whatsapp:hover {
+  border-color: #25d366;
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.12);
+}
+
+/* ===== Animations ===== */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ring-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 91, 25, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px 4px rgba(40, 139, 200, 0.2);
+  }
+}
+
+/* ===== Shared styles used by trilha pages ===== */
 .laranja {
   background-color: #ff5b19;
+}
+
+.azul {
+  background-color: #288bc8;
 }
 
 .letra-preta {
@@ -13,15 +258,12 @@
     font-size: 3.7rem;
   }
 }
+
 @media only screen and (max-width: 600px) {
   .letra-preta {
     font-size: 2.2rem;
     font-weight: bold;
   }
-}
-
-.azul {
-  background-color: #288bc8;
 }
 
 .conteudo {
@@ -121,6 +363,7 @@ figcaption.capazul {
 .aumentaimagemsm {
   width: 15%;
 }
+
 @media only screen and (max-width: 600px) {
   .aumentaimagemsm {
     width: 70%;
