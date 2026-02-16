@@ -3,3 +3,25 @@ O objetivo desse projeto é te trazer familiaridade com os comandos Javascript e
 Para isso, você deverá baixar [o seguinte repositório](https://github.com/marcelaodev/marcelaodev/tree/main/trilha/front/codebases) que contém os seguintes projetos: calculadora, jogo da memória, jogo da velha, truco e jokenpo.
 
 Execute os projetos em seu computador, leia todos seus arquivos, tente fazer qualquer modificação em seus códigos ou reconstrua algum dos projetos.
+
+Os links a seguir são componentes Javascript que podem ser úteis para construir uma aplicação web. Crie uma ou mais páginas que contenham cada biblioteca.
+
+https://datatables.net/examples/index
+https://tabulator.info/examples/6.3
+https://jqueryui.com/
+https://select2.org/
+https://amsul.ca/pickadate.js/date/
+https://www.daterangepicker.com/#usage
+https://intl-tel-input.com/
+https://autonumeric.org/
+https://dimsemenov.com/plugins/magnific-popup/
+https://www.jstree.com/plugins/
+https://kenwheeler.github.io/slick/
+https://isotope.metafizzy.co/
+https://github.com/alvarotrigo/fullPage.js?tab=readme-ov-file
+https://github.com/lukehaas/Scrollify
+
+Pago
+
+https://www.infragistics.com/products/ignite-ui-jquery
+https://js.devexpress.com/Buy/
