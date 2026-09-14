@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agenda de Posts</title>
+<style>
+:root {
+  --bg: #f5f3ee;
+  --surface: #ffffff;
+  --surface-2: #f0ede6;
+  --border: #e2ddd2;
+  --border-strong: #cfc8ba;
+  --text: #1f1d1a;
+  --muted: #6b665d;
+  --accent: #c2410c;
+  --accent-soft: #fff1e8;
+  --accent-text: #ffffff;
+  --chatgpt: #0b8a6a;
+  --gemini: #3563e9;
+  --danger: #dc2626;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.05);
+  --radius: 14px;
+
+  --c-custom: #c2410c;
+  --c-feriado: #dc2626;
+  --c-comercial: #d97706;
+  --c-profissao: #2563eb;
+  --c-causa: #db2777;
+  --c-cultura: #7c3aed;
+  --c-tech: #0d9488;
+  --c-gastronomia: #ea580c;
+  --c-natureza: #16a34a;
+  --c-especial: #0891b2;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161513;
+    --surface: #1f1e1b;
+    --surface-2: #2a2825;
+    --border: #35332f;
+    --border-strong: #4a4640;
+    --text: #ece9e2;
+    --muted: #a39e94;
+    --accent: #fb923c;
+    --accent-soft: #3a2415;
+    --accent-text: #1b1208;
+    --danger: #f87171;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 4px 16px rgba(0,0,0,.25);
+    --c-custom: #fb923c;
+    --c-feriado: #f87171;
+    --c-comercial: #fbbf24;
+    --c-profissao: #60a5fa;
+    --c-causa: #f472b6;
+    --c-cultura: #a78bfa;
+    --c-tech: #2dd4bf;
+    --c-gastronomia: #fb923c;
+    --c-natureza: #4ade80;
+    --c-especial: #22d3ee;
+  }
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, textarea, select { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 20px; }
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.spacer { flex: 1; }
+h1, h2, h3, h4 { margin: 0; }
+
+/* ---------- Top bar ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.topbar .wrap { display: flex; align-items: center; gap: 10px 18px; min-height: 60px; flex-wrap: wrap; padding-block: 8px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; text-decoration: none; color: inherit; }
+.brand-mark { width: 32px; height: 32px; border-radius: 9px; background: var(--accent); display: grid; place-items: center; font-size: 17px; }
+.nav { display: flex; gap: 2px; flex-wrap: wrap; }
+.nav a { color: var(--muted); text-decoration: none; padding: 6px 10px; border-radius: 8px; font-size: 14px; }
+.nav a:hover { background: var(--surface-2); color: var(--text); }
+.provider { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+.seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--border); border-radius: 999px; padding: 3px; }
+.seg button {
+  border: 0; background: transparent; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+  font-weight: 600; font-size: 14px; color: var(--muted); display: flex; align-items: center; gap: 7px;
+}
+.seg button[aria-checked="true"] { background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+.ai-dot { width: 9px; height: 9px; border-radius: 50%; background: currentColor; flex: none; }
+[data-provider="chatgpt"] .ai-dot { background: var(--chatgpt); }
+[data-provider="gemini"] .ai-dot { background: var(--gemini); }
+
+/* ---------- Layout ---------- */
+main.wrap { padding-block: 22px 60px; display: grid; gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 18px; min-width: 0; }
+.card-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+.card-title { font-size: 16px; display: flex; align-items: center; gap: 8px; }
+.layout {
+  display: grid; gap: 20px; align-items: start;
+  grid-template-columns: minmax(290px, 370px) minmax(0, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "cal day" "up day";
+}
+.cal-card { grid-area: cal; }
+.up-card { grid-area: up; }
+.day-panel { grid-area: day; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+@media (max-width: 880px) {
+  .layout { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto; grid-template-areas: "cal" "day" "up"; }
+  .two { grid-template-columns: minmax(0, 1fr); }
+  .provider { margin-left: 0; }
+}
+
+/* ---------- Buttons & fields ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 9px 14px; border-radius: 10px; border: 1px solid var(--border-strong);
+  background: var(--surface); cursor: pointer; font-weight: 600; font-size: 14px;
+  text-decoration: none; color: var(--text); white-space: nowrap;
+}
+.btn:hover { background: var(--surface-2); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-text); }
+.btn.primary:hover { filter: brightness(1.06); }
+.btn.ghost { border-color: transparent; background: transparent; color: var(--muted); }
+.btn.ghost:hover { background: var(--surface-2); color: var(--text); }
+.btn.small { padding: 5px 10px; font-size: 13px; border-radius: 8px; }
+.btn.danger { color: var(--danger); }
+.icon-btn {
+  width: 38px; height: 38px; border-radius: 10px; border: 1px solid var(--border);
+  background: var(--surface); cursor: pointer; font-size: 20px; line-height: 1;
+  display: grid; place-items: center; flex: none; color: var(--text);
+}
+.icon-btn:hover { background: var(--surface-2); }
+.btn-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.field { display: grid; gap: 6px; font-weight: 600; font-size: 14px; }
+.field .opt { font-weight: 400; color: var(--muted); }
+input[type=text], input[type=date], input[type=search], textarea {
+  width: 100%; padding: 9px 12px; border: 1px solid var(--border-strong); border-radius: 10px;
+  background: var(--surface); font-weight: 400;
+}
+input[type=date] { color-scheme: light dark; }
+textarea { resize: vertical; min-height: 90px; line-height: 1.5; }
+input:focus, textarea:focus { outline: 2px solid color-mix(in srgb, var(--accent) 60%, transparent); outline-offset: 0; border-color: var(--accent); }
+.check { display: flex; gap: 8px; align-items: center; font-weight: 500; font-size: 14px; cursor: pointer; }
+.check input { width: 17px; height: 17px; accent-color: var(--accent); }
+.hint { font-size: 13px; color: var(--muted); margin: 0; }
+code, .ph { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; background: var(--surface-2); padding: 1px 6px; border-radius: 6px; }
+
+/* ---------- Today banner ---------- */
+.today {
+  display: flex; flex-wrap: wrap; gap: 12px 26px; align-items: center;
+  padding: 20px 22px; border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent-soft), var(--surface) 70%);
+  border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+.today-main { min-width: 0; }
+.today h1 { margin-top: 2px; font-size: clamp(20px, 3vw, 28px); line-height: 1.2; }
+.today-body { flex: 1; min-width: 240px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.eyebrow.is-today { color: var(--accent); }
+.chip {
+  border: 1px solid color-mix(in srgb, var(--cat) 40%, transparent);
+  background: color-mix(in srgb, var(--cat) 12%, var(--surface));
+  color: var(--text); padding: 6px 13px; border-radius: 999px; font-weight: 600; cursor: pointer;
+  display: inline-flex; gap: 7px; align-items: center; font-size: 14px; text-align: left;
+}
+.chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--cat); flex: none; }
+.chip:hover { background: color-mix(in srgb, var(--cat) 20%, var(--surface)); }
+.linklike { border: 0; background: none; padding: 0; color: var(--accent); font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- Calendar ---------- */
+.cal-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.cal-title { flex: 1; text-align: center; font-weight: 700; font-size: 16px; }
+.cal-title::first-letter { text-transform: uppercase; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; }
+.dow { font-size: 11px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); text-align: center; padding: 4px 0; font-weight: 700; }
+.cell {
+  aspect-ratio: 1 / 1; max-width: 100%; border: 1.5px solid transparent; background: transparent; border-radius: 10px;
+  cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 4px; padding: 2px; color: var(--text);
+}
+.cell:hover { background: var(--surface-2); }
+.cell.out { opacity: .38; }
+.cell .num { font-size: 14px; line-height: 1; }
+.cell.has .num { font-weight: 700; }
+.dots { display: flex; gap: 2px; height: 6px; align-items: center; }
+.dots i { width: 5px; height: 5px; border-radius: 50%; display: block; }
+.dots i.dp { width: 6px; height: 6px; background: transparent; border: 1.5px solid var(--text); }
+.cell.today { border-color: var(--accent); }
+.cell.today .num { color: var(--accent); font-weight: 800; }
+.cell.sel { background: var(--accent); border-color: var(--accent); }
+.cell.sel .num { color: var(--accent-text); }
+.cell.sel .dots i { box-shadow: 0 0 0 1.5px var(--accent-text); }
+.cell.sel .dots i.dp { border-color: var(--accent-text); box-shadow: none; }
+.cal-preview { margin-top: 10px; padding: 10px 12px; background: var(--surface-2); border-radius: 10px; font-size: 13px; min-height: 78px; }
+.cal-preview .pv-date { font-weight: 700; margin-bottom: 4px; }
+.cal-preview .pv-date::first-letter { text-transform: uppercase; }
+.cal-preview ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
+.cal-preview li { display: flex; gap: 7px; align-items: center; }
+.cal-preview li i { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+.cal-foot { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.jump { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); margin-left: auto; }
+.jump input { width: auto; padding: 5px 8px; }
+.legend { margin-top: 12px; font-size: 13px; }
+.legend summary { cursor: pointer; color: var(--muted); }
+.legend-list { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 8px; }
+.legend-list span { display: inline-flex; align-items: center; gap: 6px; }
+.legend-list i { width: 8px; height: 8px; border-radius: 50%; }
+
+/* ---------- Upcoming ---------- */
+.up-card .search { margin-top: 10px; }
+.up-list { max-height: 440px; overflow: auto; margin: 10px -8px 0; padding: 0 8px; }
+.up-row {
+  display: grid; grid-template-columns: 62px minmax(0, 1fr); gap: 8px; width: 100%; text-align: left;
+  background: transparent; border: 0; padding: 8px 6px; border-radius: 10px; cursor: pointer; align-items: center; color: var(--text);
+}
+.up-row:hover { background: var(--surface-2); }
+.up-row.sel { background: var(--accent-soft); }
+.up-date { text-align: center; line-height: 1.1; }
+.up-date b { display: block; font-size: 19px; }
+.up-date span { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .02em; white-space: nowrap; }
+.up-names { font-size: 14px; min-width: 0; }
+.up-names .n { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.up-names .n::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--cat); margin-right: 7px; vertical-align: 1px; }
+.up-names .rel { color: var(--muted); font-size: 12px; display: block; }
+.empty-state { color: var(--muted); font-size: 14px; padding: 12px 4px; }
+
+/* ---------- Day panel ---------- */
+.day-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.day-title { flex: 1; min-width: 0; text-align: center; }
+.day-title h2 { font-size: clamp(18px, 2.4vw, 23px); line-height: 1.25; }
+.day-title h2::first-letter { text-transform: uppercase; }
+.day-meta { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+.campaign { font-size: 13px; color: var(--muted); background: var(--surface-2); border-radius: 999px; padding: 4px 12px; }
+.nudge {
+  display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+  background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  padding: 12px 14px; border-radius: 12px; margin-top: 14px; font-size: 14px;
+}
+.nudge > div { flex: 1; min-width: 200px; }
+.section-label { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 22px 0 10px; display: flex; align-items: center; gap: 8px; font-weight: 700; }
+.section-label .count { background: var(--surface-2); border-radius: 999px; padding: 0 8px; font-size: 12px; letter-spacing: 0; }
+.section-label .btn { margin-left: auto; text-transform: none; letter-spacing: 0; }
+.occ {
+  border: 1px solid var(--border); border-left: 4px solid var(--cat); border-radius: 12px;
+  padding: 14px; margin-bottom: 10px; background: var(--surface);
+}
+.occ header { display: flex; gap: 10px; align-items: flex-start; justify-content: space-between; }
+.occ h3 { margin-top: 5px; font-size: 17px; line-height: 1.3; }
+.occ h4 { font-size: 15px; }
+.occ .desc { margin: 6px 0 0; }
+.occ-actions { display: flex; gap: 2px; flex: none; }
+.badge {
+  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  color: var(--cat); background: color-mix(in srgb, var(--cat) 13%, transparent); padding: 2px 8px; border-radius: 999px;
+}
+.pill { display: inline-block; font-size: 11px; font-weight: 600; color: var(--muted); border: 1px solid var(--border-strong); padding: 1px 7px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; }
+.dp-text { margin: 6px 0 0; color: var(--muted); font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.split { display: inline-flex; border-radius: 10px; overflow: hidden; --p: var(--chatgpt); max-width: 100%; }
+.split.gemini { --p: var(--gemini); }
+.ai-link {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px;
+  background: var(--p); color: #fff; text-decoration: none; font-weight: 600; font-size: 14px; min-width: 0;
+}
+.ai-link .lbl { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ai-link:hover { filter: brightness(1.1); }
+.ai-link .arr { opacity: .8; }
+.split-edit {
+  border: 0; background: color-mix(in srgb, var(--p) 78%, #000); color: #fff; padding: 0 11px; cursor: pointer;
+  border-left: 1px solid rgba(255,255,255,.22); font-size: 14px;
+}
+.split-edit:hover { background: color-mix(in srgb, var(--p) 65%, #000); }
+.ai-link.disabled {
+  background: transparent; color: var(--muted); border: 1.5px dashed var(--border-strong); border-radius: 10px; font-weight: 500;
+}
+.ai-link.disabled:hover { filter: none; color: var(--text); border-color: var(--accent); }
+.day-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
+.kbd-hint { font-size: 12px; color: var(--muted); margin-left: auto; align-self: center; }
+@media (hover: none), (max-width: 600px) { .kbd-hint { display: none; } }
+kbd { font-family: inherit; font-size: 11px; border: 1px solid var(--border-strong); border-bottom-width: 2px; border-radius: 5px; padding: 0 5px; }
+
+/* ---------- Base prompts ---------- */
+.bp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 14px; }
+@media (max-width: 760px) { .bp-grid { grid-template-columns: minmax(0, 1fr); } }
+.bp { display: grid; gap: 8px; min-width: 0; }
+.bp-head { display: flex; gap: 8px; align-items: center; }
+.bp-num { width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; font-weight: 800; font-size: 13px; flex: none; }
+.bp-name { font-weight: 600; }
+.bp textarea { min-height: 200px; }
+.insert-row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.chip-btn { border: 1px solid var(--border); background: var(--surface-2); border-radius: 999px; padding: 2px 9px; font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; cursor: pointer; color: var(--text); }
+.chip-btn:hover { border-color: var(--accent); }
+.save-status { font-size: 13px; color: var(--muted); margin-left: auto; transition: color .2s; }
+.save-status.saving { color: var(--accent); }
+.help { margin: 0; font-size: 14px; color: var(--muted); max-width: 75ch; }
+
+/* ---------- My dates ---------- */
+.my-group + .my-group { margin-top: 18px; }
+.my-group h3 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 6px; }
+.my-row { display: flex; gap: 10px; align-items: center; padding: 9px 0; border-top: 1px solid var(--border); }
+.my-row:first-of-type { border-top: 0; }
+.my-row .info { flex: 1; min-width: 0; }
+.my-row .info b { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.my-row .info span { font-size: 13px; color: var(--muted); }
+.my-row .past b { color: var(--muted); }
+
+/* ---------- Dialogs ---------- */
+dialog {
+  border: 1px solid var(--border); border-radius: 16px; padding: 0; width: min(580px, calc(100vw - 32px));
+  max-height: calc(100vh - 40px); background: var(--surface); color: var(--text); box-shadow: 0 24px 70px rgba(0,0,0,.35);
+}
+dialog::backdrop { background: rgba(20, 18, 15, .5); }
+.dlg { padding: 22px; display: grid; gap: 14px; }
+.dlg-head { display: flex; align-items: center; gap: 10px; }
+.dlg-head h2 { flex: 1; font-size: 19px; }
+.dlg-head .icon-btn { width: 34px; height: 34px; border: 0; }
+.dialog-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-top: 4px; }
+#pdText { min-height: 300px; font-size: 14px; }
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 16px);
+  background: #22201c; color: #fff; padding: 11px 16px; border-radius: 12px; opacity: 0; pointer-events: none;
+  transition: opacity .2s, transform .2s; display: flex; gap: 14px; align-items: center; z-index: 100;
+  max-width: calc(100vw - 32px); box-shadow: 0 10px 30px rgba(0,0,0,.25); font-size: 14px;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+.toast.error { background: #7f1d1d; }
+.toast button { background: transparent; border: 0; color: #fdba74; font-weight: 700; cursor: pointer; padding: 0; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="brand-mark">📅</span>Agenda de Posts</a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#calendario">Calendário</a>
+      <a href="#prompts">Prompts base</a>
+      <a href="#minhas-datas">Minhas datas</a>
+      <a href="#backup">Backup</a>
+    </nav>
+    <div class="provider">
+      <span class="muted small">Enviar para</span>
+      <div class="seg" role="radiogroup" aria-label="Enviar prompts para">
+        <button type="button" role="radio" data-provider="chatgpt"><span class="ai-dot"></span>ChatGPT</button>
+        <button type="button" role="radio" data-provider="gemini"><span class="ai-dot"></span>Gemini</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <section class="today" id="today" aria-live="polite"></section>
+
+  <div class="layout" id="calendario">
+    <section class="card cal-card" aria-label="Calendário">
+      <div class="cal-head">
+        <button type="button" class="icon-btn" data-month="-1" aria-label="Mês anterior" title="Mês anterior">‹</button>
+        <div class="cal-title" id="calTitle"></div>
+        <button type="button" class="icon-btn" data-month="1" aria-label="Próximo mês" title="Próximo mês">›</button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="cal-preview" id="calPreview"></div>
+      <div class="cal-foot">
+        <button type="button" class="btn small" data-go-today>Hoje</button>
+        <label class="jump">Ir para <input type="date" id="jump"></label>
+      </div>
+      <details class="legend">
+        <summary>Legenda das cores</summary>
+        <div class="legend-list" id="legend"></div>
+      </details>
+    </section>
+
+    <section class="card up-card" aria-label="Próximas datas">
+      <h2 class="card-title">🔎 Próximas datas</h2>
+      <input type="search" class="search" id="search" placeholder="Buscar: gamer, natal, mães…" autocomplete="off">
+      <div class="up-list" id="upList"></div>
+    </section>
+
+    <section class="card day-panel" id="dayPanel" aria-live="polite"></section>
+  </div>
+
+  <section class="card" id="prompts">
+    <div class="card-head">
+      <h2 class="card-title">✏️ Prompts base</h2>
+      <span class="save-status" id="saveStatus">✓ Salvo neste navegador</span>
+    </div>
+    <p class="help">
+      Escreva seus dois prompts uma vez. Cada data comemorativa ganha um botão para cada prompt, já com a ocasião do dia.
+      Use <span class="ph">{ocasiao}</span>, <span class="ph">{data}</span>, <span class="ph">{dia_semana}</span> e <span class="ph">{campanha}</span> no texto.
+      Se você não usar <span class="ph">{ocasiao}</span>, a data e a ocasião são adicionadas no final do prompt automaticamente.
+    </p>
+    <div class="bp-grid" id="bpGrid"></div>
+  </section>
+
+  <div class="two">
+    <section class="card" id="minhas-datas">
+      <div class="card-head">
+        <h2 class="card-title">⭐ Minhas datas e prompts</h2>
+        <span class="spacer"></span>
+        <button type="button" class="btn small primary" data-add-occ>+ Nova data</button>
+      </div>
+      <div id="myDates"></div>
+    </section>
+
+    <section class="card" id="backup">
+      <h2 class="card-title">💾 Backup</h2>
+      <p class="help" style="margin-top:6px">
+        Tudo é salvo automaticamente neste navegador. Exporte um arquivo para ter uma cópia de segurança
+        ou para usar em outro computador. Importar substitui as configurações atuais.
+      </p>
+      <div class="btn-row">
+        <button type="button" class="btn primary" id="exportBtn">⬇️ Exportar configurações</button>
+        <label class="btn" tabindex="0" id="importLabel">⬆️ Importar arquivo<input type="file" id="importInput" accept=".json,application/json" hidden></label>
+      </div>
+      <p class="muted small" id="storageInfo" style="margin:14px 0 0"></p>
+      <div class="btn-row">
+        <button type="button" class="btn small" id="restoreHidden">Mostrar datas ocultas</button>
+        <button type="button" class="btn small ghost danger" id="resetAll">Apagar tudo</button>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- Ver / editar prompt antes de enviar -->
+<dialog id="promptDialog" aria-labelledby="pdTitle">
+  <div class="dlg">
+    <div class="dlg-head">
+      <h2 id="pdTitle">Prompt</h2>
+      <button type="button" class="icon-btn" data-close aria-label="Fechar">×</button>
+    </div>
+    <p class="hint" id="pdSub"></p>
+    <textarea id="pdText" spellcheck="false"></textarea>
+    <p class="hint">Mudanças aqui valem só para este envio. Para mudar sempre, edite o prompt original.</p>
+    <div class="dialog-actions">
+      <button type="button" class="btn" id="pdCopy">📋 Copiar</button>
+      <span class="spacer"></span>
+      <a class="btn primary" id="pdOpen" target="_blank" rel="noopener noreferrer">Abrir ↗</a>
+    </div>
+  </div>
+</dialog>
+
+<!-- Data especial personalizada -->
+<dialog id="occDialog" aria-labelledby="occTitle">
+  <form class="dlg" id="occForm" novalidate>
+    <div class="dlg-head">
+      <h2 id="occTitle">Nova data especial</h2>
+      <button type="button" class="icon-btn" data-close aria-label="Fechar">×</button>
+    </div>
+    <label class="field">Nome da data
+      <input type="text" name="name" maxlength="80" placeholder="Ex.: Aniversário da loja" required>
+    </label>
+    <label class="field">Data
+      <input type="date" name="date" required>
+    </label>
+    <label class="check"><input type="checkbox" name="annual" checked> <span>Repetir todo ano</span></label>
+    <label class="field">Prompt específico desta data <span class="opt">(opcional)</span>
+      <textarea name="prompt" rows="6" placeholder="Ex.: Crie um post comemorando mais um ano da loja, agradecendo os clientes e anunciando 15% de desconto com o cupom NIVER."></textarea>
+    </label>
+    <p class="hint">Os seus dois prompts base também aparecem para esta data automaticamente.</p>
+    <div class="dialog-actions">
+      <button type="button" class="btn ghost danger" id="occDelete">Excluir</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn" data-close>Cancelar</button>
+      <button type="submit" class="btn primary">Salvar data</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Prompt personalizado do dia -->
+<dialog id="dpDialog" aria-labelledby="dpTitle">
+  <form class="dlg" id="dpForm" novalidate>
+    <div class="dlg-head">
+      <h2 id="dpTitle">Prompt para este dia</h2>
+      <button type="button" class="icon-btn" data-close aria-label="Fechar">×</button>
+    </div>
+    <label class="field">Título <span class="opt">(opcional — vira o nome do botão)</span>
+      <input type="text" name="title" maxlength="50" placeholder="Ex.: Carrossel promoção">
+    </label>
+    <label class="field">Prompt
+      <textarea name="text" rows="8" required placeholder="Ex.: Crie um carrossel de 5 slides sobre {ocasiao} mostrando os produtos da nova coleção…"></textarea>
+    </label>
+    <label class="field">Data
+      <input type="date" name="date" required>
+    </label>
+    <label class="check"><input type="checkbox" name="annual"> <span id="dpAnnualLabel">Repetir todo ano</span></label>
+    <p class="hint">A data e as ocasiões do dia são incluídas no prompt (ou use <span class="ph">{ocasiao}</span> e <span class="ph">{data}</span>).</p>
+    <div class="dialog-actions">
+      <button type="button" class="btn ghost danger" id="dpDelete">Excluir</button>
+      <span class="spacer"></span>
+      <button type="button" class="btn" data-close>Cancelar</button>
+      <button type="submit" class="btn primary">Salvar prompt</button>
+    </div>
+  </form>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+'use strict';
+
+/* =========================================================
+   Dados: datas comemorativas
+   ========================================================= */
+const CATS = {
+  custom:      'Minha data',
+  feriado:     'Feriado',
+  comercial:   'Comercial',
+  profissao:   'Profissão',
+  causa:       'Conscientização',
+  cultura:     'Cultura',
+  tech:        'Tecnologia',
+  gastronomia: 'Gastronomia',
+  natureza:    'Natureza',
+  especial:    'Comemorativa',
+};
+const CAT_ORDER = Object.keys(CATS);
+
+// MM-DD | nome | categoria
+const FIXED_RAW = `
+01-01|Ano Novo (Confraternização Universal)|feriado
+01-06|Dia de Reis|cultura
+01-07|Dia do Leitor|cultura
+01-08|Dia do Fotógrafo|profissao
+01-20|Dia do Farmacêutico|profissao
+01-24|Dia do Aposentado|especial
+01-25|Dia do Carteiro|profissao
+01-29|Dia da Visibilidade Trans|causa
+01-30|Dia da Saudade|especial
+01-30|Dia do Quadrinho Nacional|cultura
+02-01|Dia do Publicitário|profissao
+02-04|Dia Mundial do Câncer|causa
+02-09|Dia do Frevo|cultura
+02-13|Dia Mundial do Rádio|cultura
+02-14|Valentine's Day (Dia de São Valentim)|comercial
+02-17|Dia do Gato|especial
+03-08|Dia Internacional da Mulher|causa
+03-14|Dia Nacional da Poesia|cultura
+03-14|Dia do Pi|tech
+03-15|Dia do Consumidor|comercial
+03-20|Dia Internacional da Felicidade|especial
+03-20|Início do Outono|natureza
+03-21|Dia Mundial da Poesia|cultura
+03-21|Dia Internacional da Síndrome de Down|causa
+03-22|Dia Mundial da Água|natureza
+03-27|Dia do Circo|cultura
+03-27|Dia Mundial do Teatro|cultura
+03-31|Dia Mundial do Backup|tech
+04-01|Dia da Mentira|especial
+04-02|Dia Mundial de Conscientização do Autismo|causa
+04-07|Dia Mundial da Saúde|causa
+04-07|Dia do Jornalista|profissao
+04-13|Dia do Beijo|especial
+04-18|Dia Nacional do Livro Infantil|cultura
+04-19|Dia dos Povos Indígenas|causa
+04-21|Tiradentes|feriado
+04-21|Dia Mundial da Criatividade|especial
+04-22|Dia da Terra|natureza
+04-22|Descobrimento do Brasil|cultura
+04-23|Dia Mundial do Livro|cultura
+04-23|Dia de São Jorge|cultura
+04-24|Dia do Churrasco|gastronomia
+04-27|Dia da Empregada Doméstica|profissao
+04-28|Dia da Educação|causa
+04-29|Dia Internacional da Dança|cultura
+05-01|Dia do Trabalho|feriado
+05-04|Star Wars Day (May the 4th)|tech
+05-08|Dia do Profissional de Marketing|profissao
+05-08|Dia Nacional do Turismo|especial
+05-12|Dia do Enfermeiro|profissao
+05-15|Dia Internacional da Família|especial
+05-17|Dia Mundial da Internet|tech
+05-17|Dia Internacional contra a LGBTfobia|causa
+05-22|Dia do Abraço|especial
+05-24|Dia Nacional do Café|gastronomia
+05-25|Dia do Orgulho Nerd|tech
+05-28|Dia do Hambúrguer|gastronomia
+06-01|Dia da Imprensa|cultura
+06-05|Dia Mundial do Meio Ambiente|natureza
+06-08|Dia Mundial dos Oceanos|natureza
+06-12|Dia dos Namorados|comercial
+06-13|Dia de Santo Antônio|cultura
+06-14|Dia Mundial do Doador de Sangue|causa
+06-21|Início do Inverno|natureza
+06-21|Dia Internacional do Yoga|especial
+06-24|Dia de São João|cultura
+06-28|Dia do Orgulho LGBTQIA+|causa
+06-29|Dia de São Pedro|cultura
+06-30|Dia Mundial das Redes Sociais|tech
+07-02|Dia do Bombeiro|profissao
+07-07|Dia Mundial do Chocolate|gastronomia
+07-10|Dia da Pizza|gastronomia
+07-13|Dia Mundial do Rock|cultura
+07-15|Dia do Homem|especial
+07-17|Dia Mundial do Emoji|tech
+07-19|Dia Nacional do Futebol|cultura
+07-20|Dia do Amigo|especial
+07-25|Dia do Escritor|cultura
+07-25|Dia do Motorista|profissao
+07-25|Dia da Mulher Negra Latino-Americana e Caribenha|causa
+07-26|Dia dos Avós|comercial
+07-28|Dia do Agricultor|profissao
+07-30|Dia Internacional da Amizade|especial
+08-05|Dia Nacional da Saúde|causa
+08-11|Dia do Estudante|especial
+08-11|Dia do Advogado|profissao
+08-11|Dia do Garçom|profissao
+08-12|Dia Internacional da Juventude|especial
+08-13|Dia do Economista|profissao
+08-13|Dia do Canhoto|especial
+08-15|Dia da Informática|tech
+08-15|Dia do Solteiro|especial
+08-19|Dia Mundial da Fotografia|cultura
+08-19|Dia do Artista de Teatro|cultura
+08-19|Dia Nacional do Ciclista|especial
+08-22|Dia do Folclore|cultura
+08-25|Dia do Soldado|profissao
+08-25|Aniversário do Linux|tech
+08-26|Dia Internacional do Cachorro|especial
+08-27|Dia do Psicólogo|profissao
+08-27|Dia do Corretor de Imóveis|profissao
+08-28|Dia Nacional do Voluntariado|causa
+08-29|Dia do Gamer|tech
+08-31|Dia do Nutricionista|profissao
+08-31|Dia do Blog|tech
+09-01|Dia do Profissional de Educação Física|profissao
+09-03|Dia do Biólogo|profissao
+09-05|Dia da Amazônia|natureza
+09-07|Independência do Brasil|feriado
+09-09|Dia do Médico Veterinário|profissao
+09-09|Dia do Administrador|profissao
+09-09|Dia Internacional da Beleza|especial
+09-10|Dia Mundial de Prevenção ao Suicídio|causa
+09-11|Dia do Cerrado|natureza
+09-15|Dia do Cliente|comercial
+09-20|Dia do Gaúcho|cultura
+09-21|Dia da Árvore|natureza
+09-21|Dia Nacional de Luta da Pessoa com Deficiência|causa
+09-22|Início da Primavera|natureza
+09-22|Dia Mundial sem Carro|natureza
+09-22|Dia do Contador|profissao
+09-23|Dia do Sorvete|gastronomia
+09-26|Dia Nacional do Surdo|causa
+09-27|Dia Mundial do Turismo|especial
+09-27|Dia de Cosme e Damião|cultura
+09-29|Dia Mundial do Coração|causa
+09-30|Dia da Secretária|profissao
+09-30|Dia do Tradutor|profissao
+10-01|Dia Internacional da Pessoa Idosa|causa
+10-01|Dia Internacional do Café|gastronomia
+10-01|Dia do Vendedor|profissao
+10-01|Dia Internacional da Música|cultura
+10-04|Dia dos Animais|natureza
+10-05|Dia da Micro e Pequena Empresa|comercial
+10-08|Dia do Nordestino|cultura
+10-12|Dia das Crianças|comercial
+10-12|Nossa Senhora Aparecida|feriado
+10-13|Dia do Fisioterapeuta|profissao
+10-15|Dia do Professor|profissao
+10-16|Dia Mundial da Alimentação|gastronomia
+10-18|Dia do Médico|profissao
+10-19|Dia do Profissional de TI|tech
+10-20|Dia do Poeta|cultura
+10-23|Dia do Aviador|profissao
+10-25|Dia do Dentista|profissao
+10-28|Dia do Servidor Público|profissao
+10-28|Dia Mundial da Animação|cultura
+10-29|Dia Nacional do Livro|cultura
+10-31|Halloween (Dia das Bruxas)|comercial
+10-31|Dia do Saci|cultura
+11-01|Dia de Todos os Santos|cultura
+11-01|Dia Mundial do Veganismo|gastronomia
+11-02|Finados|feriado
+11-05|Dia do Designer|profissao
+11-05|Dia Nacional da Cultura|cultura
+11-05|Dia do Cinema Brasileiro|cultura
+11-07|Dia do Radialista|profissao
+11-13|Dia Mundial da Gentileza|especial
+11-14|Dia Mundial do Diabetes|causa
+11-15|Proclamação da República|feriado
+11-19|Dia da Bandeira|cultura
+11-19|Dia Internacional do Homem|especial
+11-20|Dia da Consciência Negra|feriado
+11-22|Dia do Músico|profissao
+11-25|Dia Nacional do Doador de Sangue|causa
+12-01|Dia Mundial de Luta contra a AIDS|causa
+12-02|Dia do Samba|cultura
+12-02|Dia do Relações Públicas|profissao
+12-05|Dia Internacional do Voluntário|causa
+12-08|Dia da Família|especial
+12-10|Dia do Palhaço|cultura
+12-10|Dia Internacional dos Direitos Humanos|causa
+12-11|Dia do Engenheiro|profissao
+12-13|Dia do Marinheiro|profissao
+12-15|Dia do Arquiteto|profissao
+12-21|Início do Verão|natureza
+12-24|Véspera de Natal|comercial
+12-25|Natal|feriado
+12-31|Réveillon|comercial
+`;
+const FIXED = FIXED_RAW.trim().split('\n').map(line => line.split('|').map(s => s.trim()));
+
+const CAMPAIGNS = [
+  { name: 'Janeiro Branco',          theme: 'saúde mental' },
+  { name: 'Fevereiro Roxo e Laranja', theme: 'lúpus, fibromialgia, Alzheimer e leucemia' },
+  { name: 'Março Lilás',             theme: 'prevenção ao câncer do colo do útero' },
+  { name: 'Abril Azul',              theme: 'conscientização sobre o autismo' },
+  { name: 'Maio Amarelo',            theme: 'segurança no trânsito' },
+  { name: 'Junho Vermelho',          theme: 'doação de sangue' },
+  { name: 'Julho Amarelo',           theme: 'combate às hepatites virais' },
+  { name: 'Agosto Dourado',          theme: 'incentivo à amamentação' },
+  { name: 'Setembro Amarelo',        theme: 'prevenção ao suicídio' },
+  { name: 'Outubro Rosa',            theme: 'prevenção ao câncer de mama' },
+  { name: 'Novembro Azul',           theme: 'saúde do homem' },
+  { name: 'Dezembro Vermelho',       theme: 'prevenção ao HIV/AIDS' },
+];
+
+// Datas que mudam de dia a cada ano
+const MOVABLE = [
+  { name: 'Carnaval',                     cat: 'feriado',     calc: y => addDays(easter(y), -47) },
+  { name: 'Quarta-feira de Cinzas',       cat: 'cultura',     calc: y => addDays(easter(y), -46) },
+  { name: 'Sexta-feira Santa',            cat: 'feriado',     calc: y => addDays(easter(y), -2) },
+  { name: 'Páscoa',                       cat: 'comercial',   calc: y => easter(y) },
+  { name: 'Corpus Christi',               cat: 'feriado',     calc: y => addDays(easter(y), 60) },
+  { name: 'Dia das Mães',                 cat: 'comercial',   calc: y => nthWeekday(y, 4, 0, 2) },
+  { name: 'Dia Mundial da Senha',         cat: 'tech',        calc: y => nthWeekday(y, 4, 4, 1) },
+  { name: 'Dia dos Pais',                 cat: 'comercial',   calc: y => nthWeekday(y, 7, 0, 2) },
+  { name: 'Dia Internacional da Cerveja', cat: 'gastronomia', calc: y => nthWeekday(y, 7, 5, 1) },
+  { name: 'Dia do Sysadmin',              cat: 'tech',        calc: y => lastWeekday(y, 6, 5) },
+  { name: 'Dia do Programador',           cat: 'tech',        calc: y => new Date(y, 0, 256) },
+  { name: 'Dia do Software Livre',        cat: 'tech',        calc: y => nthWeekday(y, 8, 6, 3) },
+  { name: 'Dia do Comerciário',           cat: 'profissao',   calc: y => nthWeekday(y, 9, 1, 3) },
+  { name: 'Black Friday',                 cat: 'comercial',   calc: y => addDays(nthWeekday(y, 10, 4, 4), 1) },
+  { name: 'Cyber Monday',                 cat: 'comercial',   calc: y => addDays(nthWeekday(y, 10, 4, 4), 4) },
+];
+
+/* =========================================================
+   Datas
+   ========================================================= */
+const WEEKDAYS = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+const WEEK_SHORT = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+const MONTHS = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+const MONTH_SHORT = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+
+const pad = n => String(n).padStart(2, '0');
+const keyOf = d => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const mdOf = d => `${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const parseKey = k => { const [y, m, d] = k.split('-').map(Number); return new Date(y, m - 1, d); };
+const addDays = (d, n) => new Date(d.getFullYear(), d.getMonth(), d.getDate() + n);
+const startOfDay = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+const isValidKey = k => typeof k === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(k) && keyOf(parseKey(k)) === k;
+const fmtShort = d => `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()}`;
+const fmtDM = d => `${pad(d.getDate())}/${pad(d.getMonth() + 1)}`;
+const fmtLong = d => `${WEEKDAYS[d.getDay()]}, ${d.getDate()} de ${MONTHS[d.getMonth()]} de ${d.getFullYear()}`;
+const fmtMedium = d => `${WEEKDAYS[d.getDay()]}, ${d.getDate()} de ${MONTHS[d.getMonth()]}`;
+
+function easter(y) {
+  const a = y % 19, b = Math.floor(y / 100), c = y % 100, d = Math.floor(b / 4), e = b % 4;
+  const f = Math.floor((b + 8) / 25), g = Math.floor((b - f + 1) / 3);
+  const h = (19 * a + b - d - g + 15) % 30, i = Math.floor(c / 4), k = c % 4;
+  const l = (32 + 2 * e + 2 * i - h - k) % 7, m = Math.floor((a + 11 * h + 22 * l) / 451);
+  const month = Math.floor((h + l - 7 * m + 114) / 31), day = ((h + l - 7 * m + 114) % 31) + 1;
+  return new Date(y, month - 1, day);
+}
+function nthWeekday(y, month, weekday, n) {
+  const first = new Date(y, month, 1);
+  return new Date(y, month, 1 + ((weekday - first.getDay() + 7) % 7) + (n - 1) * 7);
+}
+function lastWeekday(y, month, weekday) {
+  const last = new Date(y, month + 1, 0);
+  return new Date(y, month, last.getDate() - ((last.getDay() - weekday + 7) % 7));
+}
+function diffDays(a, b) {
+  return Math.round((Date.UTC(b.getFullYear(), b.getMonth(), b.getDate()) - Date.UTC(a.getFullYear(), a.getMonth(), a.getDate())) / 864e5);
+}
+function relLabel(d) {
+  const n = diffDays(today, d);
+  if (n === 0) return 'Hoje';
+  if (n === 1) return 'Amanhã';
+  if (n === -1) return 'Ontem';
+  return n > 0 ? `Daqui a ${n} dias` : `Há ${-n} dias`;
+}
+
+/* =========================================================
+   Estado (localStorage)
+   ========================================================= */
+const STORAGE_KEY = 'agendaPosts.v1';
+const PROVIDERS = {
+  chatgpt: { label: 'ChatGPT', base: 'https://chatgpt.com/', withQuery: q => 'https://chatgpt.com/?q=' + encodeURIComponent(q) },
+  gemini:  { label: 'Gemini',  base: 'https://gemini.google.com/app', withQuery: q => 'https://gemini.google.com/app?q=' + encodeURIComponent(q) },
+};
+const MAX_URL = 7000;
+
+const str = v => (typeof v === 'string' ? v : '');
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+
+function defaultState() {
+  return {
+    version: 1,
+    provider: 'chatgpt',
+    basePrompts: [{ name: 'Prompt 1', text: '' }, { name: 'Prompt 2', text: '' }],
+    customOccasions: [],
+    dayPrompts: [],
+    hidden: [],
+  };
+}
+function normalizeState(s) {
+  const out = defaultState();
+  if (!s || typeof s !== 'object') return out;
+  if (s.provider in PROVIDERS) out.provider = s.provider;
+  if (Array.isArray(s.basePrompts)) {
+    out.basePrompts = out.basePrompts.map((def, i) => ({
+      name: str(s.basePrompts[i]?.name).trim() || def.name,
+      text: str(s.basePrompts[i]?.text),
+    }));
+  }
+  if (Array.isArray(s.customOccasions)) {
+    out.customOccasions = s.customOccasions
+      .filter(o => o && str(o.name).trim() && isValidKey(o.date))
+      .map(o => ({ id: str(o.id) || uid(), name: str(o.name).trim(), date: o.date, annual: !!o.annual, prompt: str(o.prompt) }));
+  }
+  if (Array.isArray(s.dayPrompts)) {
+    out.dayPrompts = s.dayPrompts
+      .filter(p => p && str(p.text).trim() && isValidKey(p.date))
+      .map(p => ({ id: str(p.id) || uid(), date: p.date, annual: !!p.annual, title: str(p.title).trim(), text: str(p.text) }));
+  }
+  if (Array.isArray(s.hidden)) out.hidden = [...new Set(s.hidden.filter(x => typeof x === 'string'))];
+  return out;
+}
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    return raw ? normalizeState(JSON.parse(raw)) : defaultState();
+  } catch {
+    return defaultState();
+  }
+}
+
+let state = loadState();
+let saveTimer = null;
+
+function saveState() {
+  clearTimeout(saveTimer);
+  saveTimer = null;
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    saveStatus.textContent = '✓ Salvo neste navegador';
+    saveStatus.classList.remove('saving');
+  } catch (e) {
+    toast('Não foi possível salvar no navegador: ' + e.message, { error: true });
+  }
+}
+function scheduleSave() {
+  saveStatus.textContent = 'Salvando…';
+  saveStatus.classList.add('saving');
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveState, 500);
+}
+
+/* =========================================================
+   Consulta de ocasiões
+   ========================================================= */
+const slug = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const norm = s => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const yearCache = new Map();
+
+function builtinsForYear(y) {
+  if (yearCache.has(y)) return yearCache.get(y);
+  const map = new Map();
+  const push = (k, o) => { if (!map.has(k)) map.set(k, []); map.get(k).push(o); };
+  for (const [md, name, cat] of FIXED) push(`${y}-${md}`, { id: 'b:' + slug(name), name, cat });
+  CAMPAIGNS.forEach((c, i) => push(`${y}-${pad(i + 1)}-01`, { id: 'b:inicio-' + slug(c.name), name: `Início do ${c.name}`, cat: 'causa', note: `Campanha do mês: ${c.theme}` }));
+  for (const m of MOVABLE) push(keyOf(m.calc(y)), { id: 'b:' + slug(m.name), name: m.name, cat: m.cat });
+  yearCache.set(y, map);
+  return map;
+}
+function matchesDate(item, d) {
+  return item.annual ? item.date.slice(5) === mdOf(d) : item.date === keyOf(d);
+}
+function occasionsFor(d) {
+  const customs = state.customOccasions
+    .filter(o => matchesDate(o, d))
+    .map(o => ({ id: o.id, name: o.name, cat: 'custom', custom: true, prompt: o.prompt }));
+  const builtins = (builtinsForYear(d.getFullYear()).get(keyOf(d)) || []).filter(o => !state.hidden.includes(o.id));
+  return [...customs, ...builtins].sort((a, b) => CAT_ORDER.indexOf(a.cat) - CAT_ORDER.indexOf(b.cat));
+}
+function dayPromptsFor(d) {
+  return state.dayPrompts.filter(p => matchesDate(p, d));
+}
+function nextOccurrence(item) {
+  if (!item.annual) return parseKey(item.date);
+  const [, m, dd] = item.date.split('-').map(Number);
+  for (let y = today.getFullYear(); y < today.getFullYear() + 9; y++) {
+    const d = new Date(y, m - 1, dd);
+    if (d.getMonth() === m - 1 && d >= today) return d;
+  }
+  return parseKey(item.date);
+}
+function joinNames(names) {
+  if (names.length <= 1) return names[0] || '';
+  return names.slice(0, -1).join(', ') + ' e ' + names[names.length - 1];
+}
+
+/* =========================================================
+   Montagem dos prompts
+   ========================================================= */
+const PLACEHOLDERS = ['{ocasiao}', '{data}', '{dia_semana}', '{campanha}'];
+const PH_RE = /\{\s*(ocasi[aã]o|data|dia_semana|campanha)\s*\}/gi;
+const HAS_OCC_RE = /\{\s*ocasi[aã]o\s*\}/i;
+
+function buildPrompt(template, d, occName) {
+  const camp = CAMPAIGNS[d.getMonth()];
+  const vars = {
+    ocasiao: occName || 'nenhuma data comemorativa específica',
+    data: fmtShort(d),
+    dia_semana: WEEKDAYS[d.getDay()],
+    campanha: `${camp.name} (${camp.theme})`,
+  };
+  let text = template.replace(PH_RE, (_, k) => vars[norm(k)]).trim();
+  if (!HAS_OCC_RE.test(template)) {
+    text += `\n\n---\nData da publicação: ${vars.dia_semana}, ${vars.data}\n` +
+            `Ocasião: ${occName || 'nenhuma data comemorativa (post do dia a dia)'}`;
+  }
+  return text;
+}
+function providerUrl(prompt) {
+  const p = PROVIDERS[state.provider];
+  const url = p.withQuery(prompt);
+  return url.length > MAX_URL ? p.base : url;
+}
+
+/* =========================================================
+   Utilidades de UI
+   ========================================================= */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const truncate = (s, n) => (s.length > n ? s.slice(0, n).trimEnd() + '…' : s);
+
+const todayEl = $('#today'), calGrid = $('#calGrid'), calTitle = $('#calTitle'), calPreview = $('#calPreview');
+const jumpInput = $('#jump'), searchInput = $('#search'), upList = $('#upList'), dayPanel = $('#dayPanel');
+const bpGrid = $('#bpGrid'), saveStatus = $('#saveStatus'), myDates = $('#myDates'), storageInfo = $('#storageInfo');
+const toastEl = $('#toast');
+
+let today = startOfDay(new Date());
+let selected = today;
+let view = { y: today.getFullYear(), m: today.getMonth() };
+
+let toastTimer = null;
+function toast(msg, { error = false, action = null, ms = 3800 } = {}) {
+  toastEl.innerHTML = `<span>${esc(msg)}</span>${action ? `<button type="button">${esc(action.label)}</button>` : ''}`;
+  toastEl.classList.toggle('error', error);
+  toastEl.classList.add('show');
+  if (action) toastEl.querySelector('button').onclick = () => { action.fn(); toastEl.classList.remove('show'); };
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toastEl.classList.remove('show'), action ? ms + 2500 : ms);
+}
+
+// Cópia síncrona: roda dentro do clique, antes da nova aba tirar o foco da página.
+function copyText(text) {
+  const host = document.querySelector('dialog[open]') || document.body;
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.setAttribute('readonly', '');
+  ta.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;';
+  const prev = document.activeElement;
+  host.appendChild(ta);
+  ta.select();
+  let ok = false;
+  try { ok = document.execCommand('copy'); } catch { ok = false; }
+  ta.remove();
+  if (prev && prev.focus) prev.focus({ preventScroll: true });
+  if (!ok && navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).catch(() => {});
+    ok = true;
+  }
+  return ok;
+}
+
+function announceSend(prompt, copied) {
+  const label = PROVIDERS[state.provider].label;
+  if (providerUrl(prompt) === PROVIDERS[state.provider].base) {
+    toast(copied ? `Prompt longo demais para o link: foi copiado — cole no ${label} com Ctrl+V.` : `Prompt longo demais para o link. Use “Ver / editar” para copiar.`, { ms: 6000 });
+  } else if (state.provider === 'gemini') {
+    toast(copied ? 'Prompt copiado! Se o Gemini abrir sem o texto, é só colar (Ctrl+V).' : 'Abrindo o Gemini…', { ms: 5500 });
+  } else {
+    toast(copied ? 'Abrindo o ChatGPT… (o prompt também foi copiado)' : 'Abrindo o ChatGPT…');
+  }
+}
+
+/* Registro dos prompts gerados na tela (para copiar / editar) */
+const promptReg = new Map();
+let regSeq = 0;
+
+function linkBtn(label, prompt, subtitle) {
+  const id = 'p' + (++regSeq);
+  promptReg.set(id, { label, prompt, subtitle });
+  const p = PROVIDERS[state.provider];
+  return `<span class="split ${state.provider}">` +
+    `<a class="ai-link" href="${esc(providerUrl(prompt))}" target="_blank" rel="noopener noreferrer" data-pid="${id}" title="Abrir no ${p.label} com este prompt">` +
+    `<span class="lbl">${esc(label)}</span><span class="arr">↗</span></a>` +
+    `<button type="button" class="split-edit" data-view="${id}" title="Ver / editar antes de enviar" aria-label="Ver ou editar o prompt ${esc(label)}">✎</button>` +
+    `</span>`;
+}
+function baseLinks(d, occName) {
+  return state.basePrompts.map((bp, i) => {
+    const label = bp.name || `Prompt ${i + 1}`;
+    if (!bp.text.trim()) {
+      return `<a class="ai-link disabled" href="#prompts" data-focus-bp="${i}" title="Este prompt base está vazio — clique para escrever">${esc(label)} (vazio)</a>`;
+    }
+    return linkBtn(label, buildPrompt(bp.text, d, occName), occName || 'Post do dia a dia');
+  }).join('');
+}
+
+/* =========================================================
+   Renderização
+   ========================================================= */
+function renderProvider() {
+  document.querySelectorAll('[data-provider]').forEach(b => b.setAttribute('aria-checked', String(b.dataset.provider === state.provider)));
+  $('#pdOpen').textContent = `Abrir no ${PROVIDERS[state.provider].label} ↗`;
+}
+
+function renderToday() {
+  const occ = occasionsFor(today);
+  const tk = keyOf(today);
+  let body;
+  if (occ.length) {
+    body = occ.map(o => `<button type="button" class="chip" style="--cat:var(--c-${o.cat})" data-date="${tk}">${o.custom ? '★ ' : ''}${esc(o.name)}</button>`).join('');
+  } else {
+    let next = null;
+    for (let i = 1; i <= 120 && !next; i++) {
+      const d = addDays(today, i), o = occasionsFor(d);
+      if (o.length) next = { d, o };
+    }
+    body = `<span class="muted">Nenhuma data comemorativa hoje.</span>` +
+      (next ? `<span>Próxima: <button type="button" class="linklike" data-date="${keyOf(next.d)}">${esc(next.o[0].name)}</button> <span class="muted">(${relLabel(next.d).toLowerCase()})</span></span>` : '');
+  }
+  const back = keyOf(selected) !== tk ? `<button type="button" class="btn small" data-go-today>← Voltar para hoje</button>` : '';
+  todayEl.innerHTML = `
+    <div class="today-main"><div class="eyebrow is-today">Hoje é</div><h1>${esc(fmtMedium(today)).replace(/^./, c => c.toUpperCase())}</h1></div>
+    <div class="today-body">${body}</div>${back}`;
+}
+
+function renderCalendar() {
+  const { y, m } = view;
+  calTitle.textContent = `${MONTHS[m]} ${y}`;
+  const first = new Date(y, m, 1), last = new Date(y, m + 1, 0);
+  const start = addDays(first, -first.getDay()), end = addDays(last, 6 - last.getDay());
+  const tk = keyOf(today), sk = keyOf(selected);
+  let html = WEEK_SHORT.map(w => `<div class="dow">${w}</div>`).join('');
+  for (let d = start; d <= end; d = addDays(d, 1)) {
+    const k = keyOf(d), occ = occasionsFor(d), hasDp = dayPromptsFor(d).length > 0;
+    const cls = ['cell', d.getMonth() !== m && 'out', k === tk && 'today', k === sk && 'sel', occ.length && 'has'].filter(Boolean).join(' ');
+    const names = occ.map(o => o.name);
+    const dots = occ.slice(0, 4).map(o => `<i style="background:var(--c-${o.cat})"></i>`).join('') + (hasDp ? '<i class="dp"></i>' : '');
+    html += `<button type="button" class="${cls}" data-date="${k}" data-cal="1" title="${esc(names.join('\n'))}" aria-label="${esc(fmtLong(d) + (names.length ? ': ' + names.join(', ') : ''))}"${k === sk ? ' aria-current="date"' : ''}>` +
+      `<span class="num">${d.getDate()}</span><span class="dots">${dots}</span></button>`;
+  }
+  calGrid.innerHTML = html;
+  jumpInput.value = sk;
+  renderPreview(selected);
+}
+
+function renderPreview(d) {
+  const occ = occasionsFor(d);
+  const shown = occ.slice(0, 3);
+  calPreview.innerHTML = `<div class="pv-date">${esc(fmtMedium(d))} <span class="muted" style="font-weight:400">· ${relLabel(d)}</span></div>` +
+    (occ.length
+      ? `<ul>${shown.map(o => `<li><i style="background:var(--c-${o.cat})"></i>${o.custom ? '★ ' : ''}${esc(o.name)}</li>`).join('')}${occ.length > 3 ? `<li class="muted">+ ${occ.length - 3} outra(s)</li>` : ''}</ul>`
+      : `<div class="muted">Nenhuma data comemorativa</div>`);
+}
+
+function renderLegend() {
+  $('#legend').innerHTML = Object.entries(CATS).map(([k, label]) => `<span><i style="background:var(--c-${k})"></i>${label}</span>`).join('') +
+    `<span><i style="border:1.5px solid var(--text);width:9px;height:9px"></i>Tem prompt do dia</span>`;
+}
+
+function renderUpcoming() {
+  const q = norm(searchInput.value.trim());
+  const sk = keyOf(selected);
+  const rows = [];
+  const span = q ? 366 : 60;
+  for (let i = 0; i < span && rows.length < (q ? 25 : 999); i++) {
+    const d = addDays(today, i);
+    let occ = occasionsFor(d);
+    if (q) occ = occ.filter(o => norm(o.name).includes(q));
+    if (occ.length) rows.push({ d, occ });
+  }
+  if (!rows.length) {
+    upList.innerHTML = `<div class="empty-state">${q ? 'Nada encontrado nos próximos 12 meses.' : 'Nenhuma data nos próximos 60 dias.'}</div>`;
+    return;
+  }
+  upList.innerHTML = rows.map(({ d, occ }) => {
+    const k = keyOf(d);
+    return `<button type="button" class="up-row${k === sk ? ' sel' : ''}" data-date="${k}">` +
+      `<span class="up-date"><b>${d.getDate()}</b><span>${MONTH_SHORT[d.getMonth()]} · ${WEEK_SHORT[d.getDay()]}</span></span>` +
+      `<span class="up-names">${occ.map(o => `<span class="n" style="--cat:var(--c-${o.cat})">${o.custom ? '★ ' : ''}${esc(o.name)}</span>`).join('')}<span class="rel">${relLabel(d)}</span></span>` +
+      `</button>`;
+  }).join('');
+}
+
+function renderDay() {
+  promptReg.clear();
+  const d = selected;
+  const occ = occasionsFor(d);
+  const dps = dayPromptsFor(d);
+  const camp = CAMPAIGNS[d.getMonth()];
+  const noBase = state.basePrompts.every(p => !p.text.trim());
+  const isToday = diffDays(today, d) === 0;
+
+  let html = `
+    <div class="day-head">
+      <button type="button" class="icon-btn" data-nav="-1" aria-label="Dia anterior" title="Dia anterior (seta ←)">‹</button>
+      <div class="day-title">
+        <div class="eyebrow${isToday ? ' is-today' : ''}">${relLabel(d)}</div>
+        <h2>${esc(fmtLong(d))}</h2>
+      </div>
+      <button type="button" class="icon-btn" data-nav="1" aria-label="Próximo dia" title="Próximo dia (seta →)">›</button>
+    </div>
+    <div class="day-meta"><span class="campaign">🎗️ ${esc(camp.name)} · ${esc(camp.theme)}</span></div>`;
+
+  if (noBase) {
+    html += `<div class="nudge"><span style="font-size:22px">✏️</span><div><b>Comece escrevendo seus prompts base.</b><br>Eles viram botões aqui, já com a data comemorativa do dia.</div><a class="btn small primary" href="#prompts" data-focus-bp="0">Escrever prompts</a></div>`;
+  }
+
+  html += `<h3 class="section-label">Datas comemorativas <span class="count">${occ.length}</span></h3>`;
+  if (occ.length) {
+    html += occ.map(o => {
+      const actions = o.custom
+        ? `<button type="button" class="btn ghost small" data-edit-occ="${esc(o.id)}">Editar</button>`
+        : `<button type="button" class="btn ghost small" data-hide="${esc(o.id)}" title="Não mostrar mais esta data no calendário">Ocultar</button>`;
+      let links = baseLinks(d, o.name);
+      if (o.custom && o.prompt.trim()) links += linkBtn('Prompt da data', buildPrompt(o.prompt, d, o.name), o.name);
+      return `<article class="occ" style="--cat:var(--c-${o.cat})">
+        <header><div><span class="badge">${o.custom ? '★ ' : ''}${CATS[o.cat]}</span><h3>${esc(o.name)}</h3></div><div class="occ-actions">${actions}</div></header>
+        ${o.note ? `<p class="desc muted small">${esc(o.note)}</p>` : ''}
+        <div class="links">${links}</div>
+      </article>`;
+    }).join('');
+  } else {
+    html += `<article class="occ" style="--cat:var(--border-strong)">
+      <header><div><h3 style="margin:0">Nenhuma data comemorativa</h3><p class="desc muted small">Gere um post do dia a dia com seus prompts base, ou adicione uma data sua.</p></div></header>
+      <div class="links">${baseLinks(d, '')}</div>
+    </article>`;
+  }
+
+  const occName = joinNames(occ.map(o => o.name));
+  html += `<h3 class="section-label">Prompts personalizados deste dia <span class="count">${dps.length}</span></h3>`;
+  if (dps.length) {
+    html += dps.map(p => {
+      const label = p.title || 'Prompt do dia';
+      return `<article class="occ" style="--cat:var(--accent)">
+        <header><div><h4>${esc(label)}<span class="pill">${p.annual ? 'Todo ano' : 'Só em ' + p.date.slice(0, 4)}</span></h4></div>
+          <div class="occ-actions"><button type="button" class="btn ghost small" data-edit-dp="${esc(p.id)}">Editar</button></div></header>
+        <p class="dp-text">${esc(truncate(p.text.trim(), 220))}</p>
+        <div class="links">${linkBtn(label, buildPrompt(p.text, d, occName), fmtShort(d))}</div>
+      </article>`;
+    }).join('');
+  } else {
+    html += `<p class="muted small" style="margin:0">Tem uma ideia específica para ${fmtDM(d)}? Salve um prompt só para este dia (ou para todo ano nesta data).</p>`;
+  }
+
+  html += `<div class="day-actions">
+      <button type="button" class="btn" data-add-dp>📝 Adicionar prompt para este dia</button>
+      <button type="button" class="btn" data-add-occ>⭐ Adicionar data especial</button>
+      <span class="kbd-hint">Use <kbd>←</kbd> <kbd>→</kbd> para trocar de dia</span>
+    </div>`;
+
+  dayPanel.innerHTML = html;
+}
+
+function renderBasePrompts() {
+  const examples = [
+    'Ex.: Você é social media de uma loja de roupas femininas. Crie uma legenda para Instagram sobre {ocasiao}, que será publicada em {dia_semana}, {data}. Tom leve e próximo, até 120 palavras, com uma chamada para ação e 5 hashtags.',
+    'Ex.: Crie 3 ideias de Reels/Stories para {ocasiao}. Para cada ideia: gancho dos 3 primeiros segundos, roteiro curto, texto na tela e sugestão de áudio.',
+  ];
+  bpGrid.innerHTML = state.basePrompts.map((p, i) => `
+    <div class="bp">
+      <div class="bp-head">
+        <span class="bp-num">${i + 1}</span>
+        <input type="text" class="bp-name" data-bp-name="${i}" value="${esc(p.name)}" maxlength="40" placeholder="Nome do botão (ex.: Legenda Instagram)" aria-label="Nome do prompt ${i + 1}">
+      </div>
+      <textarea data-bp-text="${i}" placeholder="${esc(examples[i])}" aria-label="Texto do prompt ${i + 1}">${esc(p.text)}</textarea>
+      <div class="insert-row"><span class="muted small">Inserir:</span>${PLACEHOLDERS.map(ph => `<button type="button" class="chip-btn" data-insert="${ph}" data-target="${i}">${ph}</button>`).join('')}</div>
+    </div>`).join('');
+}
+
+function renderMyDates() {
+  const occs = state.customOccasions
+    .map(o => ({ o, next: nextOccurrence(o) }))
+    .sort((a, b) => (a.next < today) - (b.next < today) || a.next - b.next);
+  const dps = state.dayPrompts
+    .map(p => ({ p, next: nextOccurrence(p) }))
+    .sort((a, b) => (a.next < today) - (b.next < today) || a.next - b.next);
+
+  const when = (item, next) => {
+    const past = next < today;
+    const base = item.annual ? `Todo ano · ${fmtDM(parseKey(item.date))}` : fmtShort(parseKey(item.date));
+    return `${base} — ${past ? 'já passou' : relLabel(next).toLowerCase()}`;
+  };
+
+  let html = `<div class="my-group"><h3>Datas especiais (${occs.length})</h3>`;
+  html += occs.length ? occs.map(({ o, next }) => `
+    <div class="my-row"><div class="info${next < today ? ' past' : ''}"><b>★ ${esc(o.name)}</b><span>${when(o, next)}${o.prompt.trim() ? ' · com prompt próprio' : ''}</span></div>
+      <button type="button" class="btn small" data-date="${keyOf(next)}">Ver</button>
+      <button type="button" class="btn ghost small" data-edit-occ="${esc(o.id)}">Editar</button></div>`).join('')
+    : `<p class="muted small" style="margin:0">Nenhuma ainda. Adicione aniversários da marca, lançamentos, promoções, datas do seu nicho…</p>`;
+  html += `</div><div class="my-group"><h3>Prompts de dias (${dps.length})</h3>`;
+  html += dps.length ? dps.map(({ p, next }) => `
+    <div class="my-row"><div class="info${next < today ? ' past' : ''}"><b>${esc(p.title || truncate(p.text.trim().replace(/\s+/g, ' '), 60))}</b><span>${when(p, next)}</span></div>
+      <button type="button" class="btn small" data-date="${keyOf(next)}">Ver</button>
+      <button type="button" class="btn ghost small" data-edit-dp="${esc(p.id)}">Editar</button></div>`).join('')
+    : `<p class="muted small" style="margin:0">Nenhum ainda. Selecione um dia no calendário e clique em “Adicionar prompt para este dia”.</p>`;
+  html += `</div>`;
+  myDates.innerHTML = html;
+
+  storageInfo.textContent = `Salvo agora: ${state.customOccasions.length} data(s) sua(s), ${state.dayPrompts.length} prompt(s) de dia, ${state.hidden.length} data(s) oculta(s).`;
+  $('#restoreHidden').disabled = state.hidden.length === 0;
+  $('#restoreHidden').textContent = state.hidden.length ? `Mostrar datas ocultas (${state.hidden.length})` : 'Nenhuma data oculta';
+}
+
+function renderAll() {
+  renderProvider();
+  renderToday();
+  renderCalendar();
+  renderUpcoming();
+  renderDay();
+  renderMyDates();
+}
+
+/* =========================================================
+   Ações
+   ========================================================= */
+function selectDate(d, { scroll = false } = {}) {
+  selected = startOfDay(d);
+  view = { y: selected.getFullYear(), m: selected.getMonth() };
+  renderToday();
+  renderCalendar();
+  renderUpcoming();
+  renderDay();
+  if (scroll) {
+    const r = dayPanel.getBoundingClientRect();
+    if (r.top < 70 || r.top > window.innerHeight * 0.6) dayPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function commit() {
+  saveState();
+  renderAll();
+}
+
+/* ----- Dialog: ver / editar prompt ----- */
+const promptDialog = $('#promptDialog'), pdText = $('#pdText'), pdOpen = $('#pdOpen');
+function openPromptDialog(item) {
+  if (!item) return;
+  $('#pdTitle').textContent = item.label;
+  $('#pdSub').textContent = `${item.subtitle} · ${fmtLong(selected)}`;
+  pdText.value = item.prompt;
+  pdOpen.href = providerUrl(item.prompt);
+  promptDialog.showModal();
+  pdText.focus();
+  pdText.setSelectionRange(0, 0);
+  pdText.scrollTop = 0;
+}
+pdText.addEventListener('input', () => { pdOpen.href = providerUrl(pdText.value); });
+$('#pdCopy').addEventListener('click', () => {
+  toast(copyText(pdText.value) ? 'Prompt copiado ✓' : 'Não consegui copiar — selecione o texto e use Ctrl+C.', { error: false });
+});
+pdOpen.addEventListener('click', () => {
+  announceSend(pdText.value, copyText(pdText.value));
+  promptDialog.close();
+});
+
+/* ----- Dialog: data especial ----- */
+const occDialog = $('#occDialog'), occForm = $('#occForm');
+let editingOccId = null;
+function openOccDialog(id) {
+  const o = id ? state.customOccasions.find(x => x.id === id) : null;
+  editingOccId = o ? o.id : null;
+  $('#occTitle').textContent = o ? 'Editar data especial' : 'Nova data especial';
+  occForm.elements.name.value = o ? o.name : '';
+  occForm.elements.date.value = o ? o.date : keyOf(selected);
+  occForm.elements.annual.checked = o ? o.annual : true;
+  occForm.elements.prompt.value = o ? o.prompt : '';
+  $('#occDelete').hidden = !o;
+  occDialog.showModal();
+  occForm.elements.name.focus();
+}
+occForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const name = occForm.elements.name.value.trim(), date = occForm.elements.date.value;
+  if (!name) { occForm.elements.name.focus(); toast('Dê um nome para a data.', { error: true }); return; }
+  if (!isValidKey(date)) { occForm.elements.date.focus(); toast('Escolha uma data válida.', { error: true }); return; }
+  const data = { name, date, annual: occForm.elements.annual.checked, prompt: occForm.elements.prompt.value };
+  if (editingOccId) Object.assign(state.customOccasions.find(x => x.id === editingOccId), data);
+  else state.customOccasions.push({ id: uid(), ...data });
+  occDialog.close();
+  selected = parseKey(date);
+  view = { y: selected.getFullYear(), m: selected.getMonth() };
+  commit();
+  toast(editingOccId ? 'Data atualizada ✓' : `“${name}” adicionada ao calendário ✓`);
+});
+$('#occDelete').addEventListener('click', () => {
+  const o = state.customOccasions.find(x => x.id === editingOccId);
+  if (!o || !confirm(`Excluir a data “${o.name}”?`)) return;
+  state.customOccasions = state.customOccasions.filter(x => x.id !== o.id);
+  occDialog.close();
+  commit();
+  toast('Data excluída', { action: { label: 'Desfazer', fn: () => { state.customOccasions.push(o); commit(); } } });
+});
+
+/* ----- Dialog: prompt do dia ----- */
+const dpDialog = $('#dpDialog'), dpForm = $('#dpForm');
+let editingDpId = null;
+function updateDpAnnualLabel() {
+  const k = dpForm.elements.date.value;
+  $('#dpAnnualLabel').textContent = isValidKey(k) ? `Repetir todo ano em ${fmtDM(parseKey(k))}` : 'Repetir todo ano';
+}
+function openDpDialog(id) {
+  const p = id ? state.dayPrompts.find(x => x.id === id) : null;
+  editingDpId = p ? p.id : null;
+  $('#dpTitle').textContent = p ? 'Editar prompt do dia' : 'Prompt para este dia';
+  dpForm.elements.title.value = p ? p.title : '';
+  dpForm.elements.text.value = p ? p.text : '';
+  dpForm.elements.date.value = p ? p.date : keyOf(selected);
+  dpForm.elements.annual.checked = p ? p.annual : false;
+  updateDpAnnualLabel();
+  $('#dpDelete').hidden = !p;
+  dpDialog.showModal();
+  dpForm.elements.text.focus();
+}
+dpForm.elements.date.addEventListener('input', updateDpAnnualLabel);
+dpForm.addEventListener('submit', e => {
+  e.preventDefault();
+  const text = dpForm.elements.text.value, date = dpForm.elements.date.value;
+  if (!text.trim()) { dpForm.elements.text.focus(); toast('Escreva o prompt.', { error: true }); return; }
+  if (!isValidKey(date)) { dpForm.elements.date.focus(); toast('Escolha uma data válida.', { error: true }); return; }
+  const data = { title: dpForm.elements.title.value.trim(), text, date, annual: dpForm.elements.annual.checked };
+  if (editingDpId) Object.assign(state.dayPrompts.find(x => x.id === editingDpId), data);
+  else state.dayPrompts.push({ id: uid(), ...data });
+  dpDialog.close();
+  selected = parseKey(date);
+  view = { y: selected.getFullYear(), m: selected.getMonth() };
+  commit();
+  toast(editingDpId ? 'Prompt atualizado ✓' : 'Prompt salvo para o dia ✓');
+});
+$('#dpDelete').addEventListener('click', () => {
+  const p = state.dayPrompts.find(x => x.id === editingDpId);
+  if (!p || !confirm('Excluir este prompt?')) return;
+  state.dayPrompts = state.dayPrompts.filter(x => x.id !== p.id);
+  dpDialog.close();
+  commit();
+  toast('Prompt excluído', { action: { label: 'Desfazer', fn: () => { state.dayPrompts.push(p); commit(); } } });
+});
+
+// Fechar dialogs clicando fora
+document.querySelectorAll('dialog').forEach(dlg => {
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+});
+
+/* ----- Cliques (delegação) ----- */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-pid],[data-view],[data-nav],[data-date],[data-month],[data-go-today],[data-hide],[data-add-occ],[data-edit-occ],[data-add-dp],[data-edit-dp],[data-provider],[data-focus-bp],[data-insert],[data-close]');
+  if (!t) return;
+  const ds = t.dataset;
+
+  if (ds.pid) {
+    const item = promptReg.get(ds.pid);
+    if (item) announceSend(item.prompt, copyText(item.prompt));
+    return; // o link abre normalmente em nova aba
+  }
+  if (ds.view) return openPromptDialog(promptReg.get(ds.view));
+  if (ds.close !== undefined) return t.closest('dialog')?.close();
+  if (ds.nav) return selectDate(addDays(selected, Number(ds.nav)));
+  if (ds.date) return selectDate(parseKey(ds.date), { scroll: !ds.cal });
+  if (ds.month) {
+    const d = new Date(view.y, view.m + Number(ds.month), 1);
+    view = { y: d.getFullYear(), m: d.getMonth() };
+    return renderCalendar();
+  }
+  if (ds.goToday !== undefined) return selectDate(today, { scroll: t.closest('#today') !== null });
+  if (ds.hide) {
+    const id = ds.hide;
+    const name = occasionsFor(selected).find(o => o.id === id)?.name || 'Data';
+    state.hidden.push(id);
+    commit();
+    return toast(`“${name}” foi ocultada`, { action: { label: 'Desfazer', fn: () => { state.hidden = state.hidden.filter(x => x !== id); commit(); } } });
+  }
+  if (ds.addOcc !== undefined) return openOccDialog(null);
+  if (ds.editOcc) return openOccDialog(ds.editOcc);
+  if (ds.addDp !== undefined) return openDpDialog(null);
+  if (ds.editDp) return openDpDialog(ds.editDp);
+  if (ds.provider) {
+    state.provider = ds.provider;
+    saveState();
+    renderProvider();
+    renderDay();
+    return toast(`Os links agora abrem no ${PROVIDERS[state.provider].label}`);
+  }
+  if (ds.focusBp !== undefined) {
+    e.preventDefault();
+    document.getElementById('prompts').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const ta = bpGrid.querySelector(`[data-bp-text="${ds.focusBp}"]`);
+    setTimeout(() => ta?.focus({ preventScroll: true }), 350);
+    return;
+  }
+  if (ds.insert) {
+    const ta = bpGrid.querySelector(`[data-bp-text="${ds.target}"]`);
+    if (!ta) return;
+    ta.focus();
+    ta.setRangeText(ds.insert, ta.selectionStart, ta.selectionEnd, 'end');
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+});
+
+/* ----- Prompts base (salva enquanto digita) ----- */
+let dayRenderTimer = null;
+bpGrid.addEventListener('input', e => {
+  const t = e.target;
+  if (t.dataset.bpText !== undefined) state.basePrompts[Number(t.dataset.bpText)].text = t.value;
+  else if (t.dataset.bpName !== undefined) state.basePrompts[Number(t.dataset.bpName)].name = t.value;
+  else return;
+  scheduleSave();
+  clearTimeout(dayRenderTimer);
+  dayRenderTimer = setTimeout(renderDay, 300);
+});
+bpGrid.addEventListener('focusout', e => {
+  const t = e.target;
+  if (t.dataset.bpName !== undefined && !t.value.trim()) {
+    const i = Number(t.dataset.bpName);
+    t.value = state.basePrompts[i].name = `Prompt ${i + 1}`;
+    scheduleSave();
+    renderDay();
+  }
+});
+
+/* ----- Calendário: pré-visualização ao passar o mouse ----- */
+calGrid.addEventListener('mouseover', e => {
+  const c = e.target.closest('.cell');
+  if (c) renderPreview(parseKey(c.dataset.date));
+});
+calGrid.addEventListener('focusin', e => {
+  const c = e.target.closest('.cell');
+  if (c) renderPreview(parseKey(c.dataset.date));
+});
+calGrid.addEventListener('mouseleave', () => renderPreview(selected));
+jumpInput.addEventListener('change', () => { if (isValidKey(jumpInput.value)) selectDate(parseKey(jumpInput.value), { scroll: true }); });
+searchInput.addEventListener('input', renderUpcoming);
+
+/* ----- Teclado: ← → trocam o dia ----- */
+document.addEventListener('keydown', e => {
+  if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey || document.querySelector('dialog[open]')) return;
+  if (e.target instanceof Element && e.target.closest('input, textarea, select, [contenteditable]')) return;
+  if (e.key === 'ArrowLeft') { e.preventDefault(); selectDate(addDays(selected, -1)); }
+  if (e.key === 'ArrowRight') { e.preventDefault(); selectDate(addDays(selected, 1)); }
+});
+
+/* ----- Backup ----- */
+$('#exportBtn').addEventListener('click', () => {
+  if (saveTimer) saveState();
+  const data = { app: 'agenda-posts', exportedAt: new Date().toISOString(), ...state };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `agenda-posts-backup-${keyOf(new Date())}.json`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  toast('Backup exportado ✓');
+});
+
+const importInput = $('#importInput');
+$('#importLabel').addEventListener('keydown', e => {
+  if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); importInput.click(); }
+});
+importInput.addEventListener('change', async () => {
+  const file = importInput.files[0];
+  if (!file) return;
+  try {
+    const obj = JSON.parse(await file.text());
+    if (!obj || typeof obj !== 'object' || !['basePrompts', 'customOccasions', 'dayPrompts'].some(k => k in obj)) {
+      throw new Error('o arquivo não parece ser um backup da Agenda de Posts.');
+    }
+    const next = normalizeState(obj);
+    const msg = `Importar “${file.name}”?\n\nIsso vai SUBSTITUIR as configurações atuais por:\n` +
+      `• 2 prompts base (${next.basePrompts.map(p => p.name).join(' / ')})\n` +
+      `• ${next.customOccasions.length} data(s) especial(is)\n` +
+      `• ${next.dayPrompts.length} prompt(s) de dia\n` +
+      `• ${next.hidden.length} data(s) oculta(s)`;
+    if (!confirm(msg)) return;
+    state = next;
+    saveState();
+    renderBasePrompts();
+    renderAll();
+    toast('Configurações importadas ✓');
+  } catch (err) {
+    toast('Não foi possível importar: ' + (err instanceof SyntaxError ? 'arquivo JSON inválido.' : err.message), { error: true, ms: 6000 });
+  } finally {
+    importInput.value = '';
+  }
+});
+
+$('#restoreHidden').addEventListener('click', () => {
+  const prev = state.hidden;
+  state.hidden = [];
+  commit();
+  toast(`${prev.length} data(s) voltaram para o calendário`, { action: { label: 'Desfazer', fn: () => { state.hidden = prev; commit(); } } });
+});
+
+$('#resetAll').addEventListener('click', () => {
+  if (!confirm('Apagar TUDO (prompts base, datas, prompts de dias)?\n\nDica: exporte um backup antes.')) return;
+  state = defaultState();
+  saveState();
+  renderBasePrompts();
+  renderAll();
+  toast('Tudo apagado. Recomeçando do zero.');
+});
+
+/* ----- Outras abas / virada do dia ----- */
+window.addEventListener('storage', e => {
+  if (e.key !== STORAGE_KEY) return;
+  state = loadState();
+  renderBasePrompts();
+  renderAll();
+});
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState !== 'visible') return;
+  const now = startOfDay(new Date());
+  if (keyOf(now) === keyOf(today)) return;
+  const wasToday = keyOf(selected) === keyOf(today);
+  today = now;
+  if (wasToday) selected = now;
+  view = { y: selected.getFullYear(), m: selected.getMonth() };
+  renderAll();
+});
+window.addEventListener('beforeunload', () => { if (saveTimer) saveState(); });
+
+/* ----- Início ----- */
+renderLegend();
+renderBasePrompts();
+renderAll();
+})();
+</script>
+</body>
+</html>
